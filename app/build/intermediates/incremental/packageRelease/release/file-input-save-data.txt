@@ -1,0 +1,27 @@
+#Internal package file, do not edit.
+#Thu May 17 22:23:56 CEST 2018
+2.base=C\:\\Users\\Artero\\Desktop\\mct brutef\\app\\build\\intermediates\\assets\\release
+5.set=ASSET
+0.path=classes.dex
+2.baseType=DIRECTORY
+3.base=C\:\\Users\\Artero\\Desktop\\mct brutef\\app\\build\\intermediates\\assets\\release
+2.set=ASSET
+1.path=help/help.html
+4.base=C\:\\Users\\Artero\\Desktop\\mct brutef\\app\\build\\intermediates\\assets\\release
+count=6
+5.baseType=DIRECTORY
+2.path=key-files/keys_large.txt
+5.base=C\:\\Users\\Artero\\Desktop\\mct brutef\\app\\build\\intermediates\\assets\\release
+4.set=ASSET
+3.path=help/mct_logo.png
+3.baseType=DIRECTORY
+1.set=ASSET
+4.path=key-files/extended-std.keys
+1.baseType=DIRECTORY
+5.path=key-files/std.keys
+0.base=C\:\\Users\\Artero\\Desktop\\mct brutef\\app\\build\\intermediates\\transforms\\dex\\release\\0
+0.baseType=DIRECTORY
+3.set=ASSET
+1.base=C\:\\Users\\Artero\\Desktop\\mct brutef\\app\\build\\intermediates\\assets\\release
+4.baseType=DIRECTORY
+0.set=DEX
