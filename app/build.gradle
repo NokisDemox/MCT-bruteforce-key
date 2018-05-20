@@ -6,7 +6,7 @@ android {
     compileSdkVersion 23
     buildToolsVersion '26.0.2'
     defaultConfig {
-        applicationId "de.syss.MifareClassicTool"
+        applicationId "de.syss.MCTBrute4c"
         minSdkVersion 10
         targetSdkVersion 26
         versionCode 35

@@ -1,4 +1,4 @@
-de.syss.MifareClassicTool
+de.syss.MCTBrute4c
 int color blue 0x7f010000
 int color dark_gray 0x7f010001
 int color dark_green 0x7f010002
