@@ -1,5 +1,5 @@
 /*
- * Copyright 2013 Gerhard Klostermeier
+ * Copyright 2018 NokisDemox
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -42,7 +42,7 @@ import de.syss.MCTBrute4c.R;
 public class AccessConditionDecoder extends BasicActivity {
 
     public final static String EXTRA_AC =
-            "de.syss.MifareClassicTool.Activity.AC";
+            "de.syss.MTCBrute4c.Activity.AC";
 
     private static final String LOG_TAG =
             AccessConditionDecoder.class.getSimpleName();

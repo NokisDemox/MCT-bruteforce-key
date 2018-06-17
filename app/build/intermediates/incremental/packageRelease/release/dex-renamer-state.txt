@@ -1,4 +1,4 @@
-#Sun May 20 11:03:03 CEST 2018
+#Sun Jun 17 16:17:46 CEST 2018
 base.0=C\:\\Users\\Artero\\Desktop\\proyectos\\mct app mod\\mct brutef\\app\\build\\intermediates\\transforms\\dex\\release\\0
 path.0=classes.dex
 renamed.0=classes.dex

@@ -25,7 +25,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="5dp"
-    tools:context=".DiffTool"
+    tools:context=".Activities.DiffTool"
     android:background="@drawable/back2">
 
     <Button

@@ -20,7 +20,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="de.syss.MCTBrute4c"
     android:versionCode="35"
-    android:versionName="2.0.4" >
+    android:versionName="2.0.4/2.3" >
 
     <uses-sdk
         android:minSdkVersion="10"
@@ -38,8 +38,7 @@
         android:allowBackup="false"
         android:debuggable="true"
         android:icon="@mipmap/ic_launcher"
-        android:label="@string/app_name"
-        android:testOnly="true" >
+        android:label="@string/app_name" >
         <activity
             android:name="de.syss.MCTBrute4c.Activities.MainMenu"
             android:configChanges="orientation|screenSize"
@@ -148,6 +147,12 @@
             android:configChanges="orientation|screenSize"
             android:icon="@drawable/diff_tool"
             android:label="@string/title_activity_diff_tool" >
+        </activity>
+        <activity
+            android:name="de.syss.MCTBrute4c.Activities.Brute"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:icon="@drawable/brute_tag"
+            android:label="@string/title_activity_brute" >
         </activity>
     </application>
 

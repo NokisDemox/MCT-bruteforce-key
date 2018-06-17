@@ -1,0 +1,20 @@
+{
+    "logs": [
+        {
+            "outputFile": "C:\\Users\\Artero\\Desktop\\proyectos\\mct app mod\\mct brutef\\app\\build\\intermediates\\incremental\\mergeReleaseResources\\merged.dir\\values-v23\\values-v23.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\Artero\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-23.4.0.aar\\e2aa1a3ea9e60fb56fd5ddda9f458141\\res\\values-v23\\values-v23.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,19,32,33,34,35",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,190,325,400,487,1277,2079,2184,2299,2406",
+                        "endLines": "2,3,4,5,18,31,32,33,34,35",
+                        "endColumns": "134,134,74,86,12,12,104,114,106,112",
+                        "endOffsets": "185,320,395,482,1272,2074,2179,2294,2401,2514"
+                    }
+                }
+            ]
+        }
+    ]
+}

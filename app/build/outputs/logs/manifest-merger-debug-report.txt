@@ -1,45 +1,59 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\Artero\Desktop\proyectos\mct app mod\mct brutef\app\src\main\AndroidManifest.xml:21:1-146:12
-INJECTED from C:\Users\Artero\Desktop\proyectos\mct app mod\mct brutef\app\src\main\AndroidManifest.xml:21:1-146:12
-INJECTED from C:\Users\Artero\Desktop\proyectos\mct app mod\mct brutef\app\src\main\AndroidManifest.xml:21:1-146:12
-INJECTED from C:\Users\Artero\Desktop\proyectos\mct app mod\mct brutef\app\src\main\AndroidManifest.xml:21:1-146:12
+ADDED from C:\Users\Artero\Desktop\proyectos\mct app mod\mct brutef\app\src\main\AndroidManifest.xml:19:1-166:12
+INJECTED from C:\Users\Artero\Desktop\proyectos\mct app mod\mct brutef\app\src\main\AndroidManifest.xml:19:1-166:12
+INJECTED from C:\Users\Artero\Desktop\proyectos\mct app mod\mct brutef\app\src\main\AndroidManifest.xml:19:1-166:12
+INJECTED from C:\Users\Artero\Desktop\proyectos\mct app mod\mct brutef\app\src\main\AndroidManifest.xml:19:1-166:12
+MERGED from [com.android.support:appcompat-v7:23.4.0] C:\Users\Artero\.gradle\caches\transforms-1\files-1.1\appcompat-v7-23.4.0.aar\e2aa1a3ea9e60fb56fd5ddda9f458141\AndroidManifest.xml:17:1-27:12
+MERGED from [com.android.support:animated-vector-drawable:23.4.0] C:\Users\Artero\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-23.4.0.aar\f7bacfb52c35aa8a2822b2ffb5afb82c\AndroidManifest.xml:2:1-9:12
+MERGED from [com.android.support:support-vector-drawable:23.4.0] C:\Users\Artero\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-23.4.0.aar\7c1d8f25217d0af3043a6a3f73a94a77\AndroidManifest.xml:2:1-9:12
 MERGED from [com.android.support:support-v4:23.4.0] C:\Users\Artero\.gradle\caches\transforms-1\files-1.1\support-v4-23.4.0.aar\332c60e50e382c9e2499f1769fc3b8e4\AndroidManifest.xml:17:1-24:12
-INJECTED from C:\Users\Artero\Desktop\proyectos\mct app mod\mct brutef\app\src\main\AndroidManifest.xml:21:1-146:12
-INJECTED from C:\Users\Artero\Desktop\proyectos\mct app mod\mct brutef\app\src\main\AndroidManifest.xml:21:1-146:12
-INJECTED from C:\Users\Artero\Desktop\proyectos\mct app mod\mct brutef\app\src\main\AndroidManifest.xml:21:1-146:12
+MERGED from [com.android.support.constraint:constraint-layout:1.1.0] C:\Users\Artero\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.0.aar\6967b91b56e891fd4b5388f0b0fcec10\AndroidManifest.xml:2:1-11:12
+INJECTED from C:\Users\Artero\Desktop\proyectos\mct app mod\mct brutef\app\src\main\AndroidManifest.xml:19:1-166:12
+INJECTED from C:\Users\Artero\Desktop\proyectos\mct app mod\mct brutef\app\src\main\AndroidManifest.xml:19:1-166:12
+INJECTED from C:\Users\Artero\Desktop\proyectos\mct app mod\mct brutef\app\src\main\AndroidManifest.xml:19:1-166:12
 	package
-		ADDED from C:\Users\Artero\Desktop\proyectos\mct app mod\mct brutef\app\src\main\AndroidManifest.xml:22:5-33
+		ADDED from C:\Users\Artero\Desktop\proyectos\mct app mod\mct brutef\app\src\main\AndroidManifest.xml:21:5-33
 		INJECTED from C:\Users\Artero\Desktop\proyectos\mct app mod\mct brutef\app\src\main\AndroidManifest.xml
 		INJECTED from C:\Users\Artero\Desktop\proyectos\mct app mod\mct brutef\app\src\main\AndroidManifest.xml
 	android:versionName
 		INJECTED from C:\Users\Artero\Desktop\proyectos\mct app mod\mct brutef\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\Artero\Desktop\proyectos\mct app mod\mct brutef\app\src\main\AndroidManifest.xml:21:1-146:12
+		ADDED from C:\Users\Artero\Desktop\proyectos\mct app mod\mct brutef\app\src\main\AndroidManifest.xml:19:1-166:12
 		INJECTED from C:\Users\Artero\Desktop\proyectos\mct app mod\mct brutef\app\src\main\AndroidManifest.xml
+	xmlns:tools
+		ADDED from C:\Users\Artero\Desktop\proyectos\mct app mod\mct brutef\app\src\main\AndroidManifest.xml:20:5-51
 	android:versionCode
 		INJECTED from C:\Users\Artero\Desktop\proyectos\mct app mod\mct brutef\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\Artero\Desktop\proyectos\mct app mod\mct brutef\app\src\main\AndroidManifest.xml:21:1-146:12
+		ADDED from C:\Users\Artero\Desktop\proyectos\mct app mod\mct brutef\app\src\main\AndroidManifest.xml:19:1-166:12
 		INJECTED from C:\Users\Artero\Desktop\proyectos\mct app mod\mct brutef\app\src\main\AndroidManifest.xml
 	xmlns:android
-		ADDED from C:\Users\Artero\Desktop\proyectos\mct app mod\mct brutef\app\src\main\AndroidManifest.xml:21:11-69
+		ADDED from C:\Users\Artero\Desktop\proyectos\mct app mod\mct brutef\app\src\main\AndroidManifest.xml:19:11-69
 uses-permission#android.permission.NFC
-ADDED from C:\Users\Artero\Desktop\proyectos\mct app mod\mct brutef\app\src\main\AndroidManifest.xml:24:5-62
+ADDED from C:\Users\Artero\Desktop\proyectos\mct app mod\mct brutef\app\src\main\AndroidManifest.xml:23:5-62
 	android:name
-		ADDED from C:\Users\Artero\Desktop\proyectos\mct app mod\mct brutef\app\src\main\AndroidManifest.xml:24:22-59
+		ADDED from C:\Users\Artero\Desktop\proyectos\mct app mod\mct brutef\app\src\main\AndroidManifest.xml:23:22-59
 uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
-ADDED from C:\Users\Artero\Desktop\proyectos\mct app mod\mct brutef\app\src\main\AndroidManifest.xml:25:5-81
+ADDED from C:\Users\Artero\Desktop\proyectos\mct app mod\mct brutef\app\src\main\AndroidManifest.xml:24:5-81
 	android:name
-		ADDED from C:\Users\Artero\Desktop\proyectos\mct app mod\mct brutef\app\src\main\AndroidManifest.xml:25:22-78
+		ADDED from C:\Users\Artero\Desktop\proyectos\mct app mod\mct brutef\app\src\main\AndroidManifest.xml:24:22-78
 uses-feature#android.hardware.nfc
-ADDED from C:\Users\Artero\Desktop\proyectos\mct app mod\mct brutef\app\src\main\AndroidManifest.xml:27:5-29:35
+ADDED from C:\Users\Artero\Desktop\proyectos\mct app mod\mct brutef\app\src\main\AndroidManifest.xml:26:5-28:35
 	android:required
-		ADDED from C:\Users\Artero\Desktop\proyectos\mct app mod\mct brutef\app\src\main\AndroidManifest.xml:29:9-32
+		ADDED from C:\Users\Artero\Desktop\proyectos\mct app mod\mct brutef\app\src\main\AndroidManifest.xml:28:9-32
 	android:name
-		ADDED from C:\Users\Artero\Desktop\proyectos\mct app mod\mct brutef\app\src\main\AndroidManifest.xml:28:9-44
+		ADDED from C:\Users\Artero\Desktop\proyectos\mct app mod\mct brutef\app\src\main\AndroidManifest.xml:27:9-44
 application
-ADDED from C:\Users\Artero\Desktop\proyectos\mct app mod\mct brutef\app\src\main\AndroidManifest.xml:30:5-144:19
+ADDED from C:\Users\Artero\Desktop\proyectos\mct app mod\mct brutef\app\src\main\AndroidManifest.xml:30:5-164:19
+MERGED from [com.android.support:appcompat-v7:23.4.0] C:\Users\Artero\.gradle\caches\transforms-1\files-1.1\appcompat-v7-23.4.0.aar\e2aa1a3ea9e60fb56fd5ddda9f458141\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:appcompat-v7:23.4.0] C:\Users\Artero\.gradle\caches\transforms-1\files-1.1\appcompat-v7-23.4.0.aar\e2aa1a3ea9e60fb56fd5ddda9f458141\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:animated-vector-drawable:23.4.0] C:\Users\Artero\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-23.4.0.aar\f7bacfb52c35aa8a2822b2ffb5afb82c\AndroidManifest.xml:7:5-20
+MERGED from [com.android.support:animated-vector-drawable:23.4.0] C:\Users\Artero\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-23.4.0.aar\f7bacfb52c35aa8a2822b2ffb5afb82c\AndroidManifest.xml:7:5-20
+MERGED from [com.android.support:support-vector-drawable:23.4.0] C:\Users\Artero\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-23.4.0.aar\7c1d8f25217d0af3043a6a3f73a94a77\AndroidManifest.xml:7:5-20
+MERGED from [com.android.support:support-vector-drawable:23.4.0] C:\Users\Artero\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-23.4.0.aar\7c1d8f25217d0af3043a6a3f73a94a77\AndroidManifest.xml:7:5-20
 MERGED from [com.android.support:support-v4:23.4.0] C:\Users\Artero\.gradle\caches\transforms-1\files-1.1\support-v4-23.4.0.aar\332c60e50e382c9e2499f1769fc3b8e4\AndroidManifest.xml:22:5-20
 MERGED from [com.android.support:support-v4:23.4.0] C:\Users\Artero\.gradle\caches\transforms-1\files-1.1\support-v4-23.4.0.aar\332c60e50e382c9e2499f1769fc3b8e4\AndroidManifest.xml:22:5-20
+MERGED from [com.android.support.constraint:constraint-layout:1.1.0] C:\Users\Artero\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.0.aar\6967b91b56e891fd4b5388f0b0fcec10\AndroidManifest.xml:9:5-20
+MERGED from [com.android.support.constraint:constraint-layout:1.1.0] C:\Users\Artero\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.0.aar\6967b91b56e891fd4b5388f0b0fcec10\AndroidManifest.xml:9:5-20
 	android:label
 		ADDED from C:\Users\Artero\Desktop\proyectos\mct app mod\mct brutef\app\src\main\AndroidManifest.xml:34:9-41
 	android:icon
@@ -81,7 +95,7 @@ ADDED from C:\Users\Artero\Desktop\proyectos\mct app mod\mct brutef\app\src\main
 	android:name
 		ADDED from C:\Users\Artero\Desktop\proyectos\mct app mod\mct brutef\app\src\main\AndroidManifest.xml:52:17-66
 activity#de.syss.MCTBrute4c.Activities.KeyMapCreator
-ADDED from C:\Users\Artero\Desktop\proyectos\mct app mod\mct brutef\app\src\main\AndroidManifest.xml:55:9-60:20
+ADDED from C:\Users\Artero\Desktop\proyectos\mct app mod\mct brutef\app\src\main\AndroidManifest.xml:55:9-61:20
 	android:label
 		ADDED from C:\Users\Artero\Desktop\proyectos\mct app mod\mct brutef\app\src\main\AndroidManifest.xml:59:13-66
 	android:configChanges
@@ -91,151 +105,171 @@ ADDED from C:\Users\Artero\Desktop\proyectos\mct app mod\mct brutef\app\src\main
 	android:name
 		ADDED from C:\Users\Artero\Desktop\proyectos\mct app mod\mct brutef\app\src\main\AndroidManifest.xml:56:13-53
 activity#de.syss.MCTBrute4c.Activities.DumpEditor
-ADDED from C:\Users\Artero\Desktop\proyectos\mct app mod\mct brutef\app\src\main\AndroidManifest.xml:61:9-66:20
+ADDED from C:\Users\Artero\Desktop\proyectos\mct app mod\mct brutef\app\src\main\AndroidManifest.xml:62:9-68:20
 	android:label
-		ADDED from C:\Users\Artero\Desktop\proyectos\mct app mod\mct brutef\app\src\main\AndroidManifest.xml:65:13-63
+		ADDED from C:\Users\Artero\Desktop\proyectos\mct app mod\mct brutef\app\src\main\AndroidManifest.xml:66:13-63
 	android:configChanges
-		ADDED from C:\Users\Artero\Desktop\proyectos\mct app mod\mct brutef\app\src\main\AndroidManifest.xml:63:13-74
+		ADDED from C:\Users\Artero\Desktop\proyectos\mct app mod\mct brutef\app\src\main\AndroidManifest.xml:64:13-74
 	android:icon
-		ADDED from C:\Users\Artero\Desktop\proyectos\mct app mod\mct brutef\app\src\main\AndroidManifest.xml:64:13-47
+		ADDED from C:\Users\Artero\Desktop\proyectos\mct app mod\mct brutef\app\src\main\AndroidManifest.xml:65:13-47
 	android:name
-		ADDED from C:\Users\Artero\Desktop\proyectos\mct app mod\mct brutef\app\src\main\AndroidManifest.xml:62:13-50
+		ADDED from C:\Users\Artero\Desktop\proyectos\mct app mod\mct brutef\app\src\main\AndroidManifest.xml:63:13-50
 activity#de.syss.MCTBrute4c.Activities.FileChooser
-ADDED from C:\Users\Artero\Desktop\proyectos\mct app mod\mct brutef\app\src\main\AndroidManifest.xml:67:9-71:20
+ADDED from C:\Users\Artero\Desktop\proyectos\mct app mod\mct brutef\app\src\main\AndroidManifest.xml:69:9-74:20
 	android:label
-		ADDED from C:\Users\Artero\Desktop\proyectos\mct app mod\mct brutef\app\src\main\AndroidManifest.xml:70:13-64
+		ADDED from C:\Users\Artero\Desktop\proyectos\mct app mod\mct brutef\app\src\main\AndroidManifest.xml:72:13-64
 	android:icon
-		ADDED from C:\Users\Artero\Desktop\proyectos\mct app mod\mct brutef\app\src\main\AndroidManifest.xml:69:13-42
+		ADDED from C:\Users\Artero\Desktop\proyectos\mct app mod\mct brutef\app\src\main\AndroidManifest.xml:71:13-42
 	android:name
-		ADDED from C:\Users\Artero\Desktop\proyectos\mct app mod\mct brutef\app\src\main\AndroidManifest.xml:68:13-51
+		ADDED from C:\Users\Artero\Desktop\proyectos\mct app mod\mct brutef\app\src\main\AndroidManifest.xml:70:13-51
 activity#de.syss.MCTBrute4c.Activities.AccessConditionDecoder
-ADDED from C:\Users\Artero\Desktop\proyectos\mct app mod\mct brutef\app\src\main\AndroidManifest.xml:72:9-77:20
+ADDED from C:\Users\Artero\Desktop\proyectos\mct app mod\mct brutef\app\src\main\AndroidManifest.xml:75:9-81:20
 	android:label
-		ADDED from C:\Users\Artero\Desktop\proyectos\mct app mod\mct brutef\app\src\main\AndroidManifest.xml:76:13-69
+		ADDED from C:\Users\Artero\Desktop\proyectos\mct app mod\mct brutef\app\src\main\AndroidManifest.xml:79:13-69
 	android:configChanges
-		ADDED from C:\Users\Artero\Desktop\proyectos\mct app mod\mct brutef\app\src\main\AndroidManifest.xml:74:13-59
+		ADDED from C:\Users\Artero\Desktop\proyectos\mct app mod\mct brutef\app\src\main\AndroidManifest.xml:77:13-59
 	android:icon
-		ADDED from C:\Users\Artero\Desktop\proyectos\mct app mod\mct brutef\app\src\main\AndroidManifest.xml:75:13-55
+		ADDED from C:\Users\Artero\Desktop\proyectos\mct app mod\mct brutef\app\src\main\AndroidManifest.xml:78:13-55
 	android:name
-		ADDED from C:\Users\Artero\Desktop\proyectos\mct app mod\mct brutef\app\src\main\AndroidManifest.xml:73:13-62
+		ADDED from C:\Users\Artero\Desktop\proyectos\mct app mod\mct brutef\app\src\main\AndroidManifest.xml:76:13-62
 activity#de.syss.MCTBrute4c.Activities.ValueBlocksToInt
-ADDED from C:\Users\Artero\Desktop\proyectos\mct app mod\mct brutef\app\src\main\AndroidManifest.xml:78:9-83:20
+ADDED from C:\Users\Artero\Desktop\proyectos\mct app mod\mct brutef\app\src\main\AndroidManifest.xml:82:9-88:20
 	android:label
-		ADDED from C:\Users\Artero\Desktop\proyectos\mct app mod\mct brutef\app\src\main\AndroidManifest.xml:82:13-64
+		ADDED from C:\Users\Artero\Desktop\proyectos\mct app mod\mct brutef\app\src\main\AndroidManifest.xml:86:13-64
 	android:configChanges
-		ADDED from C:\Users\Artero\Desktop\proyectos\mct app mod\mct brutef\app\src\main\AndroidManifest.xml:80:13-59
+		ADDED from C:\Users\Artero\Desktop\proyectos\mct app mod\mct brutef\app\src\main\AndroidManifest.xml:84:13-59
 	android:icon
-		ADDED from C:\Users\Artero\Desktop\proyectos\mct app mod\mct brutef\app\src\main\AndroidManifest.xml:81:13-56
+		ADDED from C:\Users\Artero\Desktop\proyectos\mct app mod\mct brutef\app\src\main\AndroidManifest.xml:85:13-56
 	android:name
-		ADDED from C:\Users\Artero\Desktop\proyectos\mct app mod\mct brutef\app\src\main\AndroidManifest.xml:79:13-56
+		ADDED from C:\Users\Artero\Desktop\proyectos\mct app mod\mct brutef\app\src\main\AndroidManifest.xml:83:13-56
 activity#de.syss.MCTBrute4c.Activities.WriteTag
-ADDED from C:\Users\Artero\Desktop\proyectos\mct app mod\mct brutef\app\src\main\AndroidManifest.xml:84:9-89:20
+ADDED from C:\Users\Artero\Desktop\proyectos\mct app mod\mct brutef\app\src\main\AndroidManifest.xml:89:9-95:20
 	android:label
-		ADDED from C:\Users\Artero\Desktop\proyectos\mct app mod\mct brutef\app\src\main\AndroidManifest.xml:88:13-61
+		ADDED from C:\Users\Artero\Desktop\proyectos\mct app mod\mct brutef\app\src\main\AndroidManifest.xml:93:13-61
 	android:configChanges
-		ADDED from C:\Users\Artero\Desktop\proyectos\mct app mod\mct brutef\app\src\main\AndroidManifest.xml:86:13-74
+		ADDED from C:\Users\Artero\Desktop\proyectos\mct app mod\mct brutef\app\src\main\AndroidManifest.xml:91:13-74
 	android:icon
-		ADDED from C:\Users\Artero\Desktop\proyectos\mct app mod\mct brutef\app\src\main\AndroidManifest.xml:87:13-47
+		ADDED from C:\Users\Artero\Desktop\proyectos\mct app mod\mct brutef\app\src\main\AndroidManifest.xml:92:13-47
 	android:name
-		ADDED from C:\Users\Artero\Desktop\proyectos\mct app mod\mct brutef\app\src\main\AndroidManifest.xml:85:13-48
+		ADDED from C:\Users\Artero\Desktop\proyectos\mct app mod\mct brutef\app\src\main\AndroidManifest.xml:90:13-48
 activity#de.syss.MCTBrute4c.Activities.ReadTag
-ADDED from C:\Users\Artero\Desktop\proyectos\mct app mod\mct brutef\app\src\main\AndroidManifest.xml:90:9-95:20
+ADDED from C:\Users\Artero\Desktop\proyectos\mct app mod\mct brutef\app\src\main\AndroidManifest.xml:96:9-102:20
 	android:label
-		ADDED from C:\Users\Artero\Desktop\proyectos\mct app mod\mct brutef\app\src\main\AndroidManifest.xml:94:13-60
-	android:configChanges
-		ADDED from C:\Users\Artero\Desktop\proyectos\mct app mod\mct brutef\app\src\main\AndroidManifest.xml:92:13-74
-	android:icon
-		ADDED from C:\Users\Artero\Desktop\proyectos\mct app mod\mct brutef\app\src\main\AndroidManifest.xml:93:13-46
-	android:name
-		ADDED from C:\Users\Artero\Desktop\proyectos\mct app mod\mct brutef\app\src\main\AndroidManifest.xml:91:13-47
-activity#de.syss.MCTBrute4c.Activities.KeyEditor
-ADDED from C:\Users\Artero\Desktop\proyectos\mct app mod\mct brutef\app\src\main\AndroidManifest.xml:96:9-101:20
-	android:label
-		ADDED from C:\Users\Artero\Desktop\proyectos\mct app mod\mct brutef\app\src\main\AndroidManifest.xml:100:13-62
+		ADDED from C:\Users\Artero\Desktop\proyectos\mct app mod\mct brutef\app\src\main\AndroidManifest.xml:100:13-60
 	android:configChanges
 		ADDED from C:\Users\Artero\Desktop\proyectos\mct app mod\mct brutef\app\src\main\AndroidManifest.xml:98:13-74
 	android:icon
-		ADDED from C:\Users\Artero\Desktop\proyectos\mct app mod\mct brutef\app\src\main\AndroidManifest.xml:99:13-47
+		ADDED from C:\Users\Artero\Desktop\proyectos\mct app mod\mct brutef\app\src\main\AndroidManifest.xml:99:13-46
 	android:name
-		ADDED from C:\Users\Artero\Desktop\proyectos\mct app mod\mct brutef\app\src\main\AndroidManifest.xml:97:13-49
+		ADDED from C:\Users\Artero\Desktop\proyectos\mct app mod\mct brutef\app\src\main\AndroidManifest.xml:97:13-47
+activity#de.syss.MCTBrute4c.Activities.KeyEditor
+ADDED from C:\Users\Artero\Desktop\proyectos\mct app mod\mct brutef\app\src\main\AndroidManifest.xml:103:9-109:20
+	android:label
+		ADDED from C:\Users\Artero\Desktop\proyectos\mct app mod\mct brutef\app\src\main\AndroidManifest.xml:107:13-62
+	android:configChanges
+		ADDED from C:\Users\Artero\Desktop\proyectos\mct app mod\mct brutef\app\src\main\AndroidManifest.xml:105:13-74
+	android:icon
+		ADDED from C:\Users\Artero\Desktop\proyectos\mct app mod\mct brutef\app\src\main\AndroidManifest.xml:106:13-47
+	android:name
+		ADDED from C:\Users\Artero\Desktop\proyectos\mct app mod\mct brutef\app\src\main\AndroidManifest.xml:104:13-49
 activity#de.syss.MCTBrute4c.Activities.HelpAndInfo
-ADDED from C:\Users\Artero\Desktop\proyectos\mct app mod\mct brutef\app\src\main\AndroidManifest.xml:102:9-107:20
+ADDED from C:\Users\Artero\Desktop\proyectos\mct app mod\mct brutef\app\src\main\AndroidManifest.xml:110:9-116:20
 	android:label
-		ADDED from C:\Users\Artero\Desktop\proyectos\mct app mod\mct brutef\app\src\main\AndroidManifest.xml:106:13-56
+		ADDED from C:\Users\Artero\Desktop\proyectos\mct app mod\mct brutef\app\src\main\AndroidManifest.xml:114:13-56
 	android:configChanges
-		ADDED from C:\Users\Artero\Desktop\proyectos\mct app mod\mct brutef\app\src\main\AndroidManifest.xml:104:13-59
+		ADDED from C:\Users\Artero\Desktop\proyectos\mct app mod\mct brutef\app\src\main\AndroidManifest.xml:112:13-59
 	android:icon
-		ADDED from C:\Users\Artero\Desktop\proyectos\mct app mod\mct brutef\app\src\main\AndroidManifest.xml:105:13-51
+		ADDED from C:\Users\Artero\Desktop\proyectos\mct app mod\mct brutef\app\src\main\AndroidManifest.xml:113:13-51
 	android:name
-		ADDED from C:\Users\Artero\Desktop\proyectos\mct app mod\mct brutef\app\src\main\AndroidManifest.xml:103:13-51
+		ADDED from C:\Users\Artero\Desktop\proyectos\mct app mod\mct brutef\app\src\main\AndroidManifest.xml:111:13-51
 activity#de.syss.MCTBrute4c.Activities.HexToAscii
-ADDED from C:\Users\Artero\Desktop\proyectos\mct app mod\mct brutef\app\src\main\AndroidManifest.xml:108:9-113:20
+ADDED from C:\Users\Artero\Desktop\proyectos\mct app mod\mct brutef\app\src\main\AndroidManifest.xml:117:9-123:20
 	android:label
-		ADDED from C:\Users\Artero\Desktop\proyectos\mct app mod\mct brutef\app\src\main\AndroidManifest.xml:112:13-64
+		ADDED from C:\Users\Artero\Desktop\proyectos\mct app mod\mct brutef\app\src\main\AndroidManifest.xml:121:13-64
 	android:configChanges
-		ADDED from C:\Users\Artero\Desktop\proyectos\mct app mod\mct brutef\app\src\main\AndroidManifest.xml:110:13-59
+		ADDED from C:\Users\Artero\Desktop\proyectos\mct app mod\mct brutef\app\src\main\AndroidManifest.xml:119:13-59
 	android:icon
-		ADDED from C:\Users\Artero\Desktop\proyectos\mct app mod\mct brutef\app\src\main\AndroidManifest.xml:111:13-50
+		ADDED from C:\Users\Artero\Desktop\proyectos\mct app mod\mct brutef\app\src\main\AndroidManifest.xml:120:13-50
 	android:name
-		ADDED from C:\Users\Artero\Desktop\proyectos\mct app mod\mct brutef\app\src\main\AndroidManifest.xml:109:13-50
+		ADDED from C:\Users\Artero\Desktop\proyectos\mct app mod\mct brutef\app\src\main\AndroidManifest.xml:118:13-50
 activity#de.syss.MCTBrute4c.Activities.TagInfoTool
-ADDED from C:\Users\Artero\Desktop\proyectos\mct app mod\mct brutef\app\src\main\AndroidManifest.xml:114:9-119:20
+ADDED from C:\Users\Artero\Desktop\proyectos\mct app mod\mct brutef\app\src\main\AndroidManifest.xml:124:9-130:20
 	android:label
-		ADDED from C:\Users\Artero\Desktop\proyectos\mct app mod\mct brutef\app\src\main\AndroidManifest.xml:118:13-60
+		ADDED from C:\Users\Artero\Desktop\proyectos\mct app mod\mct brutef\app\src\main\AndroidManifest.xml:128:13-60
 	android:configChanges
-		ADDED from C:\Users\Artero\Desktop\proyectos\mct app mod\mct brutef\app\src\main\AndroidManifest.xml:116:13-59
+		ADDED from C:\Users\Artero\Desktop\proyectos\mct app mod\mct brutef\app\src\main\AndroidManifest.xml:126:13-59
 	android:icon
-		ADDED from C:\Users\Artero\Desktop\proyectos\mct app mod\mct brutef\app\src\main\AndroidManifest.xml:117:13-46
+		ADDED from C:\Users\Artero\Desktop\proyectos\mct app mod\mct brutef\app\src\main\AndroidManifest.xml:127:13-46
 	android:name
-		ADDED from C:\Users\Artero\Desktop\proyectos\mct app mod\mct brutef\app\src\main\AndroidManifest.xml:115:13-51
+		ADDED from C:\Users\Artero\Desktop\proyectos\mct app mod\mct brutef\app\src\main\AndroidManifest.xml:125:13-51
 activity#de.syss.MCTBrute4c.Activities.ValueBlockTool
-ADDED from C:\Users\Artero\Desktop\proyectos\mct app mod\mct brutef\app\src\main\AndroidManifest.xml:120:9-125:20
+ADDED from C:\Users\Artero\Desktop\proyectos\mct app mod\mct brutef\app\src\main\AndroidManifest.xml:131:9-136:20
 	android:label
-		ADDED from C:\Users\Artero\Desktop\proyectos\mct app mod\mct brutef\app\src\main\AndroidManifest.xml:124:13-68
+		ADDED from C:\Users\Artero\Desktop\proyectos\mct app mod\mct brutef\app\src\main\AndroidManifest.xml:135:13-68
 	android:configChanges
-		ADDED from C:\Users\Artero\Desktop\proyectos\mct app mod\mct brutef\app\src\main\AndroidManifest.xml:122:13-59
+		ADDED from C:\Users\Artero\Desktop\proyectos\mct app mod\mct brutef\app\src\main\AndroidManifest.xml:133:13-59
 	android:icon
-		ADDED from C:\Users\Artero\Desktop\proyectos\mct app mod\mct brutef\app\src\main\AndroidManifest.xml:123:13-54
+		ADDED from C:\Users\Artero\Desktop\proyectos\mct app mod\mct brutef\app\src\main\AndroidManifest.xml:134:13-54
 	android:name
-		ADDED from C:\Users\Artero\Desktop\proyectos\mct app mod\mct brutef\app\src\main\AndroidManifest.xml:121:13-54
+		ADDED from C:\Users\Artero\Desktop\proyectos\mct app mod\mct brutef\app\src\main\AndroidManifest.xml:132:13-54
 activity#de.syss.MCTBrute4c.Activities.AccessConditionTool
-ADDED from C:\Users\Artero\Desktop\proyectos\mct app mod\mct brutef\app\src\main\AndroidManifest.xml:126:9-131:20
+ADDED from C:\Users\Artero\Desktop\proyectos\mct app mod\mct brutef\app\src\main\AndroidManifest.xml:137:9-143:20
 	android:label
-		ADDED from C:\Users\Artero\Desktop\proyectos\mct app mod\mct brutef\app\src\main\AndroidManifest.xml:130:13-73
+		ADDED from C:\Users\Artero\Desktop\proyectos\mct app mod\mct brutef\app\src\main\AndroidManifest.xml:141:13-73
 	android:configChanges
-		ADDED from C:\Users\Artero\Desktop\proyectos\mct app mod\mct brutef\app\src\main\AndroidManifest.xml:128:13-59
+		ADDED from C:\Users\Artero\Desktop\proyectos\mct app mod\mct brutef\app\src\main\AndroidManifest.xml:139:13-59
 	android:icon
-		ADDED from C:\Users\Artero\Desktop\proyectos\mct app mod\mct brutef\app\src\main\AndroidManifest.xml:129:13-59
-	android:name
-		ADDED from C:\Users\Artero\Desktop\proyectos\mct app mod\mct brutef\app\src\main\AndroidManifest.xml:127:13-59
-activity#de.syss.MCTBrute4c.Activities.Preferences
-ADDED from C:\Users\Artero\Desktop\proyectos\mct app mod\mct brutef\app\src\main\AndroidManifest.xml:132:9-137:20
-	android:label
-		ADDED from C:\Users\Artero\Desktop\proyectos\mct app mod\mct brutef\app\src\main\AndroidManifest.xml:136:13-63
-	android:configChanges
-		ADDED from C:\Users\Artero\Desktop\proyectos\mct app mod\mct brutef\app\src\main\AndroidManifest.xml:134:13-59
-	android:icon
-		ADDED from C:\Users\Artero\Desktop\proyectos\mct app mod\mct brutef\app\src\main\AndroidManifest.xml:135:13-49
-	android:name
-		ADDED from C:\Users\Artero\Desktop\proyectos\mct app mod\mct brutef\app\src\main\AndroidManifest.xml:133:13-51
-activity#de.syss.MCTBrute4c.Activities.DiffTool
-ADDED from C:\Users\Artero\Desktop\proyectos\mct app mod\mct brutef\app\src\main\AndroidManifest.xml:138:9-143:20
-	android:label
-		ADDED from C:\Users\Artero\Desktop\proyectos\mct app mod\mct brutef\app\src\main\AndroidManifest.xml:142:13-61
-	android:configChanges
 		ADDED from C:\Users\Artero\Desktop\proyectos\mct app mod\mct brutef\app\src\main\AndroidManifest.xml:140:13-59
-	android:icon
-		ADDED from C:\Users\Artero\Desktop\proyectos\mct app mod\mct brutef\app\src\main\AndroidManifest.xml:141:13-47
 	android:name
-		ADDED from C:\Users\Artero\Desktop\proyectos\mct app mod\mct brutef\app\src\main\AndroidManifest.xml:139:13-48
+		ADDED from C:\Users\Artero\Desktop\proyectos\mct app mod\mct brutef\app\src\main\AndroidManifest.xml:138:13-59
+activity#de.syss.MCTBrute4c.Activities.Preferences
+ADDED from C:\Users\Artero\Desktop\proyectos\mct app mod\mct brutef\app\src\main\AndroidManifest.xml:144:9-150:20
+	android:label
+		ADDED from C:\Users\Artero\Desktop\proyectos\mct app mod\mct brutef\app\src\main\AndroidManifest.xml:148:13-63
+	android:configChanges
+		ADDED from C:\Users\Artero\Desktop\proyectos\mct app mod\mct brutef\app\src\main\AndroidManifest.xml:146:13-59
+	android:icon
+		ADDED from C:\Users\Artero\Desktop\proyectos\mct app mod\mct brutef\app\src\main\AndroidManifest.xml:147:13-49
+	android:name
+		ADDED from C:\Users\Artero\Desktop\proyectos\mct app mod\mct brutef\app\src\main\AndroidManifest.xml:145:13-51
+activity#de.syss.MCTBrute4c.Activities.DiffTool
+ADDED from C:\Users\Artero\Desktop\proyectos\mct app mod\mct brutef\app\src\main\AndroidManifest.xml:151:9-157:20
+	android:label
+		ADDED from C:\Users\Artero\Desktop\proyectos\mct app mod\mct brutef\app\src\main\AndroidManifest.xml:155:13-61
+	android:configChanges
+		ADDED from C:\Users\Artero\Desktop\proyectos\mct app mod\mct brutef\app\src\main\AndroidManifest.xml:153:13-59
+	android:icon
+		ADDED from C:\Users\Artero\Desktop\proyectos\mct app mod\mct brutef\app\src\main\AndroidManifest.xml:154:13-47
+	android:name
+		ADDED from C:\Users\Artero\Desktop\proyectos\mct app mod\mct brutef\app\src\main\AndroidManifest.xml:152:13-48
+activity#de.syss.MCTBrute4c.Activities.Brute
+ADDED from C:\Users\Artero\Desktop\proyectos\mct app mod\mct brutef\app\src\main\AndroidManifest.xml:158:9-163:20
+	android:label
+		ADDED from C:\Users\Artero\Desktop\proyectos\mct app mod\mct brutef\app\src\main\AndroidManifest.xml:162:13-57
+	android:configChanges
+		ADDED from C:\Users\Artero\Desktop\proyectos\mct app mod\mct brutef\app\src\main\AndroidManifest.xml:160:13-74
+	android:icon
+		ADDED from C:\Users\Artero\Desktop\proyectos\mct app mod\mct brutef\app\src\main\AndroidManifest.xml:161:13-47
+	android:name
+		ADDED from C:\Users\Artero\Desktop\proyectos\mct app mod\mct brutef\app\src\main\AndroidManifest.xml:159:13-45
 uses-sdk
 INJECTED from C:\Users\Artero\Desktop\proyectos\mct app mod\mct brutef\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from C:\Users\Artero\Desktop\proyectos\mct app mod\mct brutef\app\src\main\AndroidManifest.xml
 INJECTED from C:\Users\Artero\Desktop\proyectos\mct app mod\mct brutef\app\src\main\AndroidManifest.xml
+MERGED from [com.android.support:appcompat-v7:23.4.0] C:\Users\Artero\.gradle\caches\transforms-1\files-1.1\appcompat-v7-23.4.0.aar\e2aa1a3ea9e60fb56fd5ddda9f458141\AndroidManifest.xml:21:5-23:78
+MERGED from [com.android.support:appcompat-v7:23.4.0] C:\Users\Artero\.gradle\caches\transforms-1\files-1.1\appcompat-v7-23.4.0.aar\e2aa1a3ea9e60fb56fd5ddda9f458141\AndroidManifest.xml:21:5-23:78
+MERGED from [com.android.support:animated-vector-drawable:23.4.0] C:\Users\Artero\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-23.4.0.aar\f7bacfb52c35aa8a2822b2ffb5afb82c\AndroidManifest.xml:5:5-44
+MERGED from [com.android.support:animated-vector-drawable:23.4.0] C:\Users\Artero\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-23.4.0.aar\f7bacfb52c35aa8a2822b2ffb5afb82c\AndroidManifest.xml:5:5-44
+MERGED from [com.android.support:support-vector-drawable:23.4.0] C:\Users\Artero\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-23.4.0.aar\7c1d8f25217d0af3043a6a3f73a94a77\AndroidManifest.xml:5:5-43
+MERGED from [com.android.support:support-vector-drawable:23.4.0] C:\Users\Artero\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-23.4.0.aar\7c1d8f25217d0af3043a6a3f73a94a77\AndroidManifest.xml:5:5-43
 MERGED from [com.android.support:support-v4:23.4.0] C:\Users\Artero\.gradle\caches\transforms-1\files-1.1\support-v4-23.4.0.aar\332c60e50e382c9e2499f1769fc3b8e4\AndroidManifest.xml:20:5-43
 MERGED from [com.android.support:support-v4:23.4.0] C:\Users\Artero\.gradle\caches\transforms-1\files-1.1\support-v4-23.4.0.aar\332c60e50e382c9e2499f1769fc3b8e4\AndroidManifest.xml:20:5-43
+MERGED from [com.android.support.constraint:constraint-layout:1.1.0] C:\Users\Artero\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.0.aar\6967b91b56e891fd4b5388f0b0fcec10\AndroidManifest.xml:5:5-7:41
+MERGED from [com.android.support.constraint:constraint-layout:1.1.0] C:\Users\Artero\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.0.aar\6967b91b56e891fd4b5388f0b0fcec10\AndroidManifest.xml:5:5-7:41
 INJECTED from C:\Users\Artero\Desktop\proyectos\mct app mod\mct brutef\app\src\main\AndroidManifest.xml
 INJECTED from C:\Users\Artero\Desktop\proyectos\mct app mod\mct brutef\app\src\main\AndroidManifest.xml
+	tools:overrideLibrary
+		ADDED from [com.android.support:appcompat-v7:23.4.0] C:\Users\Artero\.gradle\caches\transforms-1\files-1.1\appcompat-v7-23.4.0.aar\e2aa1a3ea9e60fb56fd5ddda9f458141\AndroidManifest.xml:23:9-75
 	android:targetSdkVersion
 		INJECTED from C:\Users\Artero\Desktop\proyectos\mct app mod\mct brutef\app\src\main\AndroidManifest.xml
 		ADDED from C:\Users\Artero\Desktop\proyectos\mct app mod\mct brutef\app\src\main\AndroidManifest.xml

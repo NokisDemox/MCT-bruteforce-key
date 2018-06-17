@@ -1,7 +1,6 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!--
+<?xml version="1.0" encoding="utf-8"?><!--
 /*
- * Copyright 2013 Gerhard Klostermeier
+ * Copyright 2018 NokisDemox
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -32,6 +31,7 @@
     <string name="title_activity_access_conditions">Access Conditions</string>
     <string name="title_activity_write_tag">Write Tag</string>
     <string name="title_activity_create_key_map">Map Keys to Sectors</string>
+    <string name="title_activity_brute">Brute tag</string>
     <string name="title_activity_file_chooser">File Chooser</string>
     <string name="title_activity_value_blocks">Value Blocks as Integers</string>
     <string name="title_activity_key_editor">Key Editor</string>
@@ -157,6 +157,7 @@
     <!-- Actions (Buttons, Checkboxs, etc. -->
     <string name="action_read_tag">Read Tag</string>
     <string name="action_write_tag">Write Tag</string>
+    <string name="action_brute_tag">Bruteforce Tag</string>
     <string name="action_edit_tag_dump">Edit/Analyse Dump File</string>
     <string name="action_edit_key_dump">Edit/Add Key File</string>
     <string name="action_tools">Tools</string>
@@ -420,11 +421,11 @@
         <a href="https://github.com/ikarus23/MifareClassicTool">MCT
         on github</a><br />
         &#8226; Rate this app:
-        <a href="market://details?id=de.syss.MifareClassicTool">via
+        <a href="market://details?id=de.syss.MTCBrute4c">via
         Google Play</a><br />
         &#8226; Donate:
-        <a href="market://details?id=de.syss.MifareClassicToolDonate">via
-        Google Play</a></b><br /><br />
+        <a href="https://sites.google.com/view/nokisdemox">via
+        my webpage where is a paypal link</a></b><br /><br />
         Useful information:<br />
         &#8226; <a href="https://github.com/ikarus23/MifareClassicTool/issues">Bug
         Tracker</a><br />

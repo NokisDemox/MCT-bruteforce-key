@@ -1,0 +1,19 @@
+{
+    "logs": [
+        {
+            "outputFile": "C:\\Users\\Artero\\Desktop\\proyectos\\mct app mod\\mct brutef\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-land\\values-land.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\Artero\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-23.4.0.aar\\e2aa1a3ea9e60fb56fd5ddda9f458141\\res\\values-land\\values-land.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,7",
+                        "startColumns": "4,4,4,4,4,4",
+                        "startOffsets": "55,117,189,259,323,394",
+                        "endColumns": "61,71,69,63,70,67",
+                        "endOffsets": "112,184,254,318,389,457"
+                    }
+                }
+            ]
+        }
+    ]
+}

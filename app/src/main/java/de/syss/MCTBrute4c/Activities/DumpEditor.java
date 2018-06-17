@@ -1,5 +1,5 @@
 /*
- * Copyright 2013 Gerhard Klostermeier
+ * Copyright 2018 NokisDemox
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -86,7 +86,7 @@ public class DumpEditor extends BasicActivity
      * are marked with a "*"-symbol.
      */
     public final static String EXTRA_DUMP =
-            "de.syss.MifareClassicTool.Activity.DUMP";
+            "de.syss.MTCBrute4c.Activity.DUMP";
 
     private static final String LOG_TAG =
             DumpEditor.class.getSimpleName();

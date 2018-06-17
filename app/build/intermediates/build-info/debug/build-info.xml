@@ -6,100 +6,100 @@
     density="xhdpi"
     format="10"
     plugin-version="3.0.1"
-    timestamp="1526806908687"
+    timestamp="1529244852660"
     token="6021234471570238153"
     verifier="FULL_BUILD_REQUESTED" >
 
     <task
         name="javac"
-        duration="2512" />
+        duration="1753" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="735" />
+        duration="34" />
     <task
         name="verifier"
-        duration="396" />
+        duration="111" />
 
     <artifact
-        location="C:\Users\Artero\Desktop\proyectos\mct app mod\mct brutef\app\build\intermediates\split-apk\debug\dep\dependencies.apk"
-        type="SPLIT" />
-    <artifact
-        location="C:\Users\Artero\Desktop\proyectos\mct app mod\mct brutef\app\build\intermediates\split-apk\debug\slices\slice_0.apk"
-        type="SPLIT" />
-    <artifact
-        location="C:\Users\Artero\Desktop\proyectos\mct app mod\mct brutef\app\build\intermediates\split-apk\debug\slices\slice_1.apk"
-        type="SPLIT" />
-    <artifact
         location="C:\Users\Artero\Desktop\proyectos\mct app mod\mct brutef\app\build\intermediates\split-apk\debug\slices\slice_2.apk"
-        type="SPLIT" />
-    <artifact
-        location="C:\Users\Artero\Desktop\proyectos\mct app mod\mct brutef\app\build\intermediates\split-apk\debug\slices\slice_3.apk"
-        type="SPLIT" />
-    <artifact
-        location="C:\Users\Artero\Desktop\proyectos\mct app mod\mct brutef\app\build\intermediates\split-apk\debug\slices\slice_4.apk"
-        type="SPLIT" />
-    <artifact
-        location="C:\Users\Artero\Desktop\proyectos\mct app mod\mct brutef\app\build\intermediates\split-apk\debug\slices\slice_5.apk"
-        type="SPLIT" />
-    <artifact
-        location="C:\Users\Artero\Desktop\proyectos\mct app mod\mct brutef\app\build\intermediates\split-apk\debug\slices\slice_6.apk"
-        type="SPLIT" />
-    <artifact
-        location="C:\Users\Artero\Desktop\proyectos\mct app mod\mct brutef\app\build\intermediates\split-apk\debug\slices\slice_7.apk"
         type="SPLIT" />
     <artifact
         location="C:\Users\Artero\Desktop\proyectos\mct app mod\mct brutef\app\build\intermediates\split-apk\debug\slices\slice_8.apk"
         type="SPLIT" />
     <artifact
-        location="C:\Users\Artero\Desktop\proyectos\mct app mod\mct brutef\app\build\intermediates\split-apk\debug\slices\slice_9.apk"
-        type="SPLIT" />
-    <artifact
         location="C:\Users\Artero\Desktop\proyectos\mct app mod\mct brutef\app\build\outputs\apk\debug\app-debug.apk"
         type="SPLIT_MAIN" />
+    <artifact
+        location="C:\Users\Artero\Desktop\proyectos\mct app mod\mct brutef\app\build\intermediates\split-apk\debug\slices\slice_7.apk"
+        type="SPLIT" />
+    <artifact
+        location="C:\Users\Artero\Desktop\proyectos\mct app mod\mct brutef\app\build\intermediates\split-apk\debug\slices\slice_1.apk"
+        type="SPLIT" />
+    <artifact
+        location="C:\Users\Artero\Desktop\proyectos\mct app mod\mct brutef\app\build\intermediates\split-apk\debug\dep\dependencies.apk"
+        type="SPLIT" />
+    <artifact
+        location="C:\Users\Artero\Desktop\proyectos\mct app mod\mct brutef\app\build\intermediates\split-apk\debug\slices\slice_6.apk"
+        type="SPLIT" />
+    <artifact
+        location="C:\Users\Artero\Desktop\proyectos\mct app mod\mct brutef\app\build\intermediates\split-apk\debug\slices\slice_4.apk"
+        type="SPLIT" />
+    <artifact
+        location="C:\Users\Artero\Desktop\proyectos\mct app mod\mct brutef\app\build\intermediates\split-apk\debug\slices\slice_3.apk"
+        type="SPLIT" />
+    <artifact
+        location="C:\Users\Artero\Desktop\proyectos\mct app mod\mct brutef\app\build\intermediates\split-apk\debug\slices\slice_5.apk"
+        type="SPLIT" />
+    <artifact
+        location="C:\Users\Artero\Desktop\proyectos\mct app mod\mct brutef\app\build\intermediates\split-apk\debug\slices\slice_0.apk"
+        type="SPLIT" />
+    <artifact
+        location="C:\Users\Artero\Desktop\proyectos\mct app mod\mct brutef\app\build\intermediates\split-apk\debug\slices\slice_9.apk"
+        type="SPLIT" />
 
     <build
         build-mode="FULL"
-        timestamp="1526806908687"
+        timestamp="1529244852660"
         verifier="FULL_BUILD_REQUESTED" >
         <artifact
-            location="C:\Users\Artero\Desktop\proyectos\mct app mod\mct brutef\app\build\intermediates\split-apk\debug\dep\dependencies.apk"
-            type="SPLIT" />
-        <artifact
-            location="C:\Users\Artero\Desktop\proyectos\mct app mod\mct brutef\app\build\intermediates\split-apk\debug\slices\slice_0.apk"
-            type="SPLIT" />
-        <artifact
-            location="C:\Users\Artero\Desktop\proyectos\mct app mod\mct brutef\app\build\intermediates\split-apk\debug\slices\slice_1.apk"
-            type="SPLIT" />
-        <artifact
             location="C:\Users\Artero\Desktop\proyectos\mct app mod\mct brutef\app\build\intermediates\split-apk\debug\slices\slice_2.apk"
-            type="SPLIT" />
-        <artifact
-            location="C:\Users\Artero\Desktop\proyectos\mct app mod\mct brutef\app\build\intermediates\split-apk\debug\slices\slice_3.apk"
-            type="SPLIT" />
-        <artifact
-            location="C:\Users\Artero\Desktop\proyectos\mct app mod\mct brutef\app\build\intermediates\split-apk\debug\slices\slice_4.apk"
-            type="SPLIT" />
-        <artifact
-            location="C:\Users\Artero\Desktop\proyectos\mct app mod\mct brutef\app\build\intermediates\split-apk\debug\slices\slice_5.apk"
-            type="SPLIT" />
-        <artifact
-            location="C:\Users\Artero\Desktop\proyectos\mct app mod\mct brutef\app\build\intermediates\split-apk\debug\slices\slice_6.apk"
-            type="SPLIT" />
-        <artifact
-            location="C:\Users\Artero\Desktop\proyectos\mct app mod\mct brutef\app\build\intermediates\split-apk\debug\slices\slice_7.apk"
             type="SPLIT" />
         <artifact
             location="C:\Users\Artero\Desktop\proyectos\mct app mod\mct brutef\app\build\intermediates\split-apk\debug\slices\slice_8.apk"
             type="SPLIT" />
         <artifact
-            location="C:\Users\Artero\Desktop\proyectos\mct app mod\mct brutef\app\build\intermediates\split-apk\debug\slices\slice_9.apk"
-            type="SPLIT" />
-        <artifact
             location="C:\Users\Artero\Desktop\proyectos\mct app mod\mct brutef\app\build\outputs\apk\debug\app-debug.apk"
             type="SPLIT_MAIN" />
+        <artifact
+            location="C:\Users\Artero\Desktop\proyectos\mct app mod\mct brutef\app\build\intermediates\split-apk\debug\slices\slice_7.apk"
+            type="SPLIT" />
+        <artifact
+            location="C:\Users\Artero\Desktop\proyectos\mct app mod\mct brutef\app\build\intermediates\split-apk\debug\slices\slice_1.apk"
+            type="SPLIT" />
+        <artifact
+            location="C:\Users\Artero\Desktop\proyectos\mct app mod\mct brutef\app\build\intermediates\split-apk\debug\dep\dependencies.apk"
+            type="SPLIT" />
+        <artifact
+            location="C:\Users\Artero\Desktop\proyectos\mct app mod\mct brutef\app\build\intermediates\split-apk\debug\slices\slice_6.apk"
+            type="SPLIT" />
+        <artifact
+            location="C:\Users\Artero\Desktop\proyectos\mct app mod\mct brutef\app\build\intermediates\split-apk\debug\slices\slice_4.apk"
+            type="SPLIT" />
+        <artifact
+            location="C:\Users\Artero\Desktop\proyectos\mct app mod\mct brutef\app\build\intermediates\split-apk\debug\slices\slice_3.apk"
+            type="SPLIT" />
+        <artifact
+            location="C:\Users\Artero\Desktop\proyectos\mct app mod\mct brutef\app\build\intermediates\split-apk\debug\slices\slice_5.apk"
+            type="SPLIT" />
+        <artifact
+            location="C:\Users\Artero\Desktop\proyectos\mct app mod\mct brutef\app\build\intermediates\split-apk\debug\slices\slice_0.apk"
+            type="SPLIT" />
+        <artifact
+            location="C:\Users\Artero\Desktop\proyectos\mct app mod\mct brutef\app\build\intermediates\split-apk\debug\slices\slice_9.apk"
+            type="SPLIT" />
     </build>
 
 </instant-run>

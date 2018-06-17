@@ -1,0 +1,19 @@
+{
+    "logs": [
+        {
+            "outputFile": "C:\\Users\\Artero\\Desktop\\proyectos\\mct app mod\\mct brutef\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-hy-rAM\\values-hy-rAM.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\Artero\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-23.4.0.aar\\e2aa1a3ea9e60fb56fd5ddda9f458141\\res\\values-hy-rAM\\values-hy-rAM.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,158,266,389,490,600,690,796,911,993,1074,1159,1266,1373,1472,1582,1689,1790,1910,2009",
+                        "endColumns": "102,107,122,100,109,89,105,114,81,80,84,106,106,98,109,106,100,119,98,100",
+                        "endOffsets": "153,261,384,485,595,685,791,906,988,1069,1154,1261,1368,1467,1577,1684,1785,1905,2004,2105"
+                    }
+                }
+            ]
+        }
+    ]
+}

@@ -1,5 +1,5 @@
 /*
- * Copyright 2013 Gerhard Klostermeier
+ * Copyright 2018 NokisDemox
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -78,43 +78,43 @@ public class KeyMapCreator extends BasicActivity {
      * are the files the user can choose from. This must be in the Intent.
      */
     public final static String EXTRA_KEYS_DIR =
-            "de.syss.MifareClassicTool.Activity.KEYS_DIR";
+            "de.syss.MTCBrute4c.Activity.KEYS_DIR";
 
     /**
      * A boolean value to enable (default) or disable the possibility for the
      * user to change the key mapping range.
      */
     public final static String EXTRA_SECTOR_CHOOSER =
-            "de.syss.MifareClassicTool.Activity.SECTOR_CHOOSER";
+            "de.syss.MTCBrute4c.Activity.SECTOR_CHOOSER";
     /**
      * An integer value that represents the number of the
      * first sector for the key mapping process.
      */
     public final static String EXTRA_SECTOR_CHOOSER_FROM =
-            "de.syss.MifareClassicTool.Activity.SECTOR_CHOOSER_FROM";
+            "de.syss.MTCBrute4c.Activity.SECTOR_CHOOSER_FROM";
     /**
      * An integer value that represents the number of the
      * last sector for the key mapping process.
      */
     public final static String EXTRA_SECTOR_CHOOSER_TO =
-            "de.syss.MifareClassicTool.Activity.SECTOR_CHOOSER_TO";
+            "de.syss.MTCBrute4c.Activity.SECTOR_CHOOSER_TO";
     /**
      * The title of the activity. Optional.
      * e.g. "Map Keys to Sectors"
      */
     public final static String EXTRA_TITLE =
-            "de.syss.MifareClassicTool.Activity.TITLE";
+            "de.syss.MTCBrute4c.Activity.TITLE";
     /**
      * The text of the start key mapping button. Optional.
      * e.g. "Map Keys to Sectors"
      */
     public final static String EXTRA_BUTTON_TEXT =
-            "de.syss.MifareClassicTool.Activity.BUTTON_TEXT";
+            "de.syss.MTCBrute4c.Activity.BUTTON_TEXT";
 
     // Output parameters.
     // For later use.
 //    public final static String EXTRA_KEY_MAP =
-//            "de.syss.MifareClassicTool.Activity.KEY_MAP";
+//            "de.syss.MTCBrute4c.Activity.KEY_MAP";
 
 
     // Sector count of the biggest Mifare Classic tag (4K Tag)

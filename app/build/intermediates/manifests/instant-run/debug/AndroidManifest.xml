@@ -149,6 +149,12 @@
             android:icon="@drawable/diff_tool"
             android:label="@string/title_activity_diff_tool" >
         </activity>
+        <activity
+            android:name="de.syss.MCTBrute4c.Activities.Brute"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:icon="@drawable/brute_tag"
+            android:label="@string/title_activity_brute" >
+        </activity>
 
         <provider
             android:name="com.android.tools.ir.server.InstantRunContentProvider"

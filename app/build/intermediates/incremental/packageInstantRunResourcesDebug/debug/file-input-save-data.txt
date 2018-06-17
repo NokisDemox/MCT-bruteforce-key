@@ -1,19 +1,19 @@
 #Internal package file, do not edit.
-#Sun May 20 11:01:52 CEST 2018
+#Sat Jun 16 17:18:25 CEST 2018
 2.base=C\:\\Users\\Artero\\Desktop\\proyectos\\mct app mod\\mct brutef\\app\\build\\intermediates\\assets\\debug
 0.path=key-files/keys_large.txt
 2.baseType=DIRECTORY
 3.base=C\:\\Users\\Artero\\Desktop\\proyectos\\mct app mod\\mct brutef\\app\\build\\intermediates\\assets\\debug
 2.set=ASSET
-1.path=help/help.html
+1.path=help/ic_nokis_help.png
 4.base=C\:\\Users\\Artero\\Desktop\\proyectos\\mct app mod\\mct brutef\\app\\build\\intermediates\\assets\\debug
 count=5
-2.path=key-files/std.keys
+2.path=help/help.html
 4.set=ASSET
-3.path=key-files/extended-std.keys
+3.path=key-files/std.keys
 3.baseType=DIRECTORY
 1.set=ASSET
-4.path=help/mct_logo.png
+4.path=key-files/extended-std.keys
 1.baseType=DIRECTORY
 0.base=C\:\\Users\\Artero\\Desktop\\proyectos\\mct app mod\\mct brutef\\app\\build\\intermediates\\assets\\debug
 0.baseType=DIRECTORY

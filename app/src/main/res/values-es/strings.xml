@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
 /*
- * Copyright 2013 Gerhard Klostermeier
+ * Copyright 2018 NokisDemox
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -31,6 +31,7 @@
     <string name="title_activity_dump_editor">Editor de Dumpeos</string>
     <string name="title_activity_access_conditions">Condiciones de Acceso</string>
     <string name="title_activity_write_tag">Escribir Etiqueta</string>
+    <string name="title_activity_brute">Brute tag</string>
     <string name="title_activity_create_key_map">Mapear Claves a Sectores</string>
     <string name="title_activity_file_chooser">Escojer Ficheros</string>
     <string name="title_activity_value_blocks">Value Blocks como Enteros</string>
@@ -142,6 +143,7 @@
     <!-- Actions (Buttons, Checkboxs, etc. -->
     <string name="action_read_tag">Leer etiqueta</string>
     <string name="action_write_tag">Escribir etiqueta</string>
+    <string name="action_brute_tag">Bruteforce Tag</string>
     <string name="action_edit_tag_dump">Editar/Analizar Dumpeo</string>
     <string name="action_edit_key_dump">Editar/Analizar Fichero de Claves</string>
     <string name="action_tools">Herramientas</string>

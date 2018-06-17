@@ -176,8 +176,7 @@
             android:text="Single thread"
             android:id="@+id/radioButton"
             android:onClick="onSingleThread"
-            android:checked="true"
-             />
+            android:checked="true" />
 
         <RadioButton
             android:layout_width="wrap_content"
@@ -227,7 +226,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/bruteInfo"
-        android:textColor="@android:color/white"/>
+        android:textColor="@color/light_green"/>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -239,7 +238,8 @@
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:onClick="onBruteForce"
-            android:text="Start Brute-force" />
+            android:text="Start Brute-force"
+            android:textColor="@color/red"/>
 
         <Button
             android:id="@+id/save"

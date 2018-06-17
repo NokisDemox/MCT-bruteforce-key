@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
 /*
- * Copyright 2013 Gerhard Klostermeier
+ * Copyright 2018 NokisDemox
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -20,7 +20,6 @@
 
 
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/relativeLayoutMain"
     android:layout_width="match_parent"
@@ -41,12 +40,12 @@
             android:orientation="vertical"
             android:paddingLeft="10dp"
             android:paddingRight="10dp"
-            android:paddingTop="10dp" >
+            android:paddingTop="10dp">
 
             <LinearLayout
                 android:id="@+id/linearLayoutMainMenuRow1"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" >
+                android:layout_height="wrap_content">
 
                 <Button
                     android:id="@+id/buttonMainReadTag"
@@ -59,6 +58,22 @@
                     android:text="@string/action_read_tag" />
 
                 <Button
+                    android:id="@+id/buttonMainBrute"
+                    style="?android:attr/buttonStyleSmall"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.5"
+                    android:drawableTop="@drawable/brute_tag_soon"
+                    android:onClick="onShowBruteTag"
+                    android:text="@string/action_brute_tag" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearLayoutMainMenuRow2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <Button
                     android:id="@+id/buttonMainWriteTag"
                     style="?android:attr/buttonStyleSmall"
                     android:layout_width="match_parent"
@@ -68,12 +83,23 @@
                     android:onClick="onShowWriteTag"
                     android:text="@string/action_write_tag" />
 
+                <Button
+                    android:id="@+id/buttonMainTools"
+                    style="?android:attr/buttonStyleSmall"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.5"
+                    android:drawableTop="@drawable/tools"
+                    android:onClick="onShowTools"
+                    android:text="@string/action_tools" />
+
+
             </LinearLayout>
 
             <LinearLayout
-                android:id="@+id/linearLayoutMainMenuRow2"
+                android:id="@+id/linearLayoutMainMenuRow3"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" >
+                android:layout_height="wrap_content">
 
                 <Button
                     android:id="@+id/buttonMainEditCardDump"
@@ -98,19 +124,19 @@
             </LinearLayout>
 
             <LinearLayout
-                android:id="@+id/linearLayoutMainMenuRow3"
+                android:id="@+id/linearLayoutMainMenuRow4"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" >
+                android:layout_height="wrap_content">
 
                 <Button
-                    android:id="@+id/buttonMainTools"
+                    android:id="@+id/button"
                     style="?android:attr/buttonStyleSmall"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="0.5"
-                    android:drawableTop="@drawable/tools"
-                    android:onClick="onShowTools"
-                    android:text="@string/action_tools" />
+                    android:drawableTop="@drawable/nokisweb"
+                    android:onClick="browser1"
+                    android:text="NokisDemox Web Page" />
 
                 <Button
                     android:id="@+id/buttonMainHelp"
@@ -124,20 +150,9 @@
 
 
             </LinearLayout>
-
         </LinearLayout>
 
     </ScrollView>
-
-    <Button
-        android:id="@+id/button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/scrollViewMain"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="44dp"
-        android:text="NokisDemox Web Page"
-        android:onClick="browser1"/>
 
 
 </RelativeLayout>

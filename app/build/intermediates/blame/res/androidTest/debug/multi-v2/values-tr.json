@@ -1,0 +1,19 @@
+{
+    "logs": [
+        {
+            "outputFile": "C:\\Users\\Artero\\Desktop\\proyectos\\mct app mod\\mct brutef\\app\\build\\intermediates\\incremental\\mergeDebugAndroidTestResources\\merged.dir\\values-tr\\values-tr.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\Artero\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-23.4.0.aar\\e2aa1a3ea9e60fb56fd5ddda9f458141\\res\\values-tr\\values-tr.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,160,268,391,490,602,692,798,918,997,1073,1152,1259,1364,1460,1567,1669,1777,1896,1994",
+                        "endColumns": "104,107,122,98,111,89,105,119,78,75,78,106,104,95,106,101,107,118,97,100",
+                        "endOffsets": "155,263,386,485,597,687,793,913,992,1068,1147,1254,1359,1455,1562,1664,1772,1891,1989,2090"
+                    }
+                }
+            ]
+        }
+    ]
+}

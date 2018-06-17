@@ -3,60 +3,53 @@
 
     <item
         is-multidex="false"
-        jar="C:\Users\Artero\.gradle\caches\transforms-1\files-1.1\support-v4-23.4.0.aar\332c60e50e382c9e2499f1769fc3b8e4\jars\classes.jar"
+        jar="C:\Users\Artero\.gradle\caches\transforms-1\files-1.1\appcompat-v7-23.4.0.aar\e2aa1a3ea9e60fb56fd5ddda9f458141\jars\classes.jar"
         jumboMode="false"
         min-sdk-version="10"
         optimize="true"
         revision="26.0.2"
-        sha1="67bd36ee9340ec7c254108936ad16b24bed160cc">
-        <dex dex="C:\Users\Artero\Desktop\mct brutef\app\build\intermediates\transforms\preDex\release\1.jar" />
+        sha1="548f06de403a9409f00554b3ee12a9fdea0e236c">
+        <dex dex="C:\Users\Artero\Desktop\proyectos\mct app mod\mct brutef\app\build\intermediates\transforms\preDex\release\1.jar" />
     </item>
     <item
         is-multidex="false"
-        jar="C:\Users\Artero\Desktop\mct brutef\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.4.0\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.1"
-        sha1="67bd36ee9340ec7c254108936ad16b24bed160cc">
-        <dex dex="C:\Users\Artero\Desktop\mct brutef\app\build\intermediates\pre-dexed\debug\com.android.support-support-v4-23.4.0_dd40d2a4f26e6aa691fab78868021815f7b4f91f.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\Artero\Desktop\mct brutef\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.4.0\jars\libs\internal_impl-23.4.0.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.1"
-        sha1="ea3c07504d2c8f4b13aa17c45c1b68ed9c1c3674">
-        <dex dex="C:\Users\Artero\Desktop\mct brutef\app\build\intermediates\pre-dexed\debug\internal_impl-23.4.0_1d4a371d50359255fcf487a09e230bc129257561.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\Artero\AppData\Local\Android\Sdk\extras\android\m2repository\com\android\support\support-annotations\23.4.0\support-annotations-23.4.0.jar"
+        jar="C:\Users\Artero\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-23.4.0.aar\f7bacfb52c35aa8a2822b2ffb5afb82c\jars\classes.jar"
         jumboMode="false"
         min-sdk-version="10"
         optimize="true"
         revision="26.0.2"
-        sha1="ffbe55fdb2bb456b1485831706a9eac3300bb6b8">
-        <dex dex="C:\Users\Artero\Desktop\mct brutef\app\build\intermediates\transforms\preDex\release\3.jar" />
+        sha1="de4db3785756bfb0915a9f59a9b3f2fea7407be4">
+        <dex dex="C:\Users\Artero\Desktop\proyectos\mct app mod\mct brutef\app\build\intermediates\transforms\preDex\release\2.jar" />
     </item>
     <item
         is-multidex="false"
-        jar="C:\Users\Artero\.gradle\caches\transforms-1\files-1.1\support-v4-23.4.0.aar\332c60e50e382c9e2499f1769fc3b8e4\jars\libs\internal_impl-23.4.0.jar"
+        jar="C:\Users\Artero\.gradle\caches\modules-2\files-2.1\com.android.support.constraint\constraint-layout-solver\1.1.0\931532e953a477f876f2de18c2e7f16eee01078f\constraint-layout-solver-1.1.0.jar"
         jumboMode="false"
         min-sdk-version="10"
         optimize="true"
         revision="26.0.2"
-        sha1="ea3c07504d2c8f4b13aa17c45c1b68ed9c1c3674">
-        <dex dex="C:\Users\Artero\Desktop\mct brutef\app\build\intermediates\transforms\preDex\release\2.jar" />
+        sha1="931532e953a477f876f2de18c2e7f16eee01078f">
+        <dex dex="C:\Users\Artero\Desktop\proyectos\mct app mod\mct brutef\app\build\intermediates\transforms\preDex\release\8.jar" />
     </item>
     <item
         is-multidex="false"
-        jar="C:\Users\Artero\AppData\Local\Android\Sdk\extras\android\m2repository\com\android\support\support-annotations\23.4.0\support-annotations-23.4.0.jar"
+        jar="C:\Users\Artero\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.0.aar\6967b91b56e891fd4b5388f0b0fcec10\jars\classes.jar"
         jumboMode="false"
+        min-sdk-version="10"
         optimize="true"
-        revision="23.0.1"
-        sha1="ffbe55fdb2bb456b1485831706a9eac3300bb6b8">
-        <dex dex="C:\Users\Artero\Desktop\mct brutef\app\build\intermediates\pre-dexed\debug\support-annotations-23.4.0_d372243be6cad2dd8934b94285f0b4ade889f4ef.jar" />
+        revision="26.0.2"
+        sha1="f46121a7c3b3ba958fc27c39447ae205be23ac4a">
+        <dex dex="C:\Users\Artero\Desktop\proyectos\mct app mod\mct brutef\app\build\intermediates\transforms\preDex\release\6.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Artero\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-23.4.0.aar\7c1d8f25217d0af3043a6a3f73a94a77\jars\classes.jar"
+        jumboMode="false"
+        min-sdk-version="10"
+        optimize="true"
+        revision="26.0.2"
+        sha1="c2c594cace5d83a3227b2b6e658ecbfd586d3ed9">
+        <dex dex="C:\Users\Artero\Desktop\proyectos\mct app mod\mct brutef\app\build\intermediates\transforms\preDex\release\3.jar" />
     </item>
 
 </items>

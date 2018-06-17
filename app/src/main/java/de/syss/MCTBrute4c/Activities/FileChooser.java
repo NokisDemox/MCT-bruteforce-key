@@ -1,5 +1,5 @@
 /*
- * Copyright 2013 Gerhard Klostermeier
+ * Copyright 2018 NokisDemox
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -68,37 +68,37 @@ public class FileChooser extends BasicActivity {
      * are the files the user can choose from. This must be in the Intent.
      */
     public final static String EXTRA_DIR =
-            "de.syss.MifareClassicTool.Activity.DIR";
+            "de.syss.MTCBrute4c.Activity.DIR";
     /**
      * The title of the activity. Optional.
      * e.g. "Open Dump File"
      */
     public final static String EXTRA_TITLE =
-            "de.syss.MifareClassicTool.Activity.TITLE";
+            "de.syss.MTCBrute4c.Activity.TITLE";
     /**
      * The small text above the files. Optional.
      * e.g. "Please choose a file:
      */
     public final static String EXTRA_CHOOSER_TEXT =
-            "de.syss.MifareClassicTool.Activity.CHOOSER_TEXT";
+            "de.syss.MTCBrute4c.Activity.CHOOSER_TEXT";
     /**
      * The text of the choose button. Optional.
      * e.g. "Open File"
      */
     public final static String EXTRA_BUTTON_TEXT =
-            "de.syss.MifareClassicTool.Activity.BUTTON_TEXT";
+            "de.syss.MTCBrute4c.Activity.BUTTON_TEXT";
     /**
      * Enable/Disable the menu item  that allows the user to create a new file.
      * Optional. Boolean value. Disabled (false) by default.
      */
     public final static String EXTRA_ENABLE_NEW_FILE =
-            "de.syss.MifareClassicTool.Activity.ENABLE_NEW_FILE";
+            "de.syss.MTCBrute4c.Activity.ENABLE_NEW_FILE";
     /**
      * Enable/Disable the menu item  that allows the user to delete a file.
      * Optional. Boolean value. Disabled (false) by default.
      */
     public final static String EXTRA_ENABLE_DELETE_FILE =
-            "de.syss.MifareClassicTool.Activity.ENABLE_DELETE_FILE";
+            "de.syss.MTCBrute4c.Activity.ENABLE_DELETE_FILE";
 
 
     // Output parameter.
@@ -108,14 +108,14 @@ public class FileChooser extends BasicActivity {
      * {@link Activity#RESULT_OK}.
      */
     public final static String EXTRA_CHOSEN_FILE =
-            "de.syss.MifareClassicTool.Activity.CHOSEN_FILE";
+            "de.syss.MTCBrute4c.Activity.CHOSEN_FILE";
     /**
      * The filename (without path) that will be passed via Intent
      * to onActivityResult() method. The result code will be
      * {@link Activity#RESULT_OK}.
      */
     public final static String EXTRA_CHOSEN_FILENAME =
-            "de.syss.MifareClassicTool.Activity.EXTRA_CHOSEN_FILENAME";
+            "de.syss.MTCBrute4c.Activity.EXTRA_CHOSEN_FILENAME";
 
 
     private static final String LOG_TAG =

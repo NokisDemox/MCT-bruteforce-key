@@ -1,5 +1,5 @@
 #Internal package file, do not edit.
-#Sun May 20 11:03:03 CEST 2018
+#Sun Jun 17 16:17:47 CEST 2018
 2.base=C\:\\Users\\Artero\\Desktop\\proyectos\\mct app mod\\mct brutef\\app\\build\\intermediates\\assets\\release
 5.set=ASSET
 0.path=help/help.html
@@ -13,10 +13,10 @@ count=6
 2.path=key-files/keys_large.txt
 5.base=C\:\\Users\\Artero\\Desktop\\proyectos\\mct app mod\\mct brutef\\app\\build\\intermediates\\assets\\release
 4.set=ASSET
-3.path=key-files/std.keys
+3.path=help/ic_nokis_help.png
 3.baseType=DIRECTORY
 1.set=DEX
-4.path=help/mct_logo.png
+4.path=key-files/std.keys
 1.baseType=DIRECTORY
 5.path=key-files/extended-std.keys
 0.base=C\:\\Users\\Artero\\Desktop\\proyectos\\mct app mod\\mct brutef\\app\\build\\intermediates\\assets\\release

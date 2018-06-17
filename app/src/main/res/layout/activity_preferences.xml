@@ -24,7 +24,7 @@
     android:id="@+id/relativeLayoutPreferences"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Preferences"
+    tools:context=".Activities.Preferences"
     android:padding="5dp"
     android:background="@drawable/back2">
 

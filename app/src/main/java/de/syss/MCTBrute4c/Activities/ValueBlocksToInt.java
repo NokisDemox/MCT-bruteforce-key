@@ -1,5 +1,5 @@
 /*
- * Copyright 2013 Gerhard Klostermeier
+ * Copyright 2018 NokisDemox
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -42,7 +42,7 @@ import de.syss.MCTBrute4c.R;
 public class ValueBlocksToInt extends BasicActivity {
 
     public final static String EXTRA_VB =
-            "de.syss.MifareClassicTool.Activity.VB";
+            "de.syss.MTCBrute4c.Activity.VB";
 
     private static final String LOG_TAG =
             ValueBlocksToInt.class.getSimpleName();

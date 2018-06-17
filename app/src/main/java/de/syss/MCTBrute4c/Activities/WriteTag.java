@@ -1,5 +1,5 @@
 /*
- * Copyright 2013 Gerhard Klostermeier
+ * Copyright 2018 NokisDemox
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -70,7 +70,7 @@ public class WriteTag extends BasicActivity {
      * (e.g. "Sector: 1") are marked with a "+"-symbol (e.g. "+Sector: 1").
      */
     public final static String EXTRA_DUMP =
-            "de.syss.MifareClassicTool.Activity.DUMP";
+            "de.syss.MTCBrute4c.Activity.DUMP";
 
     private static final int FC_WRITE_DUMP = 1;
     private static final int CKM_WRITE_DUMP = 2;

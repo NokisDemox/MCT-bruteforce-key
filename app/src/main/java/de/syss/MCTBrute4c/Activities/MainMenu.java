@@ -1,5 +1,5 @@
 /*
- * Copyright 2013 Gerhard Klostermeier
+ * Copyright 2018 NokisDemox
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -84,6 +84,7 @@ public class MainMenu extends Activity {
     private AlertDialog mEnableNfc;
     private Button mReadTag;
     private Button mWriteTag;
+    private Button mBrute;
     private boolean mResume = true;
     private Intent mOldIntent = null;
     private void requestStoragePermission() {
@@ -138,17 +139,13 @@ public class MainMenu extends Activity {
         }
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_menu);
-
-
-
-
         // Add the context menu to the tools button.
         Button tools = (Button) findViewById(R.id.buttonMainTools);
         registerForContextMenu(tools);
-
         // Find Read/Write buttons and bind them to member vars.
         mReadTag = (Button) findViewById(R.id.buttonMainReadTag);
         mWriteTag = (Button) findViewById(R.id.buttonMainWriteTag);
+        mBrute = (Button) findViewById(R.id.buttonMainBrute);
 
         Common.setUseAsEditorOnly(false);
 
@@ -174,6 +171,7 @@ public class MainMenu extends Activity {
                         Common.setUseAsEditorOnly(true);
                         mReadTag.setEnabled(false);
                         mWriteTag.setEnabled(false);
+                        mBrute.setEnabled(false);
                     }
                  })
                  .setOnCancelListener(new DialogInterface.OnCancelListener() {
@@ -216,10 +214,6 @@ public class MainMenu extends Activity {
                 Log.e(LOG_TAG, "Error while creating '" + Common.HOME_DIR
                         + Common.TMP_DIR + "' directory.");
                 return;
-            }
-            // Clean up tmp directory.
-            for (File file : path.listFiles()) {
-                file.delete();
             }
 
             // Create std. key file if there is none.
@@ -383,6 +377,7 @@ public class MainMenu extends Activity {
             // Disable read/write tag options.
             mReadTag.setEnabled(false);
             mWriteTag.setEnabled(false);
+            mBrute.setEnabled(false);
             CharSequence styledText = Html.fromHtml(
                     getString(R.string.dialog_no_mfc_support_device));
             AlertDialog ad = new AlertDialog.Builder(this)
@@ -478,6 +473,7 @@ public class MainMenu extends Activity {
                 // Disable read/write tag options.
                 mReadTag.setEnabled(false);
                 mWriteTag.setEnabled(false);
+                mBrute.setEnabled(false);
             }
         } else {
             // NFC is enabled. Hide dialog and enable NFC
@@ -498,6 +494,7 @@ public class MainMenu extends Activity {
             if (Common.hasMifareClassicSupport()) {
                 mReadTag.setEnabled(true);
                 mWriteTag.setEnabled(true);
+                mBrute.setEnabled(true);
             }
         }
     }
@@ -540,6 +537,11 @@ public class MainMenu extends Activity {
         startActivity(intent);
     }
 
+    public void onShowBruteTag(View view) {
+        Intent intent = new Intent(MainMenu.this, Brute.class);
+        startActivity(intent);
+    }
+
     /**
      * Show the {@link WriteTag}.
      * @param view The View object that triggered the method
@@ -550,8 +552,7 @@ public class MainMenu extends Activity {
         Intent intent = new Intent(this, WriteTag.class);
         startActivity(intent);
     }
-
-    /**
+        /**
      * Show the {@link HelpAndInfo}.
      * @param view The View object that triggered the method
      * (in this case the help/info button).
