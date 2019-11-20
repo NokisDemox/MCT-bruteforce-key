@@ -1,16 +1,35 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\Artero\\Desktop\\proyectos\\mct app mod\\mct brutef\\app\\build\\intermediates\\incremental\\mergeReleaseResources\\merged.dir\\values-land\\values-land.xml",
+            "outputFile": "E:\\Users\\Artero\\Desktop\\proyectos\\mct-app-mod\\mct new ver madafaka\\app\\build\\intermediates\\incremental\\mergeReleaseResources\\merged.dir\\values-land\\values-land.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\Artero\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-23.4.0.aar\\e2aa1a3ea9e60fb56fd5ddda9f458141\\res\\values-land\\values-land.xml",
+                    "source": "C:\\Users\\NokisDemox\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-23.4.0.aar\\495b997cbbcfd063c8e2e0d04cdbdd8c\\res\\values-land\\values-land.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7",
                         "startColumns": "4,4,4,4,4,4",
                         "startOffsets": "55,117,189,259,323,394",
                         "endColumns": "61,71,69,63,70,67",
                         "endOffsets": "112,184,254,318,389,457"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\NokisDemox\\.gradle\\caches\\transforms-1\\files-1.1\\design-23.4.0.aar\\9b84797d2f2d9830037c0d4fa7875c28\\res\\values-land\\values-land.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endLines": "5",
+                        "endColumns": "12",
+                        "endOffsets": "232"
+                    },
+                    "to": {
+                        "startLines": "8",
+                        "startColumns": "4",
+                        "startOffsets": "462",
+                        "endLines": "11",
+                        "endColumns": "12",
+                        "endOffsets": "639"
                     }
                 }
             ]

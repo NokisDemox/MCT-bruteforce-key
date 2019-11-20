@@ -40,7 +40,7 @@ import de.syss.MCTBrute4c.Activities.Preferences.Preference;
 
 /**
  * Provides functions to read/write/analyze a Mifare Classic tag.
- * @author Gerhard Klostermeier
+ *
  */
 public class MCReader {
 

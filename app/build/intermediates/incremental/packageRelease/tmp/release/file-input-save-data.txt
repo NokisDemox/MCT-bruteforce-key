@@ -1,0 +1,35 @@
+#Internal package file, do not edit.
+#Sun Nov 10 17:54:40 CET 2019
+7.path=key-files/full.keys
+2.base=E\:\\Users\\Artero\\Desktop\\proyectos\\mct-app-mod\\mct new ver madafaka\\app\\build\\intermediates\\assets\\release
+5.set=ASSET
+0.path=help/help.html
+2.baseType=DIRECTORY
+3.base=E\:\\Users\\Artero\\Desktop\\proyectos\\mct-app-mod\\mct new ver madafaka\\app\\build\\intermediates\\assets\\release
+7.baseType=DIRECTORY
+2.set=ASSET
+1.path=key-files/extended-std.keys
+4.base=E\:\\Users\\Artero\\Desktop\\proyectos\\mct-app-mod\\mct new ver madafaka\\app\\build\\intermediates\\assets\\release
+7.set=ASSET
+count=8
+5.baseType=DIRECTORY
+2.path=key-files/std.keys
+5.base=E\:\\Users\\Artero\\Desktop\\proyectos\\mct-app-mod\\mct new ver madafaka\\app\\build\\intermediates\\assets\\release
+4.set=ASSET
+3.path=credit-card/cc.cc
+6.base=E\:\\Users\\Artero\\Desktop\\proyectos\\mct-app-mod\\mct new ver madafaka\\app\\build\\intermediates\\transforms\\dexMerger\\release\\0
+3.baseType=DIRECTORY
+1.set=ASSET
+4.path=ultralight-dumps/ultralight-test.mut
+7.base=E\:\\Users\\Artero\\Desktop\\proyectos\\mct-app-mod\\mct new ver madafaka\\app\\build\\intermediates\\assets\\release
+6.set=DEX
+1.baseType=DIRECTORY
+6.baseType=DIRECTORY
+5.path=help/ic_nokis_help.png
+0.base=E\:\\Users\\Artero\\Desktop\\proyectos\\mct-app-mod\\mct new ver madafaka\\app\\build\\intermediates\\assets\\release
+0.baseType=DIRECTORY
+3.set=ASSET
+6.path=classes.dex
+1.base=E\:\\Users\\Artero\\Desktop\\proyectos\\mct-app-mod\\mct new ver madafaka\\app\\build\\intermediates\\assets\\release
+4.baseType=DIRECTORY
+0.set=ASSET

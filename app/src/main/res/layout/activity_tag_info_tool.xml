@@ -24,7 +24,7 @@
     android:id="@+id/relativeLayoutTagInfoTool"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Activities.TagInfoTool" >
+    tools:context=".TagInfoTool" >
 
     <LinearLayout
         android:id="@+id/linearLayoutTagInfoToolSupport"
@@ -55,13 +55,28 @@
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:textColor="@color/red" />
 
-        <Button
-            android:id="@+id/buttonTagInfoToolReadMore"
+        <LinearLayout
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_vertical"
-            android:onClick="onReadMore"
-            android:text="@string/action_more" />
+            android:orientation="vertical"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/buttonTagInfoToolReadMore"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:onClick="onReadMore"
+                android:text="@string/action_more" />
+
+            <Button
+                android:id="@+id/buttonTagInfoToolUltralight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:onClick="onShowUltralightReader"
+                android:text="@string/ultralight_more_btn_open" />
+
+        </LinearLayout>
 
     </LinearLayout>
 

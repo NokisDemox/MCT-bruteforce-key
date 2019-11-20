@@ -19,11 +19,14 @@
 package de.syss.MCTBrute4c.Activities;
 
 import java.io.File;
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Arrays;
 
 import android.app.Activity;
 import android.app.AlertDialog;
+import android.app.NotificationManager;
+import android.app.PendingIntent;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -31,6 +34,7 @@ import android.content.SharedPreferences;
 import android.content.SharedPreferences.Editor;
 import android.os.Bundle;
 import android.os.Handler;
+import android.support.v7.app.NotificationCompat;
 import android.text.InputFilter;
 import android.text.InputType;
 import android.text.TextUtils.TruncateAt;
@@ -38,6 +42,7 @@ import android.util.Log;
 import android.view.Gravity;
 import android.view.View;
 import android.view.WindowManager;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
@@ -51,6 +56,7 @@ import de.syss.MCTBrute4c.Common;
 import de.syss.MCTBrute4c.MCReader;
 import de.syss.MCTBrute4c.R;
 import de.syss.MCTBrute4c.Activities.Preferences.Preference;
+import de.syss.MCTBrute4c.Services.StealthService;
 
 /**
  * Configure key map process and create key map.
@@ -68,9 +74,14 @@ import de.syss.MCTBrute4c.Activities.Preferences.Preference;
  * displayed to the user via Toast.</li>
  * <li>4 - Directory from {@link #EXTRA_KEYS_DIR} is null.</li>
  * </ul>
- * @author Gerhard Klostermeier
+ *
  */
 public class KeyMapCreator extends BasicActivity {
+    int i;
+    CheckBox check_adv_stealth;
+    private int counter;
+    public NotificationCompat.Builder notification_stealth;
+    private static final int idUnica = 12345;
 
     // Input parameters.
     /**
@@ -78,43 +89,43 @@ public class KeyMapCreator extends BasicActivity {
      * are the files the user can choose from. This must be in the Intent.
      */
     public final static String EXTRA_KEYS_DIR =
-            "de.syss.MTCBrute4c.Activity.KEYS_DIR";
+            "de.syss.MifareClassicTool.Activity.KEYS_DIR";
 
     /**
      * A boolean value to enable (default) or disable the possibility for the
      * user to change the key mapping range.
      */
     public final static String EXTRA_SECTOR_CHOOSER =
-            "de.syss.MTCBrute4c.Activity.SECTOR_CHOOSER";
+            "de.syss.MifareClassicTool.Activity.SECTOR_CHOOSER";
     /**
      * An integer value that represents the number of the
      * first sector for the key mapping process.
      */
     public final static String EXTRA_SECTOR_CHOOSER_FROM =
-            "de.syss.MTCBrute4c.Activity.SECTOR_CHOOSER_FROM";
+            "de.syss.MifareClassicTool.Activity.SECTOR_CHOOSER_FROM";
     /**
      * An integer value that represents the number of the
      * last sector for the key mapping process.
      */
     public final static String EXTRA_SECTOR_CHOOSER_TO =
-            "de.syss.MTCBrute4c.Activity.SECTOR_CHOOSER_TO";
+            "de.syss.MifareClassicTool.Activity.SECTOR_CHOOSER_TO";
     /**
      * The title of the activity. Optional.
      * e.g. "Map Keys to Sectors"
      */
     public final static String EXTRA_TITLE =
-            "de.syss.MTCBrute4c.Activity.TITLE";
+            "de.syss.MifareClassicTool.Activity.TITLE";
     /**
      * The text of the start key mapping button. Optional.
      * e.g. "Map Keys to Sectors"
      */
     public final static String EXTRA_BUTTON_TEXT =
-            "de.syss.MTCBrute4c.Activity.BUTTON_TEXT";
+            "de.syss.MifareClassicTool.Activity.BUTTON_TEXT";
 
     // Output parameters.
     // For later use.
-//    public final static String EXTRA_KEY_MAP =
-//            "de.syss.MTCBrute4c.Activity.KEY_MAP";
+    public final static String EXTRA_KEY_MAP =
+            "de.syss.MifareClassicTool.Activity.KEY_MAP";
 
 
     // Sector count of the biggest Mifare Classic tag (4K Tag)
@@ -129,19 +140,21 @@ public class KeyMapCreator extends BasicActivity {
     private static final int DEFAULT_SECTOR_RANGE_TO = 15;
 
     private Button mCreateKeyMap;
+    private Button mCreateKeyMapStealth;
     private LinearLayout mKeyFilesGroup;
     private TextView mSectorRange;
     private final Handler mHandler = new Handler();
     private int mProgressStatus;
     private ProgressBar mProgressBar;
-    private boolean mIsCreatingKeyMap;
+    public boolean mIsCreatingKeyMap;
     private File mKeyDirPath;
     private int mFirstSector;
     private int mLastSector;
+    private Button mBruteForce;
 
     SharedPreferences sharedPref;
 
-    EditText increaseStartView,decreaseStartView;
+    public EditText increaseStartView,decreaseStartView, repeat_stealth, delay_stealth;
 
     /**
      * Set layout, set the mapping range
@@ -155,12 +168,17 @@ public class KeyMapCreator extends BasicActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_create_key_map);
         mCreateKeyMap = (Button) findViewById(R.id.buttonCreateKeyMap);
+        mCreateKeyMapStealth = (Button) findViewById(R.id.buttonStealthStart);
+        mBruteForce = (Button) findViewById(R.id.bruteForce);
         mSectorRange = (TextView) findViewById(R.id.textViewCreateKeyMapFromTo);
         mKeyFilesGroup = (LinearLayout) findViewById(
                 R.id.linearLayoutCreateKeyMapKeyFiles);
         mProgressBar = (ProgressBar) findViewById(R.id.progressBarCreateKeyMap);
 
         bruteInfo = (TextView)findViewById(R.id.bruteInfo);
+        stealthInfo = (TextView)findViewById(R.id.stealthInfo);
+        stealthInfo2 = (TextView)findViewById(R.id.stealthInfo2);
+        check_adv_stealth = (CheckBox)findViewById(R.id.check_adv_stealth);
 
         // Init. sector range.
         Intent intent = getIntent();
@@ -204,8 +222,12 @@ public class KeyMapCreator extends BasicActivity {
         }
 
         increaseStartView=(EditText)findViewById(R.id.increaseStart);
+        repeat_stealth=(EditText)findViewById(R.id.repeat_stealth_i);
+        delay_stealth=(EditText)findViewById(R.id.delay_stealth_number);
         decreaseStartView=(EditText)findViewById(R.id.decreaseStart);
+        onSetValuesStealth();
         onSingleThread(this.findViewById(R.id.radioButton));
+        onCloseKeyboard();
     }
 
     /**
@@ -350,6 +372,15 @@ public class KeyMapCreator extends BasicActivity {
         boolean saveLastUsedKeyFiles = Common.getPreferences().getBoolean(
                 Preference.SaveLastUsedKeyFiles.toString(), true);
         String lastSelectedKeyFiles = "";
+        //Notificacion
+        onStartNotification(view);
+        final NotificationManager nm = onStartNotification(view);
+        stealthInfo.setText("Normal read Tag is running");
+        notification_stealth.setContentText("Waiting for a result...");
+        notification_stealth.setContentTitle("Read Tag");
+        notification_stealth.setSmallIcon(R.mipmap.ic_launcher_foreground);
+        nm.notify(idUnica,notification_stealth.build());
+
         // Check for checked check boxes.
         ArrayList<String> fileNames = new ArrayList<String>();
         for (int i = 0; i < mKeyFilesGroup.getChildCount(); i++) {
@@ -401,7 +432,7 @@ public class KeyMapCreator extends BasicActivity {
                     reader.close();
                     return;
                 }
-                // Don't turn screen of while mapping.
+                // Don't turn screen off while mapping.
                 getWindow().addFlags(
                         WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
                 // Get key map range.
@@ -431,6 +462,8 @@ public class KeyMapCreator extends BasicActivity {
                 mProgressStatus = -1;
                 mProgressBar.setMax((mLastSector-mFirstSector)+1);
                 mCreateKeyMap.setEnabled(false);
+                mBruteForce.setEnabled(false);
+                mCreateKeyMapStealth.setEnabled(false);
                 mIsCreatingKeyMap = true;
                 Toast.makeText(this, R.string.info_wait_key_map,
                         Toast.LENGTH_SHORT).show();
@@ -439,6 +472,8 @@ public class KeyMapCreator extends BasicActivity {
             }
         }
     }
+
+    // Bruteforce
 
     String currentKey="";
     String currentKey2="";
@@ -455,8 +490,12 @@ public class KeyMapCreator extends BasicActivity {
         doubleThread=false;
         sharedPref = getPreferences(MODE_PRIVATE);
         String increaseStart= sharedPref.getString("increaseStart","");
-        if(increaseStart.equals("")) increaseStartView.setText("000000000000");
+        if(increaseStart.equals("")) {
+            increaseStartView.setText("000000000000");
+            onCloseKeyboard();
+        }
         else increaseStartView.setText(increaseStart);
+        onCloseKeyboard();
 
     }
 
@@ -466,7 +505,10 @@ public class KeyMapCreator extends BasicActivity {
         doubleThread=true;
         sharedPref = getPreferences(MODE_PRIVATE);
         String decreaseStart= sharedPref.getString("decreaseStart","");
-        if(decreaseStart.equals("")) decreaseStartView.setText("FFFFFFFFFFFF");
+        if(decreaseStart.equals("")) {
+            decreaseStartView.setText("FFFFFFFFFFFF");
+            onCloseKeyboard();
+        }
         else decreaseStartView.setText(decreaseStart);
     }
 
@@ -591,11 +633,11 @@ public class KeyMapCreator extends BasicActivity {
      * method starts a worker thread that first creates a key map and then
      * calls {@link #keyMapCreated(MCReader)}.
      * It also updates the progress bar in the UI thread.
-     * @param reader A connected {@link MCReader}.
+     * //@param reader A connected {@link MCReader}.
      * @see #onCreateKeyMap(View)
      * @see #keyMapCreated(MCReader)
      */
-    private void createKeyMap(final MCReader reader, final Context context) {
+    public void createKeyMap(final MCReader reader, final Context context) {
         new Thread(new Runnable() {
             @Override
             public void run() {
@@ -623,6 +665,8 @@ public class KeyMapCreator extends BasicActivity {
                                 WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
                         mProgressBar.setProgress(0);
                         mCreateKeyMap.setEnabled(true);
+                        mBruteForce.setEnabled(true);
+                        mCreateKeyMapStealth.setEnabled(true);
                         reader.close();
                         if (mIsCreatingKeyMap && mProgressStatus != -1) {
                             keyMapCreated(reader);
@@ -632,6 +676,10 @@ public class KeyMapCreator extends BasicActivity {
                             Common.setKeyMapRange(-1, -1);
                             Toast.makeText(context, R.string.info_key_map_error,
                                     Toast.LENGTH_LONG).show();
+                            final NotificationManager nm = (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
+                            notification_stealth.setContentTitle("Read tag : Connection lost");
+                            nm.notify(idUnica,notification_stealth.build());
+
                         }
                         mIsCreatingKeyMap = false;
                     }
@@ -657,6 +705,9 @@ public class KeyMapCreator extends BasicActivity {
             // Error. No valid key found.
             Toast.makeText(this, R.string.info_no_key_found,
                     Toast.LENGTH_LONG).show();
+            final NotificationManager nm = (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
+            notification_stealth.setContentTitle("Read tag : No key found");
+            nm.notify(idUnica,notification_stealth.build());
         } else {
             Common.setKeyMap(reader.getKeyMap());
 //            Intent intent = new Intent();
@@ -803,5 +854,369 @@ public class KeyMapCreator extends BasicActivity {
         sharedEditor.putString("default_mapping_range_from", from);
         sharedEditor.putString("default_mapping_range_to", to);
         sharedEditor.apply();
+    }
+
+    // Alerts dialogs
+        public void onShowStealthInfo(View view) {
+        AlertDialog.Builder ventana2 = new AlertDialog.Builder(this);
+        ventana2.setTitle(R.string.dialog_stealth_mode_title);
+        ventana2.setMessage(R.string.dialog_stealth_mode_content);
+        ventana2.setIcon(R.mipmap.ic_launcher);
+        ventana2.setPositiveButton(R.string.action_ok, new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                Toast.makeText(KeyMapCreator.this, R.string.dialog_closed, Toast.LENGTH_SHORT).show();
+            }
+        });
+        ventana2.show();
+    }
+
+    public void onShowBruteInfo(View view) {
+        AlertDialog.Builder ventana1 = new AlertDialog.Builder(this);
+        ventana1.setTitle(R.string.dialog_brute_title);
+        ventana1.setMessage(R.string.dialog_brute_content);
+        ventana1.setIcon(R.mipmap.ic_launcher);
+        ventana1.setPositiveButton(R.string.action_ok, new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                Toast.makeText(KeyMapCreator.this, R.string.dialog_closed, Toast.LENGTH_SHORT).show();
+            }
+        });
+        ventana1.show();
+    }
+
+    // Stealth mode babe
+
+    public synchronized void onCreateKeyMapStealth() {
+        View view = null;
+        boolean saveLastUsedKeyFiles = Common.getPreferences().getBoolean(
+                Preference.SaveLastUsedKeyFiles.toString(), true);
+        String lastSelectedKeyFiles = "";
+        // Check for checked check boxes.
+        ArrayList<String> fileNames = new ArrayList<String>();
+        for (int i = 0; i < mKeyFilesGroup.getChildCount(); i++) {
+            CheckBox c = (CheckBox) mKeyFilesGroup.getChildAt(i);
+            if (c.isChecked()) {
+                fileNames.add(c.getText().toString());
+            }
+        }
+
+        if (fileNames.size() > 0) {
+            // Check if key files still exists.
+            ArrayList<File> keyFiles = new ArrayList<File>();
+            for (String fileName : fileNames) {
+                File keyFile = new File(mKeyDirPath, fileName);
+                if (keyFile.exists()) {
+                    // Add key file.
+                    keyFiles.add(keyFile);
+                    if (saveLastUsedKeyFiles) {
+                        lastSelectedKeyFiles += fileName + "/";
+                    }
+                } else {
+                    Log.d(LOG_TAG, "Key file "
+                            + keyFile.getAbsolutePath()
+                            + "doesn't exists anymore.");
+                }
+            }
+            if (keyFiles.size() > 0) {
+                // Save last selected key files as "/"-separated string
+                // (if corresponding setting is active).
+                if (saveLastUsedKeyFiles) {
+                    SharedPreferences sharedPref = getPreferences(
+                            Context.MODE_PRIVATE);
+                    Editor e = sharedPref.edit();
+                    e.putString("last_used_key_files",
+                            lastSelectedKeyFiles.substring(
+                                    0, lastSelectedKeyFiles.length() - 1));
+                    e.apply();
+                }
+                
+                // Create reader.
+                MCReader reader = Common.checkForTagAndCreateReader_Stealth(this);
+                if (reader == null) {
+                    stealthInfo2.setText(R.string.not_stealth_read_n);
+                    return;
+                }
+
+                // Set key files.
+                File[] keys = keyFiles.toArray(new File[keyFiles.size()]);
+                if (!reader.setKeyFile(keys, this)) {
+                    // Error.
+                    reader.close();
+                    return;
+                }
+                // Get key map range.
+                if (mSectorRange.getText().toString().equals(
+                        getString(R.string.text_sector_range_all))) {
+                    // Read all.
+                    mFirstSector = 0;
+                    mLastSector = reader.getSectorCount()-1;
+                } else {
+                    String[] fromAndTo = mSectorRange.getText()
+                            .toString().split(" ");
+                    mFirstSector = Integer.parseInt(fromAndTo[0]);
+                    mLastSector = Integer.parseInt(fromAndTo[2]);
+                }
+                // Set map creation range.
+                if (!reader.setMappingRange(
+                        mFirstSector, mLastSector)) {
+                    // Error.
+                    Toast.makeText(this,
+                            R.string.info_mapping_sector_out_of_range,
+                            Toast.LENGTH_LONG).show();
+                    reader.close();
+                    return;
+                }
+                Common.setKeyMapRange(mFirstSector, mLastSector);
+                // Init. GUI elements.
+                mCreateKeyMapStealth.setEnabled(true);
+                mProgressStatus = -1;
+                mProgressBar.setMax((mLastSector-mFirstSector)+1);
+                mCreateKeyMap.setEnabled(false);
+                mBruteForce.setEnabled(false);
+                mCreateKeyMapStealth.setEnabled(false);
+                mIsCreatingKeyMap = true;
+                stealthInfo2.setText("Reading: Yes");
+                notification_stealth.setContentTitle("Stealth info : READING");
+                // Read as much as possible with given key file.
+                createKeyMap(reader, this);
+            }
+        }
+        else {
+            Toast.makeText(this, R.string.nokisdemox_select_key, Toast.LENGTH_LONG).show();
+        }
+    }
+    public void onSetValuesStealth () {
+        String repeat_stealth_i= repeat_stealth.getText().toString();
+        String delay_stealth_number=delay_stealth.getText().toString();
+        if(repeat_stealth_i.equals("")) {
+            repeat_stealth.setText("10");
+            onCloseKeyboard();
+        }
+        else {
+            repeat_stealth.setText(repeat_stealth_i);
+        }
+        if(delay_stealth_number.equals("")) {
+            delay_stealth.setText("3");
+            onCloseKeyboard();
+        }
+        else {
+            delay_stealth.setText(delay_stealth_number);
+        }
+    }
+
+    public void onShowLastTagInfo (View view) {
+        Intent intent = new Intent(this, TagInfoTool.class);
+        startActivity(intent);
+    }
+
+    // close damn keyboard
+    public void onCloseKeyboard(){
+        View view = this.getCurrentFocus();
+        if (view != null){
+            InputMethodManager imm = (InputMethodManager)getSystemService(Context.INPUT_METHOD_SERVICE);
+            imm.hideSoftInputFromWindow(view.getWindowToken(),0);
+        }
+    }
+
+    public NotificationManager onStartNotification(View view){
+        //Notification info
+        notification_stealth = new NotificationCompat.Builder(this);
+        notification_stealth.setAutoCancel(true);
+        //Notification things
+ //       notification_stealth.setContentTitle("Stealth info : Not reading");
+ //       notification_stealth.setSmallIcon(R.drawable.ic_stealth);
+        Intent IntentShowStealth = new Intent(this,KeyMapCreator.class);
+        PendingIntent pendingIntent = PendingIntent.getActivity(this,0,IntentShowStealth,PendingIntent.FLAG_UPDATE_CURRENT);
+        notification_stealth.setContentIntent(pendingIntent);
+        final NotificationManager nm = (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
+        return nm;
+    }
+
+    TextView stealthInfo;
+    public TextView stealthInfo2;
+
+    public synchronized void onCreateKeyMapStealthLoop(View view) {
+        //Textbox times to try
+        String rep_s1;
+        rep_s1 = repeat_stealth.getText().toString();
+        final int n1;
+        n1 = Integer.parseInt(rep_s1);
+
+        onStartNotification(view);
+        final NotificationManager nm = onStartNotification(view);
+        notification_stealth.setContentTitle("Stealth info : Not reading");
+        notification_stealth.setSmallIcon(R.drawable.ic_stealth);
+
+        //Textbox time delay
+        String rep_delay;
+        rep_delay = delay_stealth.getText().toString();
+        final int n2;
+        n2 = Integer.parseInt(rep_delay);
+
+        //Loop info
+        counter = 1;
+        final Handler handler = new Handler();
+        final int delay = (n2*1000);
+
+        if (check_adv_stealth.isChecked()==true){
+            Toast.makeText(KeyMapCreator.this, R.string.stealth_adv_start, Toast.LENGTH_SHORT).show();
+
+            handler.postDelayed(new Runnable(){
+                public void run(){
+
+                    handler.postDelayed(this, delay);
+                    System.out.println("Loop: Conteo " + counter);
+
+                    stealthInfo.setText("Try number: "+counter+" of "+n1);
+                    notification_stealth.setContentText("Try number: "+counter+" of "+n1);
+                    nm.notify(idUnica,notification_stealth.build());
+                    onCreateKeyMapStealth();
+
+                    counter++;
+                    if(counter > n1){
+                        System.out.println("Loop: Termina proceso.");
+                        stealthInfo.setText("Advanced try finished");
+                        notification_stealth.setContentText("Advanced try finished");
+                        handler.removeCallbacksAndMessages(null);
+                    }
+
+                }
+            }, delay);
+
+        }
+        else{
+            if (n1<15){
+                Toast.makeText(KeyMapCreator.this, R.string.stealth_start, Toast.LENGTH_SHORT).show();
+
+                handler.postDelayed(new Runnable(){
+                    public void run(){
+
+                        handler.postDelayed(this, delay);
+                        System.out.println("Loop: Conteo " + counter);
+
+                        stealthInfo.setText("Try number: "+counter+" of "+n1);
+                        notification_stealth.setContentText("Try number: "+counter+" of "+n1);
+                        nm.notify(idUnica,notification_stealth.build());
+                        onCreateKeyMapStealth();
+
+                        counter++;
+                        if(counter > n1){
+                            System.out.println("Loop: Termina proceso.");
+                            stealthInfo.setText("Try finished");
+                            notification_stealth.setContentText("Try finished");
+                            handler.removeCallbacksAndMessages(null);
+                        }
+
+                    }
+                }, delay);
+
+            }
+            else {
+                Toast.makeText(KeyMapCreator.this, R.string.stealth_adv_start_error, Toast.LENGTH_LONG).show();
+            }
+        }
+
+    }
+
+    //Test de servicio
+    public static final String EXTRA_Lastsector = "";
+    public static final String EXTRA_keyfiles = "";
+    public static final String EXTRA_Firstsector = "";
+    public static final String EXTRA_ProgressStatus = "";
+    public static final String EXTRA_IsCreatingKeyMap = "true";
+    public static final String EXTRA_keynames = "";
+    public static final String EXTRA_SectorRange = "1";
+
+
+    public void onStartService_Stealth (View view){
+        int last_sector = mLastSector;
+        int first_sector = mFirstSector;
+        int progressStatus = mProgressStatus;
+        boolean creatingmap = mIsCreatingKeyMap;
+        String sectorrange = mSectorRange.getText().toString();
+        File keydirpath = mKeyDirPath;
+
+        // Check for checked check boxes.
+        ArrayList<String> fileNames = new ArrayList<String>();
+        for (int i = 0; i < mKeyFilesGroup.getChildCount(); i++) {
+            CheckBox c = (CheckBox) mKeyFilesGroup.getChildAt(i);
+            if (c.isChecked()) {
+                fileNames.add(c.getText().toString());
+            }
+        }
+        //Stealth checking:
+        boolean saveLastUsedKeyFiles = Common.getPreferences().getBoolean(
+                Preference.SaveLastUsedKeyFiles.toString(), true);
+        String lastSelectedKeyFiles = "";
+
+        if (fileNames.size() > 0) {
+            // Check if key files still exists.
+            ArrayList<File> keyFiles = new ArrayList<File>();
+            for (String fileName : fileNames) {
+                File keyFile = new File(mKeyDirPath, fileName);
+                if (keyFile.exists()) {
+                    // Add key file.
+                    keyFiles.add(keyFile);
+                    if (saveLastUsedKeyFiles) {
+                        lastSelectedKeyFiles += fileName + "/";
+                    }
+                } else {
+                    Log.d(LOG_TAG, "Key file "
+                            + keyFile.getAbsolutePath()
+                            + "doesn't exists anymore.");
+                }
+            }
+            if (keyFiles.size() > 0) {
+                // Save last selected key files as "/"-separated string
+                // (if corresponding setting is active).
+                if (saveLastUsedKeyFiles) {
+                    SharedPreferences sharedPref = getPreferences(
+                            Context.MODE_PRIVATE);
+                    Editor e = sharedPref.edit();
+                    e.putString("last_used_key_files",
+                            lastSelectedKeyFiles.substring(
+                                    0, lastSelectedKeyFiles.length() - 1));
+                    e.apply();
+                }
+                    //array to string text
+                    String[] keyFileString = new String[keyFiles.size()];
+                    for (int i = 0; i < keyFiles.size(); i++) {
+                        keyFileString[i] = keyFiles.get(i).toString();
+                    }
+
+                    // Start the damn service for read the tag
+                Toast.makeText(this, "a la vergota el servisio", Toast.LENGTH_SHORT).show();
+                    Intent intent = new Intent(this, StealthService.class);
+                    intent.putExtra(EXTRA_keynames, fileNames);
+                    //intent.putExtra(EXTRA_keyfiles, keyFiles);
+                    intent.putExtra(EXTRA_keyfiles, keyFileString);
+                    intent.putExtra(EXTRA_Lastsector, last_sector);
+                    intent.putExtra(EXTRA_Firstsector, first_sector);
+                    intent.putExtra(EXTRA_ProgressStatus, progressStatus);
+                    intent.putExtra(String.valueOf(EXTRA_IsCreatingKeyMap), creatingmap);
+                    intent.putExtra(EXTRA_SectorRange, sectorrange);
+                    startService(intent);
+
+            }
+        }
+        else {
+            Toast.makeText(this, R.string.nokisdemox_select_key, Toast.LENGTH_LONG).show();
+        }
+
+        // Start the damn service for read the tag
+//        Intent intent = new Intent(this, StealthService.class);
+//            intent.putExtra(EXTRA_keynames, fileNames);
+//            intent.putExtra(EXTRA_Lastsector, last_sector);
+//            intent.putExtra(EXTRA_Firstsector, first_sector);
+//            intent.putExtra(EXTRA_ProgressStatus, progressStatus);
+//            intent.putExtra(String.valueOf(EXTRA_IsCreatingKeyMap), creatingmap);
+//            intent.putExtra(EXTRA_SectorRange, sectorrange);
+//        startService(intent);
+    }
+
+    public void onStopService_Stealth (View view){
+        Intent intent = new Intent(this, StealthService.class);
+        stopService(intent);
     }
 }

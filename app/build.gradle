@@ -3,26 +3,36 @@ apply plugin: 'com.android.application'
 android {
     signingConfigs {
     }
-    compileSdkVersion 23
-    buildToolsVersion '26.0.2'
+    compileSdkVersion 25
+    buildToolsVersion '27.0.3'
     defaultConfig {
         applicationId "de.syss.MCTBrute4c"
-        minSdkVersion 10
-        targetSdkVersion 26
+        minSdkVersion 11
+        targetSdkVersion 25
         versionCode 35
-        versionName '2.0.4/2.3'
+        versionName '3.1'
     }
     buildTypes {
         release {
             minifyEnabled false
+            // test
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
     productFlavors {
     }
+    lintOptions {
+
+        checkReleaseBuilds false
+
+    }
 }
 
 dependencies {
-    implementation 'com.android.support:appcompat-v7:23.4.0'
     implementation 'com.android.support.constraint:constraint-layout:1.1.0'
+    implementation 'com.android.support:design:23.4.0'
     compile 'com.android.support:support-v4:23.+'
+    implementation files('RootShell-1.6/RootShell.jar')
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    testCompile 'junit:junit:4.12'
 }

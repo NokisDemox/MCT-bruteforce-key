@@ -19,12 +19,15 @@
 -->
 
 
-<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android" >
 
-    <item android:id="@+id/menuKeyEditorSave"
+    <item
+        android:id="@+id/menuKeyEditorSave"
         android:icon="@android:drawable/ic_menu_save"
+        android:showAsAction="ifRoom"
         android:title="@string/action_save"
-        android:showAsAction="ifRoom" />
+        app:showAsAction="always" />
     <item android:id="@+id/menuKeyEditorShare"
         android:icon="@android:drawable/ic_menu_share"
         android:title="@string/action_share"

@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    tools:context=".Activities.Modder_Info"
+    android:layout_height="wrap_content"
+    android:background="@drawable/nk_logo_little">
+
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingTop="10dp">
+
+            <Button
+                android:id="@+id/button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/nokisdemox_web_page"
+                android:drawableLeft="@drawable/nokisweb"
+                android:layout_weight="0.5"
+                android:onClick="browser1"
+                style="?android:attr/buttonStyleSmall"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp">
+
+            <Button
+                android:id="@+id/button2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/nokisdemox_donation"
+                android:drawableTop="@drawable/ic_paypalme"
+                android:layout_weight="0.5"
+                android:onClick="browser2"
+                style="?android:attr/buttonStyleSmall"/>
+            <Button
+                android:id="@+id/button3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/nokisdemox_yt"
+                android:drawableTop="@mipmap/ic_yt"
+                android:layout_weight="0.5"
+                android:onClick="browser3"
+                style="?android:attr/buttonStyleSmall"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/modder_related"
+            android:textColor="@color/purple" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp">
+
+            <Button
+                android:id="@+id/button4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Metrodroid"
+                android:drawableTop="@drawable/metrodroid"
+                android:layout_weight="0.5"
+                android:onClick="browser4"
+                style="?android:attr/buttonStyleSmall"/>
+            <Button
+                android:id="@+id/button5"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/modder_official"
+                android:drawableTop="@drawable/ic_launcher"
+                android:layout_weight="0.5"
+                android:onClick="browser5"
+                style="?android:attr/buttonStyleSmall"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/modder_apps"
+            android:textColor="@color/purple" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp">
+
+            <Button
+                android:id="@+id/button6"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="NokisResolver - App"
+                android:drawableTop="@drawable/nokisresolver"
+                android:layout_weight="0.5"
+                android:onClick="browser6"
+                style="?android:attr/buttonStyleSmall"/>
+
+            <Button
+                android:id="@+id/button10"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Insta-Inspector"
+                android:drawableTop="@drawable/insta_inspector"
+                android:layout_weight="0.5"
+                android:onClick="browser10"
+                style="?android:attr/buttonStyleSmall"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/modder_thanks"
+            android:textColor="@color/purple" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp">
+
+            <Button
+                android:id="@+id/button7"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/modder_app_emv"
+                android:drawableTop="@drawable/cc_check"
+                android:layout_weight="0.5"
+                android:onClick="browser7"
+                style="?android:attr/buttonStyleSmall"/>
+            <Button
+                android:id="@+id/button8"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/modder_app_uid_em"
+                android:drawableTop="@drawable/emulate_tag"
+                android:layout_weight="0.5"
+                android:onClick="browser8"
+                style="?android:attr/buttonStyleSmall"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp">
+
+            <Button
+                android:id="@+id/button9"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/ultralight_name"
+                android:drawableTop="@drawable/nfcult"
+                android:onClick="browser9"
+                style="?android:attr/buttonStyleSmall"/>
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>

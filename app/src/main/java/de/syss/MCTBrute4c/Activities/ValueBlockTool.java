@@ -31,7 +31,7 @@ import de.syss.MCTBrute4c.R;
 /**
  * Decode Mifare Classic Value Blocks from their hex format
  * to an integer and vice versa.
- * @author Gerhard Klostermeier
+ *
  */
 public class ValueBlockTool extends BasicActivity {
 
@@ -132,7 +132,7 @@ public class ValueBlockTool extends BasicActivity {
      * (in this case the copy button).
      */
     public void onCopyToClipboard(View view) {
-        Common.copyToClipboard(mVB.getText().toString(), this);
+        Common.copyToClipboard(mVB.getText().toString(), this, true);
     }
 
     /**

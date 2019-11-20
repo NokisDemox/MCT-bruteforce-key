@@ -24,7 +24,7 @@ import android.util.SparseArray;
 
 /**
  * Provides functions to compare two dumps.
- * @author Gerhard Klostermeier
+ *
  */
 public class MCDiffUtils {
 

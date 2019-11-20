@@ -30,6 +30,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 
 import de.syss.MCTBrute4c.Activities.IActivityThatReactsToSave;
+import de.syss.MCTBrute4c.Activities.KeyMapCreator;
 
 import android.annotation.SuppressLint;
 import android.app.Activity;
@@ -56,7 +57,7 @@ import android.widget.Toast;
 
 /**
  * Common functions and variables for all Activities.
- * @author Gerhard Klostermeier
+ *
  */
 public class Common extends Application {
 
@@ -68,13 +69,17 @@ public class Common extends Application {
      * The directory name of the root directory of this app
      * (on external storage).
      */
-    public static final String HOME_DIR = "/MifareClassicTool";
+    public static final String HOME_DIR = "/MCT-Brut3";
 
     /**
      * The directory name  of the key files directory.
      * (sub directory of {@link #HOME_DIR}.)
      */
     public static final String KEYS_DIR = "key-files";
+
+    public static final String CC_DIR = "credit-card";
+    public static final String HTML_DIR = "help";
+    public static final String MUT_DIR = "ultralight-dumps";
 
     /**
      * The directory name  of the dump files directory.
@@ -107,6 +112,13 @@ public class Common extends Application {
      * https://github.com/4ZM/slurp/blob/master/res/xml/mifare_default_keys.xml
      */
     public static final String STD_KEYS_EXTENDED = "extended-std.keys";
+
+    public static final String STD_KEYS_FULL = "full.keys";
+
+    public static final String STD_CC = "cc.cc";
+    public static final String STD_MUT = "ultralight-test.mut";
+    public static final String STD_HTML = "help.html";
+    public static final String STD_LOGO = "ic_nokis_help.png";
 
     /**
      * Possible operations the on a Mifare Classic Tag.
@@ -511,8 +523,10 @@ public class Common extends Application {
             Toast.makeText(context, id, Toast.LENGTH_LONG).show();
             return checkMifareClassicSupport(tag, context);
         }
+
         return -4;
     }
+
 
     /**
      * Check if the device supports the Mifare Classic technology.
@@ -664,8 +678,28 @@ public class Common extends Application {
         }
 
         // Error. The tag is gone.
-        Toast.makeText(context, R.string.info_no_tag_found,
-                Toast.LENGTH_LONG).show();
+        Toast.makeText(context, R.string.info_no_tag_found, Toast.LENGTH_LONG).show();
+        return null;
+    }
+
+    public static MCReader checkForTagAndCreateReader_Stealth(Context context) {
+        MCReader reader;
+        boolean tagLost = false;
+        // Check for tag.
+        if (mTag != null && (reader = MCReader.get(mTag)) != null) {
+            try {
+                reader.connect();
+            } catch (Exception e) {
+                tagLost = true;
+            }
+            if (!tagLost && !reader.isConnected()) {
+                reader.close();
+                tagLost = true;
+            }
+            if (!tagLost) {
+                return reader;
+            }
+        }
         return null;
     }
 
@@ -1161,28 +1195,21 @@ public class Common extends Application {
      */
     @SuppressWarnings("deprecation")
     @SuppressLint("NewApi")
-    public static void copyToClipboard(String text, Context context) {
+    public static void copyToClipboard(String text, Context context,
+                                       boolean showMsg) {
         if (!text.equals("")) {
-            if (Build.VERSION.SDK_INT >= 11) {
-                // Android API level 11+.
-                android.content.ClipboardManager clipboard =
-                        (android.content.ClipboardManager)
-                        context.getSystemService(
-                                Context.CLIPBOARD_SERVICE);
-                android.content.ClipData clip =
-                        android.content.ClipData.newPlainText(
-                                "mifare classic tool data", text);
-                clipboard.setPrimaryClip(clip);
-            } else {
-                // Android API level 10.
-                android.text.ClipboardManager clipboard =
-                        (android.text.ClipboardManager)
-                        context.getSystemService(
-                                Context.CLIPBOARD_SERVICE);
-                clipboard.setText(text);
+            android.content.ClipboardManager clipboard =
+                    (android.content.ClipboardManager)
+                            context.getSystemService(
+                                    Context.CLIPBOARD_SERVICE);
+            android.content.ClipData clip =
+                    android.content.ClipData.newPlainText(
+                            "MIFARE classic tool data", text);
+            clipboard.setPrimaryClip(clip);
+            if (showMsg) {
+                Toast.makeText(context, R.string.info_copied_to_clipboard,
+                        Toast.LENGTH_SHORT).show();
             }
-            Toast.makeText(context, R.string.info_copied_to_clipboard,
-                    Toast.LENGTH_SHORT).show();
         }
     }
 
@@ -1344,6 +1371,31 @@ public class Common extends Application {
      */
     public static byte[] getUID() {
         return mUID;
+    }
+
+
+    public static boolean isValidBCC(byte[] uid, byte bcc) {
+        return calcBCC(uid) == bcc;
+    }
+
+    /**
+     * Calculate the BCC of a 4 byte UID. For tags with a 4 byte UID the
+     * BCC is the first byte after the UID in the manufacturers block.
+     * It is calculated by XOR-ing the 4 bytes of the UID.
+     * @param uid The UID of which the BCC should be calculated.
+     * @exception IllegalArgumentException Thrown if the uid parameter
+     * has not 4 bytes.
+     * @return The BCC of the given UID.
+     */
+    public static byte calcBCC(byte[] uid) throws IllegalArgumentException {
+        if (uid.length != 4) {
+            throw new IllegalArgumentException("UID length is not 4 bytes.");
+        }
+        byte bcc = uid[0];
+        for(int i = 1; i < uid.length; i++) {
+            bcc = (byte)(bcc ^ uid[i]);
+        }
+        return bcc;
     }
 
     /**

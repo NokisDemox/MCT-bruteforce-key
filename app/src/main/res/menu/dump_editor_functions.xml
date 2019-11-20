@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
 /*
- * Copyright 2018 NokisDemox
+ * Copyright 2013 Gerhard Klostermeier
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -19,15 +19,16 @@
 -->
 
 
-<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android" >
     <item android:id="@+id/menuDumpEditorSave"
         android:icon="@android:drawable/ic_menu_save"
         android:title="@string/action_save"
-        android:showAsAction="ifRoom" />
+        app:showAsAction="ifRoom" />
     <item android:id="@+id/menuDumpEditorShare"
         android:icon="@android:drawable/ic_menu_share"
         android:title="@string/action_share"
-        android:showAsAction="ifRoom" />
+        app:showAsAction="ifRoom" />
     <item android:id="@+id/menuDumpEditorAscii"
         android:title="@string/action_data_as_ascii" />
     <item android:id="@+id/menuDumpEditorAccessConditions"

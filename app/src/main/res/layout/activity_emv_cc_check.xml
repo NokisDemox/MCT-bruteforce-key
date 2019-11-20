@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="16dp"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:orientation="vertical"
+    android:paddingTop="16dp"
+    tools:context=".Activities.EMV_cc_check"
+    android:background="#3c3f41">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.5"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/pre_intro"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/activity_pre_into"
+            android:gravity="center"
+            android:textColor="@color/yellow"
+            android:paddingBottom="10dp"/>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Switch
+                android:id="@+id/switch1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/emv_switch_read"
+                android:layout_weight="0.5"
+                android:textColor="@color/blue"
+                android:onClick="Switch"
+                tools:targetApi="ice_cream_sandwich" />
+            <TextView
+                android:id="@+id/demonstration_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/emv_switch_demo"
+                android:layout_weight="0.5"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/intro"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/activity_into"
+            android:layout_below="@+id/pre_intro"
+            android:textColor="@color/dark_green" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:id="@+id/progress"
+            android:layout_marginTop="29dp"
+            android:layout_below="@+id/intro"
+            android:textColor="#ffffff" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:id="@+id/cardType"
+            android:layout_marginTop="29dp"
+            android:layout_below="@+id/progress"
+            android:textColor="#ffffff" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:id="@+id/cardNumber"
+            android:layout_below="@+id/cardType"
+            android:textColor="#ffffff" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:id="@+id/cardExpiration"
+            android:layout_below="@+id/cardNumber"
+            android:textColor="#ffffff" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:gravity="bottom"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/cc_save_name"
+            android:layout_width="match_parent"
+            android:textColor="@color/white"
+            android:layout_weight="0.5"
+            android:layout_height="wrap_content" />
+        <ImageButton
+            android:id="@+id/imageButton_cc_save"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/text_option_info"
+            android:onClick="onSave"
+            android:src="@android:drawable/ic_menu_save" />
+        <ImageButton
+            android:id="@+id/imageButton_cc_list"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:contentDescription="@string/text_option_info"
+            android:onClick="onOpenCCEditor"
+            android:src="@drawable/ic_list_cc" />
+
+    </LinearLayout>
+
+
+</LinearLayout>

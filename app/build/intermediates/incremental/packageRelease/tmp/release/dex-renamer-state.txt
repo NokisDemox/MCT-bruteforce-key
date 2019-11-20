@@ -1,0 +1,4 @@
+#Sun Nov 10 17:54:39 CET 2019
+base.0=E\:\\Users\\Artero\\Desktop\\proyectos\\mct-app-mod\\mct new ver madafaka\\app\\build\\intermediates\\transforms\\dexMerger\\release\\0
+path.0=classes.dex
+renamed.0=classes.dex

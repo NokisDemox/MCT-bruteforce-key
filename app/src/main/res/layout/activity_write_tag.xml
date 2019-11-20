@@ -24,7 +24,7 @@
     android:id="@+id/scrollViewWriteTag"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Activities.WriteTag" >
+    tools:context=".WriteTag" >
 
     <LinearLayout
         android:id="@+id/linearLayoutWriteTag"

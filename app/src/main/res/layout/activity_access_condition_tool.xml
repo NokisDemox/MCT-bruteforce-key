@@ -24,7 +24,7 @@
     android:id="@+id/relativeLayoutAccessConditionTool"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Activities.AccessConditionTool"
+    tools:context=".AccessConditionTool"
     android:background="@drawable/back2">
 
     <!-- Dummy to prevent EditTexts from getting focus on Activity startup -->

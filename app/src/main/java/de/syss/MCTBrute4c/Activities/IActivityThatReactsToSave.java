@@ -24,7 +24,7 @@ import de.syss.MCTBrute4c.Common;
  * Interface with callback functions for objects (most likely Activities) that
  * want to use the {@link Common#checkFileExistenceAndSave(java.io.File,
  * String[],boolean, android.content.Context, IActivityThatReactsToSave)}.
- * @author Gerhard Klostermeier
+ *
  */
 public interface IActivityThatReactsToSave {
 

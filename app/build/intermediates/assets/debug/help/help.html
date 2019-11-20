@@ -4,7 +4,7 @@
 <body>
 <font face="sans-serif">
   <div align="center">
-    <img src="ic_nokis_help.png" width="250px">
+    <img src="ic_nokis_help.png" width="250px" alt="logo">
   </div>
   <hr>
   <h1>Help and Info</h1>
@@ -49,6 +49,7 @@
         <li><a href="#value_block_tool">7.2 Value Block Decoder/Encoder</a></li>
         <li><a href="#ac_tool">7.3 Access Condition Decoder/Encoder</a></li>
         <li><a href="#diff_tool">7.4 Diff Tool (Compare Dumps)</a></li>
+        <li><a href="#bcc_tool">7.5 BCC Calculator</a></li>
       </ul>
     </li>
     <li>
@@ -58,6 +59,7 @@
 
       </ul>
     </li>
+    <li><a href="#external_nfc">9. External NFC</a></li>
   </ul>
   <hr>
 
@@ -143,6 +145,11 @@
     <li>Read Mifare Classic tags</li>
     <li>Save, edit and share the tag data you read</li>
     <li>Write to Mifare Classic tags (block-wise)</li>
+    <li>Check if tag is a Cradit Card and show info</li>
+    <li>Stealth read mode (BETA)</li>
+    <li>Emulate dumps (BETA)</li>
+    <li><strong>Tag details selectable</strong></li>
+    <li>BCC Calculator</li>
     <li>Clone Mifare Classic tags<br>
       (Write dump of a tag to another tag;
       write 'dump-wise')</li>
@@ -505,10 +512,36 @@
   Just select the dumps you want to compare and tool will highlight all
   the sections where the two dumps differ from each other.
   <hr>
+  <h3 id="bcc_tool">7.5 BCC Calculator</h3>
+  This tool can calculate the Bit Count Check (BCC) value. For MIFARE
+  Classic tags with a 4 byte UID, the BCC must be the 5th byte of the very
+  first block (manufacturers block).
+  <br /><br />
+  More information about calculating the BCC and how it is used during
+  the anti-collision phase can be found in
+  <a href="http://cache.nxp.com/documents/application_note/AN10927.pdf">NXP's AN10927</a>.
+  <hr />
   <h2 id="brute">8. Bruteforce</h2>
   <h3 id="brute_info"> 8.1 Bruteforce information</h3>
   This is a slow but powerful tool, not avaible in the original app.
   <a href="https://sites.google.com/view/nokisdemox"> Modder web page</a>
+  <hr />
+  <h2 id="external_nfc">9. External NFC</h2>
+  MCT can be used with
+  <a href="https://play.google.com/store/apps/details?id=eu.dedb.nfc.service">External NFC</a>.
+  This app allows you to connect an external USB-based RFID reader to
+  your Android device. Not every RFID reader is supported by External
+  NFC and your Android device must be USB-OTG enabled.<br /><br />
+
+  Readers which should work:
+  <ul>
+    <li>ACR 122U</li>
+    <li>MFRC522 via USB-UART adapters</li>
+  </ul>
+
+  For questions regarding the External NFC app please have a look at its
+  <a href="https://play.google.com/store/apps/details?id=eu.dedb.nfc.service">Play Store</a>
+  page and/or contact its developer.
 
 
 

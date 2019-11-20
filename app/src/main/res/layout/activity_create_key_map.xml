@@ -18,234 +18,436 @@
  */
 -->
 
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@drawable/back2">
-<RelativeLayout
+<ScrollView
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/relativeLayoutCreateKeyMap"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/scrollViewReadTag"
     android:layout_width="match_parent"
-    android:layout_height="250sp"
-    tools:context=".KeyMapCreator"
-    android:orientation="horizontal">
+    style="@style/AppTheme"
+    android:layout_height="match_parent">
 
     <LinearLayout
-        android:id="@+id/linearLayoutCreateKeyMap"
+
+        android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" >
+        android:layout_height="match_parent">
 
-        <TextView
-            android:id="@+id/textViewCreateKeyMapSectorRange"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:paddingLeft="5dp"
-            android:paddingRight="3dp"
-            android:text="@string/text_sector_range"
-            android:textAppearance="?android:attr/textAppearanceMedium" />
+        <RelativeLayout
 
-        <TextView
-            android:id="@+id/textViewCreateKeyMapFromTo"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:paddingRight="3dp"
-            android:text="@string/text_sector_range_all"
-            android:textAppearance="?android:attr/textAppearanceMedium"
-            android:textColor="@color/blue" />
-
-        <Button
-            android:id="@+id/buttonCreateKeyMapChangeRange"
-            style="?android:attr/buttonStyleSmall"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:minHeight="34dip"
-            android:onClick="onChangeSectorRange"
-            android:text="@string/action_change" />
-
-    </LinearLayout>
-
-    <TextView
-        android:id="@+id/textViewCreateKeyMapChooseKeyFile"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/linearLayoutCreateKeyMap"
-        android:paddingLeft="5dp"
-        android:text="@string/text_choose_key_file"
-        android:textAppearance="?android:attr/textAppearanceMedium" />
-
-    <Button
-        android:id="@+id/buttonCreateKeyMapSelectAll"
-        style="?android:attr/buttonStyleSmall"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/textViewCreateKeyMapChooseKeyFile"
-        android:minHeight="34dip"
-        android:onClick="onSelectAll"
-        android:text="@string/action_select_all" />
-
-    <Button
-        android:id="@+id/buttonCreateKeyMapSelectNone"
-        style="?android:attr/buttonStyleSmall"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBaseline="@id/buttonCreateKeyMapSelectAll"
-        android:layout_toRightOf="@id/buttonCreateKeyMapSelectAll"
-        android:minHeight="34dip"
-        android:onClick="onSelectNone"
-        android:text="@string/action_select_none" />
-
-    <ScrollView
-        android:id="@+id/scrollViewCreateKeyMap"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/textViewCreateKeyMapProgess"
-        android:layout_below="@id/buttonCreateKeyMapSelectAll"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentRight="true" >
-
-        <LinearLayout
-            android:id="@+id/linearLayoutCreateKeyMapKeyFiles"
+            android:id="@+id/relativeLayoutCreateKeyMap"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical" >
+            tools:context=".KeyMapCreator"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="@string/title_activity_read_tag_only"
+                android:id="@+id/readtag_text" />
+
+            <LinearLayout
+                android:id="@+id/linearLayoutCreateKeyMap"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/readtag_text">
+
+                <TextView
+                    android:id="@+id/textViewCreateKeyMapSectorRange"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="3dp"
+                    android:text="@string/text_sector_range"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                <TextView
+                    android:id="@+id/textViewCreateKeyMapFromTo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingRight="3dp"
+                    android:text="@string/text_sector_range_all"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@color/blue" />
+
+                <Button
+                    android:id="@+id/buttonCreateKeyMapChangeRange"
+                    style="?android:attr/buttonStyleSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:minHeight="34dip"
+                    android:onClick="onChangeSectorRange"
+                    android:text="@string/action_change" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/textViewCreateKeyMapChooseKeyFile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/linearLayoutCreateKeyMap"
+                android:paddingLeft="5dp"
+                android:text="@string/text_choose_key_file"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+
+            <Button
+                android:id="@+id/buttonCreateKeyMapSelectAll"
+                style="?android:attr/buttonStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/textViewCreateKeyMapChooseKeyFile"
+                android:minHeight="34dip"
+                android:onClick="onSelectAll"
+                android:text="@string/action_select_all" />
+
+            <Button
+                android:id="@+id/buttonCreateKeyMapSelectNone"
+                style="?android:attr/buttonStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@id/buttonCreateKeyMapSelectAll"
+                android:layout_toRightOf="@id/buttonCreateKeyMapSelectAll"
+                android:minHeight="34dip"
+                android:onClick="onSelectNone"
+                android:text="@string/action_select_none" />
+        </RelativeLayout>
+       <LinearLayout
+            android:id="@+id/linearLayoutCreateKeyMapKeyFiles"
+            android:layout_width="match_parent"
+            android:layout_below="@+id/buttonCreateKeyMapSelectNone"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
         </LinearLayout>
 
-    </ScrollView>
 
-    <TextView
-        android:id="@+id/textViewCreateKeyMapProgess"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/buttonCreateKeyMap"
-        android:layout_alignParentLeft="true"
-        android:padding="5dp"
-        android:text="@string/text_key_map_progress"
-        android:textAppearance="?android:attr/textAppearanceSmall" />
+        <LinearLayout
 
-    <ProgressBar
-        android:id="@+id/progressBarCreateKeyMap"
-        style="?android:attr/progressBarStyleHorizontal"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/buttonCreateKeyMap"
-        android:layout_toRightOf="@id/textViewCreateKeyMapProgess"
-        android:paddingBottom="5dp"
-        android:paddingRight="5dp"
-        android:paddingTop="10dp" />
-
-    <Button
-        android:id="@+id/buttonCreateKeyMapCancel"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentLeft="true"
-        android:onClick="onCancelCreateKeyMap"
-        android:text="@string/action_cancel"
-        android:layout_above="@+id/textViewCreateKeyMapProgess" />
-
-    <Button
-        android:id="@+id/buttonCreateKeyMap"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentRight="true"
-        android:layout_toRightOf="@id/buttonCreateKeyMapCancel"
-        android:onClick="onCreateKeyMap"
-        android:text="@string/action_create_key_map" />
-
-</RelativeLayout>
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="Brute Force Attack"
-        android:id="@+id/textView" />
-
-    <LinearLayout
-        android:orientation="horizontal"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-        <RadioButton
-            android:layout_width="wrap_content"
+            android:id="@+id/relativeLayoutCreateKeyMap2"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Single thread"
-            android:id="@+id/radioButton"
-            android:onClick="onSingleThread"
-            android:checked="true" />
+            tools:context=".KeyMapCreator"
+            android:orientation="vertical">
 
-        <RadioButton
-            android:layout_width="wrap_content"
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+
+                <TextView
+                    android:id="@+id/textViewCreateKeyMapProgess"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/buttonCreateKeyMap"
+                    android:layout_alignParentLeft="true"
+                    android:padding="5dp"
+                    android:text="@string/text_key_map_progress"
+                    android:textAppearance="?android:attr/textAppearanceSmall" />
+
+                <ProgressBar
+                    android:id="@+id/progressBarCreateKeyMap"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="5dp"
+                    android:paddingRight="5dp"
+                    android:paddingTop="10dp" />
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/buttonCreateKeyMapCancel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="onCancelCreateKeyMap"
+                    android:text="@string/action_cancel"
+                    />
+
+                <Button
+                    android:id="@+id/buttonCreateKeyMap"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="onCreateKeyMap"
+                    android:text="@string/action_create_key_map" />
+            </LinearLayout>
+
+            <LinearLayout
+
+                android:id="@+id/relativeLayoutCreateKeyMapNew"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/dark_gray"
+                android:orientation="vertical"
+                tools:context=".KeyMapCreator">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/stealth_tag_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5"
+                        android:text="@string/action_stealth"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:textColor="@color/white" />
+
+                    <ImageButton
+                        android:id="@+id/imageButtonPreferencesCustomSectorCount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:contentDescription="@string/text_option_info"
+                        android:onClick="onShowStealthInfo"
+                        android:src="@drawable/ic_stealth" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <CheckBox
+                        android:id="@+id/check_adv_stealth"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:checked="false"
+                        android:text="@string/check_stealth_adv"
+                        android:textColor="@color/yellow" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/textView4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/stealth_xml_repeats"
+                        android:textColor="@color/white" />
+
+                    <EditText
+                        android:id="@+id/repeat_stealth_i"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="numberDecimal"
+                        android:textColor="@color/dark_green" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/delay_stealth_letter"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/stealth_xml_delay"
+                        android:textColor="@color/white" />
+
+                    <EditText
+                        android:id="@+id/delay_stealth_number"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="numberDecimal"
+                        android:textColor="@color/dark_green" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/stealthInfo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/dark_green" />
+
+                <TextView
+                    android:id="@+id/stealthInfo2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/dark_green" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/buttonStealthStart"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5"
+                        android:onClick="onCreateKeyMapStealthLoop"
+                        android:text="@string/action_stealth_start" />
+
+                    <Button
+                        android:id="@+id/menuMainTagInfo"
+                        style="?android:attr/buttonStyleSmall"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.5"
+                        android:onClick="onShowLastTagInfo"
+                        android:text="@string/stealth_xml_lasttag" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/buttonStealthStart_serv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5"
+                        android:enabled="false"
+                        android:onClick="onStartService_Stealth"
+                        android:text="Start service" />
+
+                    <Button
+                        android:id="@+id/buttonStealthStop_serv"
+                        style="?android:attr/buttonStyleSmall"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:enabled="false"
+                        android:layout_weight="0.5"
+                        android:onClick="onStopService_Stealth"
+                        android:text="Stop service" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Double thread"
-            android:id="@+id/radioButton2"
-            android:onClick="onDoubleThread"
-            android:checked="false" />
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="@string/title_activity_brute_tag_only"
+                    android:id="@+id/textView" />
+
+                <ImageButton
+                    android:id="@+id/imageButtonP_info_brute"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@string/text_option_info"
+                    android:onClick="onShowBruteInfo"
+                    android:src="@android:drawable/ic_dialog_info" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/brute_thread1"
+                    android:id="@+id/radioButton"
+                    android:onClick="onSingleThread"
+                    android:checked="true"
+                    />
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/brute_thread2"
+                    android:id="@+id/radioButton2"
+                    android:onClick="onDoubleThread"
+                    android:checked="false" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/brute_increase_start"
+                    android:id="@+id/textView2" />
+
+                <EditText
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/increaseStart" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/decreaseLayout">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/brute_decrease_start"
+                    android:id="@+id/textView3" />
+
+                <EditText
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/decreaseStart" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/bruteInfo"
+                android:textColor="@color/dark_green"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/bruteForce"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:onClick="onBruteForce"
+                    android:layout_weight="0.5"
+                    android:text="@string/brute_start"
+                    android:textColor="@color/dark_green"/>
+
+                <Button
+                    android:id="@+id/save"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:onClick="onSaveState"
+                    android:text="@string/brute_save_status" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
     </LinearLayout>
-
-    <LinearLayout
-        android:orientation="horizontal"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Increase start"
-            android:id="@+id/textView2" />
-
-        <EditText
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/increaseStart" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:orientation="horizontal"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/decreaseLayout">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Decrease start"
-            android:id="@+id/textView3" />
-
-        <EditText
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/decreaseStart" />
-    </LinearLayout>
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/bruteInfo"
-        android:textColor="@color/light_green"/>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-
-        <Button
-            android:id="@+id/bruteForce"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:onClick="onBruteForce"
-            android:text="Start Brute-force"
-            android:textColor="@color/red"/>
-
-        <Button
-            android:id="@+id/save"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:onClick="onSaveState"
-            android:text="Save current state" />
-    </LinearLayout>
-</LinearLayout>
+</ScrollView>

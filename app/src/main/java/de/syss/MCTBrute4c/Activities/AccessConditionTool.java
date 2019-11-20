@@ -34,7 +34,7 @@ import de.syss.MCTBrute4c.R;
 /**
  * Decode Mifare Classic Access Conditions from their hex format
  * to a more human readable format and vice versa.
- * @author Gerhard Klostermeier
+ *
  */
 public class AccessConditionTool extends BasicActivity {
 
@@ -262,7 +262,7 @@ public class AccessConditionTool extends BasicActivity {
      * (in this case the copy button).
      */
     public void onCopyToClipboard(View view) {
-        Common.copyToClipboard(mAC.getText().toString(), this);
+        Common.copyToClipboard(mAC.getText().toString(), this, true);
     }
 
     /**

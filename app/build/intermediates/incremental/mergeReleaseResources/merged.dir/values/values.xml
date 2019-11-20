@@ -157,6 +157,16 @@
     <color name="button_material_light">#ffd6d7d7</color>
     <color name="dark_gray">#222222</color>
     <color name="dark_green">#338800</color>
+    <color name="design_fab_shadow_end_color">@android:color/transparent</color>
+    <color name="design_fab_shadow_mid_color">#14000000</color>
+    <color name="design_fab_shadow_start_color">#44000000</color>
+    <color name="design_fab_stroke_end_inner_color">#0A000000</color>
+    <color name="design_fab_stroke_end_outer_color">#0F000000</color>
+    <color name="design_fab_stroke_top_inner_color">#1AFFFFFF</color>
+    <color name="design_fab_stroke_top_outer_color">#2EFFFFFF</color>
+    <color name="design_snackbar_background_color">#323232</color>
+    <color name="design_textinput_error_color_dark">#FFFF6E6E</color>
+    <color name="design_textinput_error_color_light">#FFD50000</color>
     <color name="dim_foreground_disabled_material_dark">#80bebebe</color>
     <color name="dim_foreground_disabled_material_light">#80323232</color>
     <color name="dim_foreground_material_dark">#ffbebebe</color>
@@ -167,6 +177,7 @@
     <color name="highlighted_text_material_light">#66009688</color>
     <color name="hint_foreground_material_dark">@color/bright_foreground_disabled_material_dark</color>
     <color name="hint_foreground_material_light">@color/bright_foreground_disabled_material_light</color>
+    <color name="light_black">#737373</color>
     <color name="light_gray">#DDDDDD</color>
     <color name="light_green">#66FF66</color>
     <color name="material_blue_grey_800">#ff37474f</color>
@@ -203,6 +214,7 @@
     <color name="switch_thumb_disabled_material_light">#ffbdbdbd</color>
     <color name="switch_thumb_normal_material_dark">#ffbdbdbd</color>
     <color name="switch_thumb_normal_material_light">#fff1f1f1</color>
+    <color name="white">#FFFFFF</color>
     <color name="yellow">#CCCC00</color>
     <declare-styleable name="ActionBar"><attr name="navigationMode"><enum name="normal" value="0"/><enum name="listMode" value="1"/><enum name="tabMode" value="2"/></attr><attr name="displayOptions"><flag name="none" value="0"/><flag name="useLogo" value="0x1"/><flag name="showHome" value="0x2"/><flag name="homeAsUp" value="0x4"/><flag name="showTitle" value="0x8"/><flag name="showCustom" value="0x10"/><flag name="disableHome" value="0x20"/></attr><attr name="title"/><attr format="string" name="subtitle"/><attr format="reference" name="titleTextStyle"/><attr format="reference" name="subtitleTextStyle"/><attr format="reference" name="icon"/><attr format="reference" name="logo"/><attr format="reference" name="divider"/><attr format="reference" name="background"/><attr format="reference|color" name="backgroundStacked"/><attr format="reference|color" name="backgroundSplit"/><attr format="reference" name="customNavigationLayout"/><attr name="height"/><attr format="reference" name="homeLayout"/><attr format="reference" name="progressBarStyle"/><attr format="reference" name="indeterminateProgressStyle"/><attr format="dimension" name="progressBarPadding"/><attr name="homeAsUpIndicator"/><attr format="dimension" name="itemPadding"/><attr format="boolean" name="hideOnContentScroll"/><attr format="dimension" name="contentInsetStart"/><attr format="dimension" name="contentInsetEnd"/><attr format="dimension" name="contentInsetLeft"/><attr format="dimension" name="contentInsetRight"/><attr format="dimension" name="elevation"/><attr format="reference" name="popupTheme"/></declare-styleable>
     <declare-styleable name="ActionBarLayout"><attr name="android:layout_gravity"/></declare-styleable>
@@ -211,15 +223,25 @@
     <declare-styleable name="ActionMode"><attr name="titleTextStyle"/><attr name="subtitleTextStyle"/><attr name="background"/><attr name="backgroundSplit"/><attr name="height"/><attr format="reference" name="closeItemLayout"/></declare-styleable>
     <declare-styleable name="ActivityChooserView"><attr format="string" name="initialActivityCount"/><attr format="reference" name="expandActivityOverflowButtonDrawable"/></declare-styleable>
     <declare-styleable name="AlertDialog"><attr name="android:layout"/><attr format="reference" name="buttonPanelSideLayout"/><attr format="reference" name="listLayout"/><attr format="reference" name="multiChoiceItemLayout"/><attr format="reference" name="singleChoiceItemLayout"/><attr format="reference" name="listItemLayout"/></declare-styleable>
+    <declare-styleable name="AppBarLayout"><attr name="elevation"/><attr name="android:background"/><attr format="boolean" name="expanded"/></declare-styleable>
+    <declare-styleable name="AppBarLayout_LayoutParams"><attr name="layout_scrollFlags"><flag name="scroll" value="0x1"/><flag name="exitUntilCollapsed" value="0x2"/><flag name="enterAlways" value="0x4"/><flag name="enterAlwaysCollapsed" value="0x8"/><flag name="snap" value="0x10"/></attr><attr format="reference" name="layout_scrollInterpolator"/></declare-styleable>
     <declare-styleable name="AppCompatImageView"><attr name="android:src"/><attr format="reference" name="srcCompat"/></declare-styleable>
     <declare-styleable name="AppCompatTextView"><attr format="reference|boolean" name="textAllCaps"/><attr name="android:textAppearance"/></declare-styleable>
     <declare-styleable name="AppCompatTheme"><attr format="boolean" name="windowActionBar"/><attr format="boolean" name="windowNoTitle"/><attr format="boolean" name="windowActionBarOverlay"/><attr format="boolean" name="windowActionModeOverlay"/><attr format="dimension|fraction" name="windowFixedWidthMajor"/><attr format="dimension|fraction" name="windowFixedHeightMinor"/><attr format="dimension|fraction" name="windowFixedWidthMinor"/><attr format="dimension|fraction" name="windowFixedHeightMajor"/><attr format="dimension|fraction" name="windowMinWidthMajor"/><attr format="dimension|fraction" name="windowMinWidthMinor"/><attr name="android:windowIsFloating"/><attr name="android:windowAnimationStyle"/><attr format="reference" name="actionBarTabStyle"/><attr format="reference" name="actionBarTabBarStyle"/><attr format="reference" name="actionBarTabTextStyle"/><attr format="reference" name="actionOverflowButtonStyle"/><attr format="reference" name="actionOverflowMenuStyle"/><attr format="reference" name="actionBarPopupTheme"/><attr format="reference" name="actionBarStyle"/><attr format="reference" name="actionBarSplitStyle"/><attr format="reference" name="actionBarTheme"/><attr format="reference" name="actionBarWidgetTheme"/><attr format="dimension" name="actionBarSize"><enum name="wrap_content" value="0"/></attr><attr format="reference" name="actionBarDivider"/><attr format="reference" name="actionBarItemBackground"/><attr format="reference" name="actionMenuTextAppearance"/><attr format="color|reference" name="actionMenuTextColor"/><attr format="reference" name="actionModeStyle"/><attr format="reference" name="actionModeCloseButtonStyle"/><attr format="reference" name="actionModeBackground"/><attr format="reference" name="actionModeSplitBackground"/><attr format="reference" name="actionModeCloseDrawable"/><attr format="reference" name="actionModeCutDrawable"/><attr format="reference" name="actionModeCopyDrawable"/><attr format="reference" name="actionModePasteDrawable"/><attr format="reference" name="actionModeSelectAllDrawable"/><attr format="reference" name="actionModeShareDrawable"/><attr format="reference" name="actionModeFindDrawable"/><attr format="reference" name="actionModeWebSearchDrawable"/><attr format="reference" name="actionModePopupWindowStyle"/><attr format="reference" name="textAppearanceLargePopupMenu"/><attr format="reference" name="textAppearanceSmallPopupMenu"/><attr format="reference" name="dialogTheme"/><attr format="dimension" name="dialogPreferredPadding"/><attr format="reference" name="listDividerAlertDialog"/><attr format="reference" name="actionDropDownStyle"/><attr format="dimension" name="dropdownListPreferredItemHeight"/><attr format="reference" name="spinnerDropDownItemStyle"/><attr format="reference" name="homeAsUpIndicator"/><attr format="reference" name="actionButtonStyle"/><attr format="reference" name="buttonBarStyle"/><attr format="reference" name="buttonBarButtonStyle"/><attr format="reference" name="selectableItemBackground"/><attr format="reference" name="selectableItemBackgroundBorderless"/><attr format="reference" name="borderlessButtonStyle"/><attr format="reference" name="dividerVertical"/><attr format="reference" name="dividerHorizontal"/><attr format="reference" name="activityChooserViewStyle"/><attr format="reference" name="toolbarStyle"/><attr format="reference" name="toolbarNavigationButtonStyle"/><attr format="reference" name="popupMenuStyle"/><attr format="reference" name="popupWindowStyle"/><attr format="reference|color" name="editTextColor"/><attr format="reference" name="editTextBackground"/><attr format="reference" name="imageButtonStyle"/><attr format="reference" name="textAppearanceSearchResultTitle"/><attr format="reference" name="textAppearanceSearchResultSubtitle"/><attr format="reference|color" name="textColorSearchUrl"/><attr format="reference" name="searchViewStyle"/><attr format="dimension" name="listPreferredItemHeight"/><attr format="dimension" name="listPreferredItemHeightSmall"/><attr format="dimension" name="listPreferredItemHeightLarge"/><attr format="dimension" name="listPreferredItemPaddingLeft"/><attr format="dimension" name="listPreferredItemPaddingRight"/><attr format="reference" name="dropDownListViewStyle"/><attr format="reference" name="listPopupWindowStyle"/><attr format="reference" name="textAppearanceListItem"/><attr format="reference" name="textAppearanceListItemSmall"/><attr format="reference" name="panelBackground"/><attr format="dimension" name="panelMenuListWidth"/><attr format="reference" name="panelMenuListTheme"/><attr format="reference" name="listChoiceBackgroundIndicator"/><attr format="color" name="colorPrimary"/><attr format="color" name="colorPrimaryDark"/><attr format="color" name="colorAccent"/><attr format="color" name="colorControlNormal"/><attr format="color" name="colorControlActivated"/><attr format="color" name="colorControlHighlight"/><attr format="color" name="colorButtonNormal"/><attr format="color" name="colorSwitchThumbNormal"/><attr format="reference" name="controlBackground"/><attr format="reference" name="alertDialogStyle"/><attr format="reference" name="alertDialogButtonGroupStyle"/><attr format="boolean" name="alertDialogCenterButtons"/><attr format="reference" name="alertDialogTheme"/><attr format="reference|color" name="textColorAlertDialogListItem"/><attr format="reference" name="buttonBarPositiveButtonStyle"/><attr format="reference" name="buttonBarNegativeButtonStyle"/><attr format="reference" name="buttonBarNeutralButtonStyle"/><attr format="reference" name="autoCompleteTextViewStyle"/><attr format="reference" name="buttonStyle"/><attr format="reference" name="buttonStyleSmall"/><attr format="reference" name="checkboxStyle"/><attr format="reference" name="checkedTextViewStyle"/><attr format="reference" name="editTextStyle"/><attr format="reference" name="radioButtonStyle"/><attr format="reference" name="ratingBarStyle"/><attr format="reference" name="ratingBarStyleIndicator"/><attr format="reference" name="ratingBarStyleSmall"/><attr format="reference" name="seekBarStyle"/><attr format="reference" name="spinnerStyle"/><attr format="reference" name="switchStyle"/></declare-styleable>
+    <declare-styleable name="BottomSheetBehavior_Params"><attr format="dimension" name="behavior_peekHeight"/><attr format="boolean" name="behavior_hideable"/></declare-styleable>
     <declare-styleable name="ButtonBarLayout"><attr format="boolean" name="allowStacking"/></declare-styleable>
+    <declare-styleable name="CollapsingAppBarLayout_LayoutParams"><attr name="layout_collapseMode"><enum name="none" value="0"/><enum name="pin" value="1"/><enum name="parallax" value="2"/></attr><attr format="float" name="layout_collapseParallaxMultiplier"/></declare-styleable>
+    <declare-styleable name="CollapsingToolbarLayout"><attr format="dimension" name="expandedTitleMargin"/><attr format="dimension" name="expandedTitleMarginStart"/><attr format="dimension" name="expandedTitleMarginTop"/><attr format="dimension" name="expandedTitleMarginEnd"/><attr format="dimension" name="expandedTitleMarginBottom"/><attr format="reference" name="expandedTitleTextAppearance"/><attr format="reference" name="collapsedTitleTextAppearance"/><attr format="color" name="contentScrim"/><attr format="color" name="statusBarScrim"/><attr format="reference" name="toolbarId"/><attr name="collapsedTitleGravity"><flag name="top" value="0x30"/><flag name="bottom" value="0x50"/><flag name="left" value="0x03"/><flag name="right" value="0x05"/><flag name="center_vertical" value="0x10"/><flag name="fill_vertical" value="0x70"/><flag name="center_horizontal" value="0x01"/><flag name="center" value="0x11"/><flag name="start" value="0x00800003"/><flag name="end" value="0x00800005"/></attr><attr name="expandedTitleGravity"><flag name="top" value="0x30"/><flag name="bottom" value="0x50"/><flag name="left" value="0x03"/><flag name="right" value="0x05"/><flag name="center_vertical" value="0x10"/><flag name="fill_vertical" value="0x70"/><flag name="center_horizontal" value="0x01"/><flag name="center" value="0x11"/><flag name="start" value="0x00800003"/><flag name="end" value="0x00800005"/></attr><attr format="boolean" name="titleEnabled"/><attr name="title"/></declare-styleable>
     <declare-styleable name="CompoundButton"><attr name="android:button"/><attr format="color" name="buttonTint"/><attr name="buttonTintMode"><enum name="src_over" value="3"/><enum name="src_in" value="5"/><enum name="src_atop" value="9"/><enum name="multiply" value="14"/><enum name="screen" value="15"/></attr></declare-styleable>
     <declare-styleable name="ConstraintLayout_Layout"><attr name="android:orientation"/><attr name="android:minWidth"/><attr name="android:minHeight"/><attr name="android:maxWidth"/><attr name="android:maxHeight"/><attr name="layout_optimizationLevel"/><attr name="constraintSet"/><attr name="barrierDirection"/><attr name="barrierAllowsGoneWidgets"/><attr name="constraint_referenced_ids"/><attr name="chainUseRtl"/><attr name="layout_constraintCircle"/><attr name="layout_constraintCircleRadius"/><attr name="layout_constraintCircleAngle"/><attr name="layout_constraintGuide_begin"/><attr name="layout_constraintGuide_end"/><attr name="layout_constraintGuide_percent"/><attr name="layout_constraintLeft_toLeftOf"/><attr name="layout_constraintLeft_toRightOf"/><attr name="layout_constraintRight_toLeftOf"/><attr name="layout_constraintRight_toRightOf"/><attr name="layout_constraintTop_toTopOf"/><attr name="layout_constraintTop_toBottomOf"/><attr name="layout_constraintBottom_toTopOf"/><attr name="layout_constraintBottom_toBottomOf"/><attr name="layout_constraintBaseline_toBaselineOf"/><attr name="layout_constraintStart_toEndOf"/><attr name="layout_constraintStart_toStartOf"/><attr name="layout_constraintEnd_toStartOf"/><attr name="layout_constraintEnd_toEndOf"/><attr name="layout_goneMarginLeft"/><attr name="layout_goneMarginTop"/><attr name="layout_goneMarginRight"/><attr name="layout_goneMarginBottom"/><attr name="layout_goneMarginStart"/><attr name="layout_goneMarginEnd"/><attr name="layout_constrainedWidth"/><attr name="layout_constrainedHeight"/><attr name="layout_constraintHorizontal_bias"/><attr name="layout_constraintVertical_bias"/><attr name="layout_constraintWidth_default"/><attr name="layout_constraintHeight_default"/><attr name="layout_constraintWidth_min"/><attr name="layout_constraintWidth_max"/><attr name="layout_constraintWidth_percent"/><attr name="layout_constraintHeight_min"/><attr name="layout_constraintHeight_max"/><attr name="layout_constraintHeight_percent"/><attr name="layout_constraintLeft_creator"/><attr name="layout_constraintTop_creator"/><attr name="layout_constraintRight_creator"/><attr name="layout_constraintBottom_creator"/><attr name="layout_constraintBaseline_creator"/><attr name="layout_constraintDimensionRatio"/><attr name="layout_constraintHorizontal_weight"/><attr name="layout_constraintVertical_weight"/><attr name="layout_constraintHorizontal_chainStyle"/><attr name="layout_constraintVertical_chainStyle"/><attr name="layout_editor_absoluteX"/><attr name="layout_editor_absoluteY"/></declare-styleable>
     <declare-styleable name="ConstraintLayout_placeholder"><attr name="emptyVisibility"/><attr name="content"/></declare-styleable>
     <declare-styleable name="ConstraintSet"><attr name="android:orientation"/><attr name="android:id"/><attr name="android:visibility"/><attr name="android:alpha"/><attr name="android:elevation"/><attr name="android:rotation"/><attr name="android:rotationX"/><attr name="android:rotationY"/><attr name="android:scaleX"/><attr name="android:scaleY"/><attr name="android:transformPivotX"/><attr name="android:transformPivotY"/><attr name="android:translationX"/><attr name="android:translationY"/><attr name="android:translationZ"/><attr name="android:layout_width"/><attr name="android:layout_height"/><attr name="android:layout_marginStart"/><attr name="android:layout_marginBottom"/><attr name="android:layout_marginTop"/><attr name="android:layout_marginEnd"/><attr name="android:layout_marginLeft"/><attr name="android:layout_marginRight"/><attr name="layout_constraintCircle"/><attr name="layout_constraintCircleRadius"/><attr name="layout_constraintCircleAngle"/><attr name="layout_constraintGuide_begin"/><attr name="layout_constraintGuide_end"/><attr name="layout_constraintGuide_percent"/><attr name="layout_constraintLeft_toLeftOf"/><attr name="layout_constraintLeft_toRightOf"/><attr name="layout_constraintRight_toLeftOf"/><attr name="layout_constraintRight_toRightOf"/><attr name="layout_constraintTop_toTopOf"/><attr name="layout_constraintTop_toBottomOf"/><attr name="layout_constraintBottom_toTopOf"/><attr name="layout_constraintBottom_toBottomOf"/><attr name="layout_constraintBaseline_toBaselineOf"/><attr name="layout_constraintStart_toEndOf"/><attr name="layout_constraintStart_toStartOf"/><attr name="layout_constraintEnd_toStartOf"/><attr name="layout_constraintEnd_toEndOf"/><attr name="layout_goneMarginLeft"/><attr name="layout_goneMarginTop"/><attr name="layout_goneMarginRight"/><attr name="layout_goneMarginBottom"/><attr name="layout_goneMarginStart"/><attr name="layout_goneMarginEnd"/><attr name="layout_constrainedWidth"/><attr name="layout_constrainedHeight"/><attr name="layout_constraintHorizontal_bias"/><attr name="layout_constraintVertical_bias"/><attr name="layout_constraintWidth_default"/><attr name="layout_constraintHeight_default"/><attr name="layout_constraintWidth_min"/><attr name="layout_constraintWidth_max"/><attr name="layout_constraintWidth_percent"/><attr name="layout_constraintHeight_min"/><attr name="layout_constraintHeight_max"/><attr name="layout_constraintHeight_percent"/><attr name="layout_constraintLeft_creator"/><attr name="layout_constraintTop_creator"/><attr name="layout_constraintRight_creator"/><attr name="layout_constraintBottom_creator"/><attr name="layout_constraintBaseline_creator"/><attr name="layout_constraintDimensionRatio"/><attr name="layout_constraintHorizontal_weight"/><attr name="layout_constraintVertical_weight"/><attr name="layout_constraintHorizontal_chainStyle"/><attr name="layout_constraintVertical_chainStyle"/><attr name="layout_editor_absoluteX"/><attr name="layout_editor_absoluteY"/></declare-styleable>
+    <declare-styleable name="CoordinatorLayout"><attr format="reference" name="keylines"/><attr format="reference" name="statusBarBackground"/></declare-styleable>
+    <declare-styleable name="CoordinatorLayout_LayoutParams"><attr name="android:layout_gravity"/><attr format="string" name="layout_behavior"/><attr format="reference" name="layout_anchor"/><attr format="integer" name="layout_keyline"/><attr name="layout_anchorGravity"><flag name="top" value="0x30"/><flag name="bottom" value="0x50"/><flag name="left" value="0x03"/><flag name="right" value="0x05"/><flag name="center_vertical" value="0x10"/><flag name="fill_vertical" value="0x70"/><flag name="center_horizontal" value="0x01"/><flag name="fill_horizontal" value="0x07"/><flag name="center" value="0x11"/><flag name="fill" value="0x77"/><flag name="clip_vertical" value="0x80"/><flag name="clip_horizontal" value="0x08"/><flag name="start" value="0x00800003"/><flag name="end" value="0x00800005"/></attr></declare-styleable>
+    <declare-styleable name="DesignTheme"><attr format="reference" name="bottomSheetDialogTheme"/><attr format="reference" name="bottomSheetStyle"/><attr format="color" name="textColorError"/></declare-styleable>
     <declare-styleable name="DrawerArrowToggle"><attr format="color" name="color"/><attr format="boolean" name="spinBars"/><attr format="dimension" name="drawableSize"/><attr format="dimension" name="gapBetweenBars"/><attr format="dimension" name="arrowHeadLength"/><attr format="dimension" name="arrowShaftLength"/><attr format="dimension" name="barLength"/><attr format="dimension" name="thickness"/></declare-styleable>
+    <declare-styleable name="FloatingActionButton"><attr name="backgroundTint"/><attr name="backgroundTintMode"/><attr format="color" name="rippleColor"/><attr name="fabSize"><enum name="normal" value="0"/><enum name="mini" value="1"/></attr><attr name="elevation"/><attr format="dimension" name="pressedTranslationZ"/><attr format="dimension" name="borderWidth"/><attr format="boolean" name="useCompatPadding"/></declare-styleable>
+    <declare-styleable name="ForegroundLinearLayout"><attr name="android:foreground"/><attr name="android:foregroundGravity"/><attr format="boolean" name="foregroundInsidePadding"/></declare-styleable>
     <declare-styleable name="LinearConstraintLayout"><attr name="android:orientation"/></declare-styleable>
     <declare-styleable name="LinearLayoutCompat"><attr name="android:orientation"/><attr name="android:gravity"/><attr name="android:baselineAligned"/><attr name="android:baselineAlignedChildIndex"/><attr name="android:weightSum"/><attr format="boolean" name="measureWithLargestChild"/><attr name="divider"/><attr name="showDividers"><flag name="none" value="0"/><flag name="beginning" value="1"/><flag name="middle" value="2"/><flag name="end" value="4"/></attr><attr format="dimension" name="dividerPadding"/></declare-styleable>
     <declare-styleable name="LinearLayoutCompat_Layout"><attr name="android:layout_width"/><attr name="android:layout_height"/><attr name="android:layout_weight"/><attr name="android:layout_gravity"/></declare-styleable>
@@ -227,12 +249,20 @@
     <declare-styleable name="MenuGroup"><attr name="android:id"/><attr name="android:menuCategory"/><attr name="android:orderInCategory"/><attr name="android:checkableBehavior"/><attr name="android:visible"/><attr name="android:enabled"/></declare-styleable>
     <declare-styleable name="MenuItem"><attr name="android:id"/><attr name="android:menuCategory"/><attr name="android:orderInCategory"/><attr name="android:title"/><attr name="android:titleCondensed"/><attr name="android:icon"/><attr name="android:alphabeticShortcut"/><attr name="android:numericShortcut"/><attr name="android:checkable"/><attr name="android:checked"/><attr name="android:visible"/><attr name="android:enabled"/><attr name="android:onClick"/><attr name="showAsAction"><flag name="never" value="0"/><flag name="ifRoom" value="1"/><flag name="always" value="2"/><flag name="withText" value="4"/><flag name="collapseActionView" value="8"/></attr><attr format="reference" name="actionLayout"/><attr format="string" name="actionViewClass"/><attr format="string" name="actionProviderClass"/></declare-styleable>
     <declare-styleable name="MenuView"><attr name="android:itemTextAppearance"/><attr name="android:horizontalDivider"/><attr name="android:verticalDivider"/><attr name="android:headerBackground"/><attr name="android:itemBackground"/><attr name="android:windowAnimationStyle"/><attr name="android:itemIconDisabledAlpha"/><attr format="boolean" name="preserveIconSpacing"/></declare-styleable>
+    <declare-styleable name="NavigationView"><attr name="android:background"/><attr name="android:fitsSystemWindows"/><attr name="android:maxWidth"/><attr name="elevation"/><attr format="reference" name="menu"/><attr format="color" name="itemIconTint"/><attr format="color" name="itemTextColor"/><attr format="reference" name="itemBackground"/><attr format="reference" name="itemTextAppearance"/><attr format="reference" name="headerLayout"/></declare-styleable>
     <declare-styleable name="PopupWindow"><attr format="boolean" name="overlapAnchor"/><attr name="android:popupBackground"/></declare-styleable>
     <declare-styleable name="PopupWindowBackgroundState"><attr format="boolean" name="state_above_anchor"/></declare-styleable>
+    <declare-styleable name="RecyclerView"><attr format="string" name="layoutManager"/><attr name="android:orientation"/><attr format="integer" name="spanCount"/><attr format="boolean" name="reverseLayout"/><attr format="boolean" name="stackFromEnd"/></declare-styleable>
+    <declare-styleable name="ScrimInsetsFrameLayout"><attr format="color|reference" name="insetForeground"/></declare-styleable>
+    <declare-styleable name="ScrollingViewBehavior_Params"><attr format="dimension" name="behavior_overlapTop"/></declare-styleable>
     <declare-styleable name="SearchView"><attr format="reference" name="layout"/><attr format="boolean" name="iconifiedByDefault"/><attr name="android:maxWidth"/><attr format="string" name="queryHint"/><attr format="string" name="defaultQueryHint"/><attr name="android:imeOptions"/><attr name="android:inputType"/><attr format="reference" name="closeIcon"/><attr format="reference" name="goIcon"/><attr format="reference" name="searchIcon"/><attr format="reference" name="searchHintIcon"/><attr format="reference" name="voiceIcon"/><attr format="reference" name="commitIcon"/><attr format="reference" name="suggestionRowLayout"/><attr format="reference" name="queryBackground"/><attr format="reference" name="submitBackground"/><attr name="android:focusable"/></declare-styleable>
+    <declare-styleable name="SnackbarLayout"><attr name="android:maxWidth"/><attr name="elevation"/><attr format="dimension" name="maxActionInlineWidth"/></declare-styleable>
     <declare-styleable name="Spinner"><attr name="android:prompt"/><attr name="popupTheme"/><attr name="android:popupBackground"/><attr name="android:dropDownWidth"/><attr name="android:entries"/></declare-styleable>
     <declare-styleable name="SwitchCompat"><attr name="android:thumb"/><attr format="reference" name="track"/><attr name="android:textOn"/><attr name="android:textOff"/><attr format="dimension" name="thumbTextPadding"/><attr format="reference" name="switchTextAppearance"/><attr format="dimension" name="switchMinWidth"/><attr format="dimension" name="switchPadding"/><attr format="boolean" name="splitTrack"/><attr format="boolean" name="showText"/></declare-styleable>
+    <declare-styleable name="TabItem"><attr name="android:text"/><attr name="android:icon"/><attr name="android:layout"/></declare-styleable>
+    <declare-styleable name="TabLayout"><attr format="color" name="tabIndicatorColor"/><attr format="dimension" name="tabIndicatorHeight"/><attr format="dimension" name="tabContentStart"/><attr format="reference" name="tabBackground"/><attr name="tabMode"><enum name="scrollable" value="0"/><enum name="fixed" value="1"/></attr><attr name="tabGravity"><enum name="fill" value="0"/><enum name="center" value="1"/></attr><attr format="dimension" name="tabMinWidth"/><attr format="dimension" name="tabMaxWidth"/><attr format="reference" name="tabTextAppearance"/><attr format="color" name="tabTextColor"/><attr format="color" name="tabSelectedTextColor"/><attr format="dimension" name="tabPaddingStart"/><attr format="dimension" name="tabPaddingTop"/><attr format="dimension" name="tabPaddingEnd"/><attr format="dimension" name="tabPaddingBottom"/><attr format="dimension" name="tabPadding"/></declare-styleable>
     <declare-styleable name="TextAppearance"><attr name="android:textSize"/><attr name="android:textColor"/><attr name="android:textStyle"/><attr name="android:typeface"/><attr name="textAllCaps"/><attr name="android:shadowColor"/><attr name="android:shadowDy"/><attr name="android:shadowDx"/><attr name="android:shadowRadius"/></declare-styleable>
+    <declare-styleable name="TextInputLayout"><attr format="reference" name="hintTextAppearance"/><attr name="android:hint"/><attr format="boolean" name="hintEnabled"/><attr format="boolean" name="errorEnabled"/><attr format="reference" name="errorTextAppearance"/><attr format="boolean" name="counterEnabled"/><attr format="integer" name="counterMaxLength"/><attr format="reference" name="counterTextAppearance"/><attr format="reference" name="counterOverflowTextAppearance"/><attr name="android:textColorHint"/><attr format="boolean" name="hintAnimationEnabled"/></declare-styleable>
     <declare-styleable name="Toolbar"><attr format="reference" name="titleTextAppearance"/><attr format="reference" name="subtitleTextAppearance"/><attr name="title"/><attr name="subtitle"/><attr name="android:gravity"/><attr format="dimension" name="titleMargins"/><attr format="dimension" name="titleMarginStart"/><attr format="dimension" name="titleMarginEnd"/><attr format="dimension" name="titleMarginTop"/><attr format="dimension" name="titleMarginBottom"/><attr name="contentInsetStart"/><attr name="contentInsetEnd"/><attr name="contentInsetLeft"/><attr name="contentInsetRight"/><attr format="dimension" name="maxButtonHeight"/><attr format="reference" name="collapseIcon"/><attr format="string" name="collapseContentDescription"/><attr name="popupTheme"/><attr format="reference" name="navigationIcon"/><attr format="string" name="navigationContentDescription"/><attr name="android:minHeight"/><attr name="logo"/><attr format="string" name="logoDescription"/><attr format="color" name="titleTextColor"/><attr format="color" name="subtitleTextColor"/></declare-styleable>
     <declare-styleable name="View"><attr format="dimension" name="paddingStart"/><attr format="dimension" name="paddingEnd"/><attr name="android:focusable"/><attr format="reference" name="theme"/><attr name="android:theme"/></declare-styleable>
     <declare-styleable name="ViewBackgroundHelper"><attr name="android:background"/><attr format="color" name="backgroundTint"/><attr name="backgroundTintMode"><enum name="src_over" value="3"/><enum name="src_in" value="5"/><enum name="src_atop" value="9"/><enum name="multiply" value="14"/><enum name="screen" value="15"/></attr></declare-styleable>
@@ -304,11 +334,44 @@
     <dimen name="abc_text_size_subtitle_material_toolbar">16dp</dimen>
     <dimen name="abc_text_size_title_material">20sp</dimen>
     <dimen name="abc_text_size_title_material_toolbar">20dp</dimen>
+    <dimen name="design_appbar_elevation">4dp</dimen>
+    <dimen name="design_bottom_sheet_modal_elevation">16dp</dimen>
+    <dimen name="design_bottom_sheet_modal_peek_height">256dp</dimen>
+    <dimen name="design_fab_border_width">0.5dp</dimen>
+    <dimen name="design_fab_elevation">6dp</dimen>
+    <dimen name="design_fab_image_size">24dp</dimen>
+    <dimen name="design_fab_size_mini">40dp</dimen>
+    <dimen name="design_fab_size_normal">56dp</dimen>
+    <dimen name="design_fab_translation_z_pressed">6dp</dimen>
+    <dimen name="design_navigation_elevation">16dp</dimen>
+    <dimen name="design_navigation_icon_padding">32dp</dimen>
+    <dimen name="design_navigation_icon_size">24dp</dimen>
+    <dimen name="design_navigation_max_width">280dp</dimen>
+    <dimen name="design_navigation_padding_bottom">8dp</dimen>
+    <dimen name="design_navigation_separator_vertical_padding">8dp</dimen>
+    <dimen name="design_snackbar_action_inline_max_width">128dp</dimen>
+    <dimen name="design_snackbar_background_corner_radius">0dp</dimen>
+    <dimen name="design_snackbar_elevation">6dp</dimen>
+    <dimen name="design_snackbar_extra_spacing_horizontal">0dp</dimen>
+    <dimen name="design_snackbar_max_width">-1px</dimen>
+    <dimen name="design_snackbar_min_width">-1px</dimen>
+    <dimen name="design_snackbar_padding_horizontal">12dp</dimen>
+    <dimen name="design_snackbar_padding_vertical">14dp</dimen>
+    <dimen name="design_snackbar_padding_vertical_2lines">24dp</dimen>
+    <dimen name="design_snackbar_text_size">14sp</dimen>
+    <dimen name="design_tab_max_width">264dp</dimen>
+    <dimen name="design_tab_scrollable_min_width">72dp</dimen>
+    <dimen name="design_tab_text_size">14sp</dimen>
+    <dimen name="design_tab_text_size_2line">12sp</dimen>
     <item format="float" name="disabled_alpha_material_dark" type="dimen">0.30</item>
     <item format="float" name="disabled_alpha_material_light" type="dimen">0.26</item>
+    <dimen name="fab_margin">16dp</dimen>
     <item format="float" name="highlight_alpha_material_colored" type="dimen">0.26</item>
     <item format="float" name="highlight_alpha_material_dark" type="dimen">0.20</item>
     <item format="float" name="highlight_alpha_material_light" type="dimen">0.12</item>
+    <dimen name="item_touch_helper_max_drag_scroll_per_frame">20dp</dimen>
+    <dimen name="item_touch_helper_swipe_escape_max_velocity">800dp</dimen>
+    <dimen name="item_touch_helper_swipe_escape_velocity">120dp</dimen>
     <dimen name="notification_large_icon_height">64dp</dimen>
     <dimen name="notification_large_icon_width">64dp</dimen>
     <dimen name="notification_subtext_size">12dp</dimen>
@@ -318,14 +381,18 @@
     <item name="action_menu_divider" type="id"/>
     <item name="action_menu_presenter" type="id"/>
     <item name="home" type="id"/>
+    <item name="item_touch_helper_previous_elevation" type="id"/>
     <item name="progress_circular" type="id"/>
     <item name="progress_horizontal" type="id"/>
     <item name="split_action_bar" type="id"/>
     <item name="up" type="id"/>
+    <item name="view_offset_helper" type="id"/>
     <integer name="abc_config_activityDefaultDur">220</integer>
     <integer name="abc_config_activityShortDur">150</integer>
     <integer name="abc_max_action_buttons">2</integer>
+    <integer name="bottom_sheet_slide_duration">150</integer>
     <integer name="cancel_button_image_alpha">127</integer>
+    <integer name="design_snackbar_text_max_lines">2</integer>
     <integer name="status_bar_notification_info_maxnum">999</integer>
     <string name="abc_action_bar_home_description">Navigate home</string>
     <string name="abc_action_bar_home_description_format">%1$s, %2$s</string>
@@ -394,17 +461,24 @@
     <string name="ac_sector_trailer_7">
         Read KeyA: Never\nWrite KeyA: Never\nRead ACs: A|B\nWrite ACs: Never
         \nRead KeyB: Never\nWrite KeyB: Never</string>
+    <string name="action_Emulator_root_info">**---You need to be Root User---**</string>
+    <string name="action_Emulator_scan">Emulator Scan UID</string>
+    <string name="action_Emulator_settings">Emulator Settings</string>
     <string name="action_append">Append</string>
+    <string name="action_auto_copy_uid">Automatically copy new tag UID to clipboard</string>
     <string name="action_auto_reconnect">Advanced: Auto reconnect if tag gets
         lost during the key mapping process</string>
-    <string name="action_beer_sounds_fine">Beer sounds fine
-        (Donate via Google Play)</string>
+    <string name="action_beer_sounds_fine">Donate via Google Play to original dev</string>
+    <string name="action_beer_sounds_fine2">Donate via PayPal to modder</string>
     <string name="action_brute_tag">Bruteforce Tag</string>
+    <string name="action_calc_bcc">Calculate BCC</string>
     <string name="action_cancel">Cancel</string>
     <string name="action_cancel_all">Cancel Writing</string>
     <string name="action_change">Change</string>
     <string name="action_choose_file">Choose Selected File</string>
     <string name="action_chose_dump">Choose a Dump…</string>
+    <string name="action_clone_uid">Calculate block 0 and clone UID</string>
+    <string name="action_clone_uid_advanced">Advanced options</string>
     <string name="action_compare_dump">Compare Dump</string>
     <string name="action_continue">Continue</string>
     <string name="action_create_key_map">Map Keys to Sectors</string>
@@ -427,9 +501,12 @@
     <string name="action_do_not_show_again">Do not show this message
         again</string>
     <string name="action_dont_save">Don\'t Save</string>
-    <string name="action_edit_key_dump">Edit/Add Key File</string>
+    <string name="action_edit_key_dump">Edit/Add Key File or Credit Card Dumps</string>
     <string name="action_edit_tag_dump">Edit/Analyse Dump File</string>
     <string name="action_editor_only">Use App in \"Offline\" Mode</string>
+    <string name="action_emulator_delete">Delete</string>
+    <string name="action_emulator_emulate">Emulate</string>
+    <string name="action_emulator_rename">Rename</string>
     <string name="action_encode">Encode</string>
     <string name="action_exit_app">Exit App</string>
     <string name="action_factory_format">Factory Format</string>
@@ -444,6 +521,7 @@
     <string name="action_read_tag">Read Tag</string>
     <string name="action_remove_duplicates">Remove Duplicates</string>
     <string name="action_replace">Replace</string>
+    <string name="action_retry_authentication">Retry the authentication if it fails</string>
     <string name="action_save">Save</string>
     <string name="action_save_as_default">Save as default</string>
     <string name="action_save_keys">Save keys</string>
@@ -454,16 +532,26 @@
     <string name="action_share">Share</string>
     <string name="action_show_about">About</string>
     <string name="action_show_ac_tool">Access Condition De-/Encoder</string>
+    <string name="action_show_clone_uid">Clone UID</string>
     <string name="action_show_diff_tool">Diff Tool (Compare Dumps)</string>
     <string name="action_show_options">Show Options</string>
     <string name="action_show_preferences">Preferences</string>
-    <string name="action_show_tag_info">Display Tag Info</string>
+    <string name="action_show_tag_info">Display Tag Details</string>
     <string name="action_show_value_blocks_as_int">Value Blocks as Int.</string>
     <string name="action_show_vb_tool">Value Block De-/Encoder</string>
     <string name="action_skip_blocks">Write as Much as Possible</string>
     <string name="action_static_ac">Use these Access Conditions for all
         sectors:</string>
+    <string name="action_stealth">Stealth mode (Alpha)</string>
+    <string name="action_stealth_nokey">No key file selected</string>
+    <string name="action_stealth_notify_body">Click here to stop it</string>
+    <string name="action_stealth_notify_title">Stealth mode is active</string>
+    <string name="action_stealth_start">Start read</string>
+    <string name="action_stealth_stop">Stop read</string>
     <string name="action_tools">Tools</string>
+    <string name="action_use_custom_sector_count">Use custom sector count</string>
+    <string name="action_use_internal_storage">Save dump and key files
+        to the internal storage</string>
     <string name="action_wirte_block">Write Block</string>
     <string name="action_write_block">Write Block</string>
     <string name="action_write_dump">Write Dump</string>
@@ -473,8 +561,29 @@
         manufacturer block</string>
     <string name="action_write_tag">Write Tag</string>
     <string name="action_write_value_block">Write Value Block</string>
+    <string name="activity_into">Reader mode active</string>
+    <string name="activity_pre_into">The app may crash if the tag is not a Credit Card, for more info click in the info button at the top</string>
     <string name="app_name">MCT Bruteforce Mod</string>
     <string name="app_version">App Version</string>
+    <string name="appbar_scrolling_view_behavior" translatable="false">android.support.design.widget.AppBarLayout$ScrollingViewBehavior</string>
+    <string name="bottom_sheet_behavior" translatable="false">android.support.design.widget.BottomSheetBehavior</string>
+    <string name="brute_decrease_start">Decrease start</string>
+    <string name="brute_increase_start">Increase start</string>
+    <string name="brute_save_status">Save current state</string>
+    <string name="brute_start">Start Brute-force</string>
+    <string name="brute_stop">Stop Brute-force</string>
+    <string name="brute_thread1">Single thread</string>
+    <string name="brute_thread2">Double thread</string>
+    <string name="btn_Emulator_advanced_settings">Advanced settings(Coming soon)</string>
+    <string name="btn_Emulator_info">Information</string>
+    <string name="btn_Emulator_reset">Reset NFC Status</string>
+    <string name="btn_Emulator_scan">Scan tag UID</string>
+    <string name="btn_Emulator_settings">Add tag and settings</string>
+    <string name="btn_Emulator_settings_add">Add</string>
+    <string name="cc_editor_btn">Open this Credit Card file</string>
+    <string name="cc_editor_title">Open a Credit Card saved file</string>
+    <string name="character_counter_pattern" translatable="false">%1$d / %2$d</string>
+    <string name="check_stealth_adv">Advanced mode (more than 15 times)</string>
     <string name="dialog_about_mct">
         <![CDATA[
         <b>MifareClassicTool (MCT)<br /><br />
@@ -485,7 +594,7 @@
         <a href="https://github.com/ikarus23/MifareClassicTool">MCT
         on github</a><br />
         &#8226; Rate this app:
-        <a href="market://details?id=de.syss.MTCBrute4c">via
+        <a href="market://details?id=de.syss.MifareClassicTool">via
         Google Play</a><br />
         &#8226; Donate:
         <a href="https://sites.google.com/view/nokisdemox">via
@@ -519,7 +628,17 @@
         \n\n<b>Check out the \"Write Tag\" section from
         \"Help and Info\" for more information.</b></string>
     <string name="dialog_block0_writing_title">Write manufacturer block</string>
+    <string name="dialog_brute_content">This mode allows your android device to bruteforce any
+    nfc tag, but it can take soo long. There are two modes, a single thread that goes from what
+    you want to FFFFFFFFFFFF and the double one that allows you to choose the start value and
+    the last one.</string>
+    <string name="dialog_brute_title">Brute Force Mod</string>
     <string name="dialog_choose_ac_title">Choose Access Conditions</string>
+    <string name="dialog_closed">I hope this help you</string>
+    <string name="dialog_custom_sector_count">Force a custom sector count
+        and ignore the sector count detected by Android. This can be useful
+        for tags with 2K memory.</string>
+    <string name="dialog_custom_sector_count_title">Custom Sector Count</string>
     <string name="dialog_date_of_manuf">
         <![CDATA[
         The tag was manufacured between <b>%1$s</b> and <b>%2$s</b>
@@ -538,10 +657,20 @@
         \n\nMaybe the tag is not an original Mifare Classic tag.</string>
     <string name="dialog_date_of_manuf_title">Date of manufacture</string>
     <string name="dialog_donate"><b>This is a MCT apk Mod</b>
-        \n\nIf the new features, fixes or the app in general makes you happy,
-        please consider to make the developer happy. Buy him a beer! ;)
+        \n\nThere is a lot of new feautures, that requires your agreement of this terms:
+        -You are completely responsable of your acts
+        -I\'m not responsible of any damage or act you do.
+        -You have to use this app on cards that are completely yours.
+        By continue using this app, it means you accept this terms and conditions.
     </string>
     <string name="dialog_donate_title">Donate</string>
+    <string name="dialog_emulator_content">Card is </string>
+    <string name="dialog_emulator_title">Card is being emulated</string>
+    <string name="dialog_emv_context">This activity will allow you to see the information of a
+    NFC credit card and automatically emulate it. Once you have read the credit card, you can
+    save that info and check it out whenever you want in the list menu.Check out modder info in
+    the main menu to see the original project.
+    </string>
     <string name="dialog_first_run">This application is dedicated
         to users who have at least basic familiarity with the
         Mifare Classic technology. Its features are basic and at a low
@@ -552,6 +681,19 @@
         \n\n<b>FOR MORE INFORMATION AND HELP CHECK OUT THE
         \"Help and Info\" SECTION.</b></string>
     <string name="dialog_first_run_title">WARNING NOTICE</string>
+    <string name="dialog_gen2_tags_info">The first block of the first sector of an MIFARE
+        Classic tag contains the UID and is read-only i.e. not writable. But there are
+        special MIFARE Classic tags (\"magic tags 2nd gen\", aka. \"block 0 direct write tags\")
+        that support writing to the first block (including the UID) with a simple write command.
+        This App is able to write to such tags and can therefore clone the UID. However, some special
+        tags (\"magic tags 1st gen\") require a special command sequence to put them into the
+        state where writing to the manufacturer block is possible. These tags will not work.
+        \n\nFor now this tool will only work with 4-byte UIDs.</string>
+    <string name="dialog_gen2_tags_info_title">Cloning the UID</string>
+    <string name="dialog_key_for_block_0">To write to block 0 (the block with the UID) you
+        need the corresponding key with write privileges. For blank or factory formatted
+        tags this key is key A with a value of \"FFFFFFFFFFFF\".</string>
+    <string name="dialog_key_for_block_0_title">Key for Block 0</string>
     <string name="dialog_mapping_range">Choose the sector range for the key
         mapping process\n(0 is the first sector):</string>
     <string name="dialog_mapping_range_title">Choose range</string>
@@ -590,15 +732,23 @@
     <string name="dialog_not_writable">Some parts are not writable! Check the
         WHOLE list below.</string>
     <string name="dialog_not_writable_title">Write Issues</string>
+    <string name="dialog_rest_of_block_0">MIFARE Classic tags can typically only be
+        written blockwise. The UID is represented by the first bytes of block 0. To
+        change the UID, the full block 0 must be written. The \"rest of block 0\" data are
+        the bytes which will get appended to the UID to represent a full block.</string>
+    <string name="dialog_rest_of_block_0_title">Rest of Block 0</string>
+    <string name="dialog_retry_authentication">Retry the authentication (to access a sector/block)
+        X times if it fails.\n\nSome tags need this in order to work well (e.g. some block 0
+        writable tags with 7 bytes UID). Also, might help to get some devices to work more
+        consistent (e.g. the Google Nexus 5X or the Huawei P10).\n\nKeep in mind that this
+        might slow down reading, writing or even key mapping. In most cases you should leave
+        this option disabled.</string>
+    <string name="dialog_retry_authentication_title">Retry authentication</string>
     <string name="dialog_save_before_quitting"><b>There are unsaved changes!</b>
         \nDo you want to save these changes?
     </string>
     <string name="dialog_save_before_quitting_title">Unsaved changes</string>
-    <string name="dialog_save_conflict_dump">This file already exists.
-        What do you want to do?
-        \n\n<b>Note: Files containing multiple dumps (created by using
-        \"append\") can not be displayed, edited or written by
-        this app.</b></string>
+    <string name="dialog_save_conflict_dump">This file already exists.         What do you want to do?           <b>Note: Files containing multiple dumps (created by using         \"append\") can not be displayed, edited or written by         this app.</b></string>
     <string name="dialog_save_conflict_keyfile">This file already exists.
         What do you want to do?</string>
     <string name="dialog_save_conflict_title">File already exists</string>
@@ -620,15 +770,50 @@
         \n\n<b>WARNING: Writing incorrect data may cause irreparable
         damage to the tag.</b></string>
     <string name="dialog_static_ac_title">Use static Access Conditions</string>
+    <string name="dialog_stealth_mode_content">This mode will allow you to read tags while
+    screen is off and also it will repeat the key dictionary the times you want ,until its read something
+    or you press stop stealth mode. (It may have some errors, you can\'t put more than15 times because you may break the app).
+    Now is only available a repetitive mode while the screen is on, the service, that will provide lock screen reading, is under testing and has a lot
+    of issues, thats why is not available yet.(Hopefully a new version of this app will bring the stealth mode as a Beta or even as a release version)</string>
+    <string name="dialog_stealth_mode_title">Stealth reader (ALPHA)</string>
     <string name="dialog_tools_menu_title">Available tools</string>
+    <string name="dialog_use_internal_storage">Android commonly has two places to store
+        files: The internal and the external memory.\n\nThe internal memory is only
+        readable by the app and will be deleted once the app gets uninstalled.\n\nThe
+        external storage, in many cases the SD card, is readable by every app with
+        sufficient rights. Data stored on the external memory will survive an
+        uninstall of the app.\n\nBy using this option you can switch between the two
+        storages. Dump and key files will not be copied between them.</string>
+    <string name="dialog_use_internal_storage_title">Use Internal Storage</string>
     <string name="dialog_wait_write_tag">Writing tag…\n(Don\'t remove tag)</string>
     <string name="dialog_wait_write_tag_title">Writing…</string>
     <string name="dialog_write_sectors">Select the sectors you
         want to write:</string>
     <string name="dialog_write_sectors_title">Write Sectors</string>
+    <string name="emulator_already_restore">Already restore to default</string>
+    <string name="emulator_card">card:</string>
+    <string name="emulator_current">Current:</string>
+    <string name="emulator_first_restore">Restore to default first</string>
+    <string name="emulator_no_restore">No backup file found</string>
+    <string name="emulator_not_root">Can\'t get root access</string>
+    <string name="emulator_root">Root access is given</string>
+    <string name="emulator_scanning_text">Put your card behind your phone and I\'ll try to read it.</string>
+    <string name="emulator_settings_tag">New Card Here as: "XX, XX, XX, XX" Example: 12, 34, 56, 78</string>
+    <string name="emv_card_detected">Card detected</string>
+    <string name="emv_not_cc">Card detected but it is not a supported Credit Card</string>
+    <string name="emv_reading_progress">Reading card data … </string>
+    <string name="emv_reading_success">Reading card data … completed</string>
+    <string name="emv_save_no_name">Please don\'t leave name empty</string>
+    <string name="emv_saved_as">Saved as </string>
+    <string name="emv_switch_demo">Demonstration Mode</string>
+    <string name="emv_switch_read">Read Mode</string>
+    <string name="emv_toast_read">Tag read</string>
+    <string name="hint_custom_retry_authentication_count">Number of retries</string>
+    <string name="hint_custom_sector_count">e.g. 16 for 1K</string>
     <string name="hint_hex_00">00</string>
     <string name="hint_hex_16_byte">HEX, 16 bytes (e.g. 0A4F…)</string>
     <string name="hint_hex_3_byte">HEX, 3 bytes</string>
+    <string name="hint_hex_4_byte">HEX, 4 bytes</string>
     <string name="hint_int_423">e.g. 423</string>
     <string name="info_ac_format_error">Error: The Access Conditions
         are invalid</string>
@@ -661,13 +846,17 @@
           insufficient rights or incorrect value</string>
     <string name="info_file_already_exists">Error: File already exists</string>
     <string name="info_file_to_big">Error: File is too big (out of memory)</string>
+    <string name="info_hope_help">I hope this help you</string>
+    <string name="info_incorrect_key">Error: Key not correct</string>
     <string name="info_invalid_int">Not a valid integer</string>
     <string name="info_invalid_range">Error in mapping range</string>
+    <string name="info_invalid_uid_length">Error: Invalid UID length</string>
     <string name="info_is_not_vb">Error: Not a value block.</string>
     <string name="info_key_map_error">Error: Lost connection to the tag</string>
     <string name="info_mapping_sector_out_of_range">Error in mapping range:
         Sector out of range. Use a bigger tag.</string>
     <string name="info_new_tag_found">New tag found</string>
+    <string name="info_new_tag_not_found">Tag not found</string>
     <string name="info_no_dumps">There are no dumps.
         Read a tag and save the dump</string>
     <string name="info_no_external_storage">Error: External storage is not
@@ -688,8 +877,13 @@
         (Maybe it will come in future versions…)</string>
     <string name="info_not_vb">Error: Selected block is not a Value Block</string>
     <string name="info_nothing_to_write">There is nothing left to write</string>
+    <string name="info_rest_of_block_0_length">Error: The length of the rest of block 0
+        is incorrect</string>
+    <string name="info_retry_authentication_count_error">Error: Retries must be between
+        1 and 1000</string>
     <string name="info_save_error">Error: Error while saving data</string>
     <string name="info_save_successful">Data successfully saved</string>
+    <string name="info_sector_count_error">Error: Sector count must be between 1 and 40</string>
     <string name="info_sector_out_of_range">Error: The sector is out of range</string>
     <string name="info_strange_error">Error: A strange error occurred…
         and I don\'t know why :(\nPlease report this using the project page</string>
@@ -721,7 +915,30 @@
     <string name="info_write_error">Error: Some error occurred while
         writing.\nThis could be really bad.</string>
     <string name="info_write_successful">Data successfully written</string>
+    <string name="modder_app_emv">EmvEmulator (CCReader)</string>
+    <string name="modder_app_uid_em">NFC UID Emulator</string>
+    <string name="modder_apps">My other Apps:</string>
+    <string name="modder_official">Official Mifare Classic Tools</string>
+    <string name="modder_related">Other NFC cool Apps:</string>
+    <string name="modder_thanks">This New Version is also possible thanks to this projects:</string>
+    <string name="nokisdemox_donation">NokisDemox Donation</string>
+    <string name="nokisdemox_select_key">Please select a keyfile</string>
+    <string name="nokisdemox_web_page">NokisDemox Web Page</string>
+    <string name="nokisdemox_yt">NokisDemox Youtube Channel</string>
+    <string name="not_emulator_message">This activity will allow you to emulate any NFC UID by
+    typing it or just scanning the tag. Check out modder info in the main menu to see the
+    original project.</string>
+    <string name="not_emulator_title">UID Emulator</string>
+    <string name="not_stealth_content_read_y">Stealth info : READING</string>
+    <string name="not_stealth_read_n">Reading: Not yet</string>
+    <string name="not_stealth_read_y">Reading: Yes</string>
     <string name="status_bar_notification_info_overflow">999+</string>
+    <string name="stealth_adv_start">Advanced stealth mode activated</string>
+    <string name="stealth_adv_start_error">Error, put less than 15 times or check Advanced mode</string>
+    <string name="stealth_start">Stealth mode activated</string>
+    <string name="stealth_xml_delay">Delay between reads(in seconds)</string>
+    <string name="stealth_xml_lasttag">Last Tag info</string>
+    <string name="stealth_xml_repeats">Times to repeat map key</string>
     <string name="tag_000218">MIFARE Classic 4k, NXP</string>
     <string name="tag_000238">MIFARE Classic 4k - emulated (6212 Classic), Nokia</string>
     <string name="tag_000298">MPCOS, Gemplus</string>
@@ -761,8 +978,10 @@
     <string name="text_atqa">ATQA</string>
     <string name="text_ats">ATS</string>
     <string name="text_b">B:</string>
+    <string name="text_bcc">BCC:</string>
     <string name="text_block">Block</string>
     <string name="text_block_0">Block 0 (0-4):</string>
+    <string name="text_block_0_calculated">Block 0 calculated</string>
     <string name="text_block_1">Block 1 (5-9):</string>
     <string name="text_block_2">Block 2 (10-14):</string>
     <string name="text_block_3">Block 3 (15) - Sector Trailer:</string>
@@ -770,9 +989,17 @@
     <string name="text_block_read_only">Block is read-only</string>
     <string name="text_block_size">Block Size</string>
     <string name="text_caption_title">Caption</string>
+    <string name="text_checking_clone">Checking clone</string>
     <string name="text_choose_dump_to_write">Choose the dump to be written:</string>
     <string name="text_choose_key_file">Choose some key file(s):</string>
-    <string name="text_chooser_info_text">Choose a file:</string>
+    <string name="text_chooser_info_text">Choose a key file:</string>
+    <string name="text_clone_error">Error: Are you sure you have a magic
+        tag (2nd gen)?</string>
+    <string name="text_clone_successfully">Successfully cloned UID</string>
+    <string name="text_clone_uid_info">This tool can clone the UID of a tag to a
+        \"magic tag\" (2nd gen, Android compatible, direct write,
+        block 0 writable). Hit the info button to get more information.</string>
+    <string name="text_clone_uid_manufacturer_block_rest">The rest of block 0</string>
     <string name="text_copy">Copy</string>
     <string name="text_data">Data</string>
     <string name="text_decrement">Decrement</string>
@@ -802,6 +1029,7 @@
     <string name="text_mem_size">Memory Size</string>
     <string name="text_mf_info">Mifare Classic Info</string>
     <string name="text_never">Never</string>
+    <string name="text_no_errors_on_write">No errors during write process</string>
     <string name="text_no_files_in_chooser">No files found</string>
     <string name="text_no_key_io_error">No keys found (or dead sector)</string>
     <string name="text_no_mfc_support_device">This device does not
@@ -814,6 +1042,7 @@
     <string name="text_open_key_file_title">Open or Create a Key File</string>
     <string name="text_option_info">Info to option</string>
     <string name="text_paste">Paste</string>
+    <string name="text_rescan_tag_to_check">Rescan clone to validate success</string>
     <string name="text_rf_tech">RF Technology</string>
     <string name="text_rf_tech_14a">ISO/IEC 14443, Type A</string>
     <string name="text_sak">SAK</string>
@@ -825,6 +1054,7 @@
     <string name="text_share_subject_key_file">MCT Key File</string>
     <string name="text_starting_at_0">(Starting at 0)</string>
     <string name="text_static_ac_default">08778F</string>
+    <string name="text_status_log">Status Log</string>
     <string name="text_step_1_sector_trailer">Step 1:
         Choose ACs for Sector Trailer</string>
     <string name="text_step_2_data_blocks">Step 2:
@@ -836,7 +1066,11 @@
     <string name="text_to">To</string>
     <string name="text_uid">UID</string>
     <string name="text_uid_and_manuf">UID &amp; ManufInfo</string>
+    <string name="text_uid_match_error">UIDs did not match</string>
+    <string name="text_uid_part">UID (part):</string>
+    <string name="text_uid_to_clone">UID to clone</string>
     <string name="text_update_colors">Update Colors</string>
+    <string name="text_use_uid_of_scanned_tag">Use UID of scanned tag</string>
     <string name="text_value">Value</string>
     <string name="text_valueblock">ValueBlock</string>
     <string name="text_vb">VB:</string>
@@ -845,36 +1079,84 @@
     <string name="text_vb_orig">Original:</string>
     <string name="text_vb_value">Value:</string>
     <string name="text_vb_what">What:</string>
-    <string name="text_wait_read_tag">Reading tag…\n(Don\'t remove tag)</string>
+    <string name="text_wait_read_tag">Reading tag…\n(Dont remove tag)</string>
+    <string name="text_waiting_for_magic_tag">Waiting for magic tag (2nd gen)</string>
     <string name="text_write_dump_info">Write a dump (or some sectors of it) to
         a tag. Blocks containing unknown data (---) will be skipped!</string>
+    <string name="text_write_key">The key to write block 0</string>
     <string name="text_write_key_a_not_known">Key with write access (A)
         not known</string>
     <string name="text_write_key_b_not_known">Key with write access (B)
         not known</string>
+    <string name="text_writing_block_0">Writing block 0</string>
+    <string name="title_EMV_cc_check">EMV Credit Card Check</string>
+    <string name="title_Emulator">Emulate Tag UID (BETA)</string>
     <string name="title_activity_access_condition_tool">Access Condition
         Decoder &amp; Encode</string>
     <string name="title_activity_access_conditions">Access Conditions</string>
+    <string name="title_activity_bcc_tool">BCC Calculator</string>
     <string name="title_activity_brute">Brute tag</string>
+    <string name="title_activity_brute_tag_only">Brute Force Tag</string>
+    <string name="title_activity_clone_uid">Clone UID to Magic Tag (2nd gen)</string>
     <string name="title_activity_create_key_map">Map Keys to Sectors</string>
     <string name="title_activity_diff_tool">Diff Tool</string>
     <string name="title_activity_dump_editor">Dump Editor</string>
     <string name="title_activity_file_chooser">File Chooser</string>
     <string name="title_activity_help">Help and Info</string>
     <string name="title_activity_hex_to_ascii">Data as ASCII</string>
+    <string name="title_activity_info_led">Icon to show NFC status</string>
     <string name="title_activity_key_editor">Key Editor</string>
-    <string name="title_activity_main">MCT Bruteforce Mod</string>
+    <string name="title_activity_main">Tag info</string>
+    <string name="title_activity_main_about">About</string>
+    <string name="title_activity_main_menu1">MCT Brut3force Mod</string>
+    <string name="title_activity_main_modder">Modder Information and more</string>
+    <string name="title_activity_main_settings">App Settings</string>
+    <string name="title_activity_main_tools">Main NFC Tools</string>
+    <string name="title_activity_other_tools">Other NFC Tools</string>
     <string name="title_activity_preferences">Preferences</string>
-    <string name="title_activity_read_tag">Read Tag</string>
+    <string name="title_activity_read_tag">Read Tag / Bruteforce / Stealth</string>
+    <string name="title_activity_read_tag_only">Read Tag</string>
     <string name="title_activity_tag_info">Tag Info</string>
     <string name="title_activity_value_block_tool">Value Block Decoder
         &amp; Encoder</string>
     <string name="title_activity_value_blocks">Value Blocks as Integers</string>
     <string name="title_activity_write_tag">Write Tag</string>
+    <string name="title_stealth">Stealth read tags</string>
+    <string name="txt_not_stealth_advanced">Advanced try finished</string>
+    <string name="txt_not_stealth_try">Try finished</string>
+    <string name="txt_stealth_of"> of </string>
+    <string name="txt_stealth_read_n">Stealth info : Not reading</string>
+    <string name="txt_stealth_try_n">Try number: </string>
+    <string name="ultralight_btn_open">Open Dump</string>
+    <string name="ultralight_btn_save">Save Dump</string>
+    <string name="ultralight_btn_write">Write Dump</string>
+    <string name="ultralight_dump_insert_name">Insert dump name..</string>
+    <string name="ultralight_info">This activity will allow you to see the information of a
+    mifare ultralight tag. Once you have read it, you can save that info and check it out
+    whenever you want in the list menu.Check out modder info in the main menu to see the
+    original project.(in a future update emulate ultralight will be added)(.mut files are
+    "mifare ultralight tags", which is just a txt)</string>
+    <string name="ultralight_info_title">Ultralight reader (NFCulT)</string>
+    <string name="ultralight_more_btn_open">Ultralight Reader</string>
+    <string name="ultralight_name">Ultralight reader (NFCulT)</string>
+    <string name="ultralight_saved_btn">Open this Ultralight dump</string>
+    <string name="ultralight_saved_title">Open an Ultralight saved dump</string>
     <style name="AlertDialog.AppCompat" parent="Base.AlertDialog.AppCompat"/>
     <style name="AlertDialog.AppCompat.Light" parent="Base.AlertDialog.AppCompat.Light"/>
     <style name="Animation.AppCompat.Dialog" parent="Base.Animation.AppCompat.Dialog"/>
     <style name="Animation.AppCompat.DropDownUp" parent="Base.Animation.AppCompat.DropDownUp"/>
+    <style name="Animation.Design.BottomSheetDialog" parent="Animation.AppCompat.Dialog">
+        <item name="android:windowEnterAnimation">@anim/design_bottom_sheet_slide_in</item>
+        <item name="android:windowExitAnimation">@anim/design_bottom_sheet_slide_out</item>
+    </style>
+    <style name="AppCompat.ActionBar.Black" parent="Theme.AppCompat"/>
+    <style name="AppTheme" parent="Theme.AppCompat.Light"/>
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar"/>
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">true</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light"/>
     <style name="Base.AlertDialog.AppCompat" parent="android:Widget">
         <item name="android:layout">@layout/abc_alert_dialog_material</item>
         <item name="listLayout">@layout/abc_select_dialog_material</item>
@@ -1830,6 +2112,16 @@
         <item name="android:minWidth">56dp</item>
         <item name="android:scaleType">center</item>
     </style>
+    <style name="Base.Widget.Design.TabLayout" parent="android:Widget">
+        <item name="tabMaxWidth">@dimen/design_tab_max_width</item>
+        <item name="tabIndicatorColor">?attr/colorAccent</item>
+        <item name="tabIndicatorHeight">2dp</item>
+        <item name="tabPaddingStart">12dp</item>
+        <item name="tabPaddingEnd">12dp</item>
+        <item name="tabBackground">?attr/selectableItemBackground</item>
+        <item name="tabTextAppearance">@style/TextAppearance.Design.Tab</item>
+        <item name="tabSelectedTextColor">?android:textColorPrimary</item>
+    </style>
     <style name="Platform.AppCompat" parent="android:Theme">
         <item name="android:windowNoTitle">true</item>
 
@@ -2030,6 +2322,28 @@
     </style>
     <style name="TextAppearance.AppCompat.Widget.Switch" parent="Base.TextAppearance.AppCompat.Widget.Switch"/>
     <style name="TextAppearance.AppCompat.Widget.TextView.SpinnerItem" parent="Base.TextAppearance.AppCompat.Widget.TextView.SpinnerItem"/>
+    <style name="TextAppearance.Design.CollapsingToolbar.Expanded" parent="TextAppearance.AppCompat.Display1">
+        <item name="android:textColor">?android:attr/textColorPrimary</item>
+    </style>
+    <style name="TextAppearance.Design.Counter" parent="TextAppearance.AppCompat.Caption"/>
+    <style name="TextAppearance.Design.Counter.Overflow" parent="TextAppearance.AppCompat.Caption">
+        <item name="android:textColor">?attr/textColorError</item>
+    </style>
+    <style name="TextAppearance.Design.Error" parent="TextAppearance.AppCompat.Caption">
+        <item name="android:textColor">?attr/textColorError</item>
+    </style>
+    <style name="TextAppearance.Design.Hint" parent="TextAppearance.AppCompat.Caption">
+        <item name="android:textColor">?attr/colorControlActivated</item>
+    </style>
+    <style name="TextAppearance.Design.Snackbar.Message" parent="android:TextAppearance">
+        <item name="android:textSize">@dimen/design_snackbar_text_size</item>
+        <item name="android:textColor">?android:textColorPrimary</item>
+    </style>
+    <style name="TextAppearance.Design.Tab" parent="TextAppearance.AppCompat.Button">
+        <item name="android:textSize">@dimen/design_tab_text_size</item>
+        <item name="android:textColor">?android:textColorSecondary</item>
+        <item name="textAllCaps">true</item>
+    </style>
     <style name="TextAppearance.StatusBar.EventContent" parent=""/>
     <style name="TextAppearance.StatusBar.EventContent.Info" parent=""/>
     <style name="TextAppearance.StatusBar.EventContent.Line2" parent=""/>
@@ -2067,6 +2381,30 @@
         <item name="windowNoTitle">true</item>
     </style>
     <style name="Theme.AppCompat.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+    <style name="Theme.Design" parent="Theme.AppCompat">
+        <item name="textColorError">@color/design_textinput_error_color_dark</item>
+    </style>
+    <style name="Theme.Design.BottomSheetDialog" parent="Theme.AppCompat.Dialog">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowAnimationStyle">@style/Animation.Design.BottomSheetDialog</item>
+        <item name="bottomSheetStyle">@style/Widget.Design.BottomSheet.Modal</item>
+    </style>
+    <style name="Theme.Design.Light" parent="Theme.AppCompat.Light">
+        <item name="textColorError">@color/design_textinput_error_color_light</item>
+    </style>
+    <style name="Theme.Design.Light.BottomSheetDialog" parent="Theme.AppCompat.Light.Dialog">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowAnimationStyle">@style/Animation.Design.BottomSheetDialog</item>
+        <item name="bottomSheetStyle">@style/Widget.Design.BottomSheet.Modal</item>
+    </style>
+    <style name="Theme.Design.Light.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+    <style name="Theme.Design.NoActionBar">
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
     </style>
@@ -2170,4 +2508,59 @@
     <style name="Widget.AppCompat.TextView.SpinnerItem" parent="Base.Widget.AppCompat.TextView.SpinnerItem"/>
     <style name="Widget.AppCompat.Toolbar" parent="Base.Widget.AppCompat.Toolbar"/>
     <style name="Widget.AppCompat.Toolbar.Button.Navigation" parent="Base.Widget.AppCompat.Toolbar.Button.Navigation"/>
+    <style name="Widget.Design.AppBarLayout" parent="android:Widget">
+        <item name="elevation">@dimen/design_appbar_elevation</item>
+        <item name="android:background">?attr/colorPrimary</item>
+    </style>
+    <style name="Widget.Design.BottomSheet.Modal" parent="android:Widget">
+        <item name="android:background">?android:attr/colorBackground</item>
+        <item name="android:elevation">@dimen/design_bottom_sheet_modal_elevation</item>
+        <item name="behavior_peekHeight">@dimen/design_bottom_sheet_modal_peek_height</item>
+        <item name="behavior_hideable">true</item>
+    </style>
+    <style name="Widget.Design.CollapsingToolbar" parent="android:Widget">
+        <item name="expandedTitleMargin">32dp</item>
+        <item name="statusBarScrim">?attr/colorPrimaryDark</item>
+    </style>
+    <style name="Widget.Design.CoordinatorLayout" parent="android:Widget">
+        <item name="statusBarBackground">?attr/colorPrimaryDark</item>
+    </style>
+    <style name="Widget.Design.FloatingActionButton" parent="android:Widget">
+        <item name="android:background">@drawable/design_fab_background</item>
+        <item name="backgroundTint">?attr/colorAccent</item>
+        <item name="fabSize">normal</item>
+        <item name="elevation">@dimen/design_fab_elevation</item>
+        <item name="pressedTranslationZ">@dimen/design_fab_translation_z_pressed</item>
+        <item name="rippleColor">?attr/colorControlHighlight</item>
+        <item name="borderWidth">@dimen/design_fab_border_width</item>
+    </style>
+    <style name="Widget.Design.NavigationView" parent="">
+        <item name="elevation">@dimen/design_navigation_elevation</item>
+        <item name="android:background">?android:attr/windowBackground</item>
+        <item name="android:fitsSystemWindows">true</item>
+        <item name="android:maxWidth">@dimen/design_navigation_max_width</item>
+    </style>
+    <style name="Widget.Design.ScrimInsetsFrameLayout" parent="">
+        <item name="insetForeground">#4000</item>
+    </style>
+    <style name="Widget.Design.Snackbar" parent="android:Widget">
+        <item name="android:theme">@style/ThemeOverlay.AppCompat.Dark</item>
+        <item name="android:minWidth">@dimen/design_snackbar_min_width</item>
+        <item name="android:maxWidth">@dimen/design_snackbar_max_width</item>
+        <item name="android:background">@drawable/design_snackbar_background</item>
+        <item name="android:paddingLeft">@dimen/design_snackbar_padding_horizontal</item>
+        <item name="android:paddingRight">@dimen/design_snackbar_padding_horizontal</item>
+        <item name="elevation">@dimen/design_snackbar_elevation</item>
+        <item name="maxActionInlineWidth">@dimen/design_snackbar_action_inline_max_width</item>
+    </style>
+    <style name="Widget.Design.TabLayout" parent="Base.Widget.Design.TabLayout">
+        <item name="tabGravity">fill</item>
+        <item name="tabMode">fixed</item>
+    </style>
+    <style name="Widget.Design.TextInputLayout" parent="android:Widget">
+        <item name="hintTextAppearance">@style/TextAppearance.Design.Hint</item>
+        <item name="errorTextAppearance">@style/TextAppearance.Design.Error</item>
+        <item name="counterTextAppearance">@style/TextAppearance.Design.Counter</item>
+        <item name="counterOverflowTextAppearance">@style/TextAppearance.Design.Counter.Overflow</item>
+    </style>
 </resources>

@@ -45,7 +45,7 @@ import de.syss.MCTBrute4c.R;
 
 /**
  * Show and edit key files.
- * @author Gerhard Klostermeier
+ *
  */
 public class KeyEditor extends BasicActivity
         implements IActivityThatReactsToSave{

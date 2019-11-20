@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activities.OtherTools"
+    android:background="@drawable/nk_logo_little">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:ignore="UselessParent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/linearLayoutMainMenuRow1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:paddingTop="10dp">
+
+                    <Button
+                        android:id="@+id/menuMainTagInfo"
+                        style="?android:attr/buttonStyleSmall"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.5"
+                        android:onClick="onShowTagInfo"
+                        android:drawableTop="@drawable/read_tag"
+                        android:text="@string/action_show_tag_info"
+                        android:layout_width="0dp" />
+
+                    <Button
+                        android:id="@+id/menuMainEMV_cc_Check"
+                        style="?android:attr/buttonStyleSmall"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.5"
+                        android:drawableTop="@drawable/cc_check"
+                        android:onClick="onShowEMV_cc_check"
+                        android:text="@string/title_EMV_cc_check"
+                        android:layout_width="0dp" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linearLayoutMainMenuRow3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp">
+
+                    <Button
+                        android:id="@+id/menuMainValueBlockTool"
+                        style="?android:attr/buttonStyleSmall"
+                        android:drawableTop="@drawable/value_block_tool"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.5"
+                        android:onClick="onShowValueBlock"
+                        android:text="@string/action_show_vb_tool"
+                        android:layout_width="0dp" />
+
+                    <Button
+                        android:id="@+id/menuMainAccessConditionTool"
+                        style="?android:attr/buttonStyleSmall"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.5"
+                        android:drawableTop="@drawable/access_condition_tool"
+                        android:onClick="onShowAccessTool"
+                        android:text="@string/action_show_ac_tool"
+                        android:layout_width="0dp" />
+
+
+
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/linearLayoutMainMenuRow4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp">
+
+                    <Button
+                        android:id="@+id/menuMainDiffTool"
+                        style="?android:attr/buttonStyleSmall"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.5"
+                        android:drawableTop="@drawable/diff_tool"
+                        android:onClick="onShowDiffTool"
+                        android:text="@string/action_show_diff_tool"
+                        android:layout_width="0dp" />
+
+                    <Button
+                        android:id="@+id/buttonMainEditCardDump"
+                        style="?android:attr/buttonStyleSmall"
+                        android:layout_height="match_parent"
+                        android:layout_width="0dp"
+                        android:layout_weight="0.5"
+                        android:drawableTop="@drawable/edit_dump"
+                        android:onClick="onOpenTagDumpEditor"
+                        android:text="@string/action_edit_tag_dump" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linearLayoutMainMenuRow5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp">
+
+                    <Button
+                        android:id="@+id/menuMainBccTool"
+                        style="?android:attr/buttonStyleSmall"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.5"
+                        android:drawableTop="@drawable/bcc_tool"
+                        android:onClick="onShowBccTool"
+                        android:text="@string/title_activity_bcc_tool"
+                        android:layout_width="0dp" />
+                    <Button
+                        android:id="@+id/menuMainCloneUidTool"
+                        style="?android:attr/buttonStyleSmall"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.5"
+                        android:drawableTop="@drawable/clone_uid"
+                        android:onClick="onShowCloneUidTool"
+                        android:text="@string/title_activity_clone_uid"
+                        android:layout_width="0dp" />
+
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+
+</RelativeLayout>

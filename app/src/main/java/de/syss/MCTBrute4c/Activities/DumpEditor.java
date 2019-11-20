@@ -74,7 +74,7 @@ import de.syss.MCTBrute4c.R;
  * <li>Display Access Conditions as table</li>
  * <li>Resolve Value Blocks to integers</li>
  * </ul>
- * @author Gerhard Klostermeier
+ *
  */
 public class DumpEditor extends BasicActivity
         implements IActivityThatReactsToSave {
@@ -86,7 +86,7 @@ public class DumpEditor extends BasicActivity
      * are marked with a "*"-symbol.
      */
     public final static String EXTRA_DUMP =
-            "de.syss.MTCBrute4c.Activity.DUMP";
+            "de.syss.MifareClassicTool.Activity.DUMP";
 
     private static final String LOG_TAG =
             DumpEditor.class.getSimpleName();

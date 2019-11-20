@@ -61,7 +61,7 @@ import de.syss.MCTBrute4c.R;
  * Write data to tag. The user can choose to write
  * a single block of data or to write a dump to a tag providing its keys
  * or to factory format a tag.
- * @author Gerhard Klostermeier
+ *
  */
 public class WriteTag extends BasicActivity {
 
@@ -70,7 +70,7 @@ public class WriteTag extends BasicActivity {
      * (e.g. "Sector: 1") are marked with a "+"-symbol (e.g. "+Sector: 1").
      */
     public final static String EXTRA_DUMP =
-            "de.syss.MTCBrute4c.Activity.DUMP";
+            "de.syss.MifareClassicTool.Activity.DUMP";
 
     private static final int FC_WRITE_DUMP = 1;
     private static final int CKM_WRITE_DUMP = 2;

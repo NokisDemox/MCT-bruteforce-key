@@ -37,12 +37,12 @@ import de.syss.MCTBrute4c.R;
  * if you want to have a closer look.
  * This Activity will be shown from the {@link DumpEditor}, if the user
  * clicks the corresponding menu item.
- * @author Gerhard Klostermeier
+ *
  */
 public class ValueBlocksToInt extends BasicActivity {
 
     public final static String EXTRA_VB =
-            "de.syss.MTCBrute4c.Activity.VB";
+            "de.syss.MifareClassicTool.Activity.VB";
 
     private static final String LOG_TAG =
             ValueBlocksToInt.class.getSimpleName();

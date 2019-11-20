@@ -18,6 +18,7 @@
 
 package de.syss.MCTBrute4c.Activities;
 
+import android.annotation.TargetApi;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -26,6 +27,7 @@ import android.nfc.Tag;
 import android.nfc.tech.IsoDep;
 import android.nfc.tech.MifareClassic;
 import android.nfc.tech.NfcA;
+import android.os.Build;
 import android.os.Bundle;
 import android.text.Html;
 import android.text.TextUtils;
@@ -42,7 +44,7 @@ import de.syss.MCTBrute4c.R;
  * Display tag info like technology, size, sector count, etc.
  * This is the only thing a user can do with a device that does not support
  * Mifare Classic.
- * @author Gerhard Klostermeier
+ *
  */
 public class TagInfoTool extends BasicActivity {
 
@@ -118,6 +120,7 @@ public class TagInfoTool extends BasicActivity {
      * If there is no Mifare Classic support, a warning will be shown.
      * @param tag A Tag from an NFC Intent.
      */
+    @TargetApi(Build.VERSION_CODES.HONEYCOMB)
     private void updateTagInfo(Tag tag) {
 
         if (tag != null) {
@@ -131,6 +134,7 @@ public class TagInfoTool extends BasicActivity {
             headerGenericInfo.setText(Common.colorString(
                     getString(R.string.text_generic_info),
                     getResources().getColor(R.color.blue)));
+            headerGenericInfo.setTextIsSelectable(true);
             headerGenericInfo.setBackgroundColor(
                     getResources().getColor(R.color.dark_gray));
             headerGenericInfo.setTextAppearance(this,
@@ -140,6 +144,7 @@ public class TagInfoTool extends BasicActivity {
             headerGenericInfo.setPadding(pad, pad, pad, pad);
             mLayout.addView(headerGenericInfo);
             TextView genericInfo = new TextView(this);
+            genericInfo.setTextIsSelectable(true);
             genericInfo.setPadding(pad, pad, pad, pad);
             genericInfo.setTextAppearance(this,
                     android.R.style.TextAppearance_Medium);
@@ -210,6 +215,7 @@ public class TagInfoTool extends BasicActivity {
             // Add message that the tag type might be wrong.
             if (tagTypeResourceID != R.string.tag_unknown) {
                 TextView tagTypeInfo = new TextView(this);
+                tagTypeInfo.setTextIsSelectable(true);
                 tagTypeInfo.setPadding(pad, 0, pad, pad);
                 tagTypeInfo.setText(
                         "(" + getString(R.string.text_tag_type_guess) + ")");
@@ -223,6 +229,7 @@ public class TagInfoTool extends BasicActivity {
                 // Display Mifare Classic info.
                 // Create views and add them to the layout.
                 TextView headerMifareInfo = new TextView(this);
+                headerMifareInfo.setTextIsSelectable(true);
                 headerMifareInfo.setText(Common.colorString(
                         getString(R.string.text_mf_info),
                         getResources().getColor(R.color.blue)));
@@ -234,6 +241,7 @@ public class TagInfoTool extends BasicActivity {
                 headerMifareInfo.setPadding(pad, pad, pad, pad);
                 mLayout.addView(headerMifareInfo);
                 TextView mifareInfo = new TextView(this);
+                mifareInfo.setTextIsSelectable(true);
                 mifareInfo.setPadding(pad, pad, pad, pad);
                 mifareInfo.setTextAppearance(this,
                         android.R.style.TextAppearance_Medium);
@@ -318,5 +326,9 @@ public class TagInfoTool extends BasicActivity {
             return R.string.tag_unknown;
         }
         return ret;
+    }
+    public void onShowUltralightReader(View view) {
+        Intent intent = new Intent(this, Ultralight_activity.class);
+        startActivity(intent);
     }
 }

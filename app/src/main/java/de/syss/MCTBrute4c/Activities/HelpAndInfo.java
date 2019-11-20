@@ -19,12 +19,15 @@
 package de.syss.MCTBrute4c.Activities;
 
 import android.os.Bundle;
+import android.os.Environment;
 import android.webkit.WebView;
+
+import de.syss.MCTBrute4c.Common;
 import de.syss.MCTBrute4c.R;
 
 /**
  * In-App (offline) help and info.
- * @author Gerhard Klostermeier
+ *
  */
 public class HelpAndInfo extends BasicActivity {
 
@@ -39,6 +42,6 @@ public class HelpAndInfo extends BasicActivity {
 
         // Init. help from local website.
         WebView wv = (WebView) findViewById(R.id.webViewHelpText);
-        wv.loadUrl("file:///android_asset/help/help.html");
+        wv.loadUrl("file:///" + (Environment.getExternalStoragePublicDirectory(Common.HOME_DIR)+ "/" + Common.HTML_DIR) +"/"+ Common.STD_HTML);
     }
 }

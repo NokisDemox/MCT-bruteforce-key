@@ -1,0 +1,19 @@
+#Thu Nov 07 23:27:31 CET 2019
+path.1=classes.dex
+path.0=classes.dex
+renamed.5=classes6.dex
+renamed.4=classes5.dex
+renamed.3=classes4.dex
+renamed.2=classes3.dex
+renamed.1=classes2.dex
+renamed.0=classes.dex
+base.5=E\:\\Users\\Artero\\Desktop\\proyectos\\mct-app-mod\\mct new ver madafaka\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\15
+base.4=E\:\\Users\\Artero\\Desktop\\proyectos\\mct-app-mod\\mct new ver madafaka\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\12
+base.3=E\:\\Users\\Artero\\Desktop\\proyectos\\mct-app-mod\\mct new ver madafaka\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\11
+base.2=E\:\\Users\\Artero\\Desktop\\proyectos\\mct-app-mod\\mct new ver madafaka\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\14
+base.1=E\:\\Users\\Artero\\Desktop\\proyectos\\mct-app-mod\\mct new ver madafaka\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\13
+base.0=E\:\\Users\\Artero\\Desktop\\proyectos\\mct-app-mod\\mct new ver madafaka\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\16
+path.5=classes.dex
+path.4=classes.dex
+path.3=classes.dex
+path.2=classes.dex

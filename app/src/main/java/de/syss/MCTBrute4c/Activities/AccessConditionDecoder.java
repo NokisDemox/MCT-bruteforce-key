@@ -37,12 +37,12 @@ import de.syss.MCTBrute4c.R;
  * if you want to have a closer look.
  * This Activity will be shown from the {@link DumpEditor}, if the user
  * clicks the corresponding menu item.
- * @author Gerhard Klostermeier
+ *
  */
 public class AccessConditionDecoder extends BasicActivity {
 
     public final static String EXTRA_AC =
-            "de.syss.MTCBrute4c.Activity.AC";
+            "de.syss.MifareClassicTool.Activity.AC";
 
     private static final String LOG_TAG =
             AccessConditionDecoder.class.getSimpleName();

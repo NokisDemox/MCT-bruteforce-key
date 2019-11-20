@@ -28,7 +28,7 @@ import de.syss.MCTBrute4c.Common;
  * @see Common#enableNfcForegroundDispatch(Activity)
  * @see Common#disableNfcForegroundDispatch(Activity)
  * @see Common#treatAsNewTag(Intent, android.content.Context)
- * @author Gerhard Klostermeier
+ *
  *
  */
 public abstract class BasicActivity extends Activity {

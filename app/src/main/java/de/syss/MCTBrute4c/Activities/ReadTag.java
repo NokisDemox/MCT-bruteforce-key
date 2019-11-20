@@ -35,7 +35,7 @@ import de.syss.MCTBrute4c.R;
 /**
  * Create a key map with the {@link KeyMapCreator} and then
  * read the tag.
- * @author Gerhard Klostermeier
+ *
  */
 public class ReadTag extends Activity {
 

@@ -39,7 +39,7 @@ import de.syss.MCTBrute4c.R;
 
 /**
  * A tool to show the difference between two dumps.
- * @author Gerhard Klostermeier
+ *
  */
 public class DiffTool extends BasicActivity {
 
@@ -49,7 +49,7 @@ public class DiffTool extends BasicActivity {
      * are marked with a "+"-symbol (e.g. "+Sector: 1").
      */
     public final static String EXTRA_DUMP =
-            "de.syss.MTCBrute4c.Activity.DUMP";
+            "de.syss.MifareClassicTool.Activity.DUMP";
 
     private final static int FILE_CHOOSER_DUMP_FILE_1 = 1;
     private final static int FILE_CHOOSER_DUMP_FILE_2 = 2;

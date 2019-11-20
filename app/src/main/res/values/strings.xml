@@ -16,17 +16,17 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 -->
-
-
 <resources>
-
     <!-- Common stuff -->
     <string name="app_name">MCT Bruteforce Mod</string>
     <string name="app_version">App Version</string>
+    <string name="dialog_closed">I hope this help you</string>
 
     <!-- Activity titles -->
-    <string name="title_activity_main">MCT Bruteforce Mod</string>
-    <string name="title_activity_read_tag">Read Tag</string>
+    <string name="title_activity_main">Tag info</string>
+    <string name="title_activity_read_tag">Read Tag / Bruteforce / Stealth</string>
+    <string name="title_activity_read_tag_only">Read Tag</string>
+    <string name="title_activity_brute_tag_only">Brute Force Tag</string>
     <string name="title_activity_dump_editor">Dump Editor</string>
     <string name="title_activity_access_conditions">Access Conditions</string>
     <string name="title_activity_write_tag">Write Tag</string>
@@ -38,16 +38,23 @@
     <string name="title_activity_help">Help and Info</string>
     <string name="title_activity_hex_to_ascii">Data as ASCII</string>
     <string name="title_activity_tag_info">Tag Info</string>
+    <string name="title_activity_main_tools">Main NFC Tools</string>
     <string name="title_activity_value_block_tool">Value Block Decoder
         &amp; Encoder</string>
     <string name="title_activity_access_condition_tool">Access Condition
         Decoder &amp; Encode</string>
     <string name="title_activity_preferences">Preferences</string>
     <string name="title_activity_diff_tool">Diff Tool</string>
+    <string name="title_activity_main_menu1">MCT Brut3force Mod</string>
+    <string name="title_activity_other_tools">Other NFC Tools</string>
+    <string name="title_activity_main_about">About</string>
+    <string name="title_activity_main_settings">App Settings</string>
+    <string name="title_activity_main_modder">Modder Information and more</string>
+    <string name="title_activity_info_led">Icon to show NFC status</string>
 
     <!-- Texts (labels etc.) -->
     <string name="text_choose_key_file">Choose some key file(s):</string>
-    <string name="text_wait_read_tag">Reading tag&#8230;\n(Don\'t remove tag)</string>
+    <string name="text_wait_read_tag">Reading tag&#8230;\n(Dont remove tag)</string>
     <string name="text_key_map_progress">Key Mapping Progress:</string>
     <string name="text_sector">Sector</string>
     <string name="text_block">Block</string>
@@ -58,7 +65,7 @@
     <string name="text_uid">UID</string>
     <string name="text_uid_and_manuf">UID &amp; ManufInfo</string>
     <string name="text_valueblock">ValueBlock</string>
-    <string name="text_chooser_info_text">Choose a file:</string>
+    <string name="text_chooser_info_text">Choose a key file:</string>
     <string name="text_open_dump_title">Open Tag Dump</string>
     <string name="text_no_files_in_chooser">No files found</string>
     <string name="text_ac_read">Read:</string>
@@ -159,7 +166,7 @@
     <string name="action_write_tag">Write Tag</string>
     <string name="action_brute_tag">Bruteforce Tag</string>
     <string name="action_edit_tag_dump">Edit/Analyse Dump File</string>
-    <string name="action_edit_key_dump">Edit/Add Key File</string>
+    <string name="action_edit_key_dump">Edit/Add Key File or Credit Card Dumps</string>
     <string name="action_tools">Tools</string>
     <string name="action_exit_app">Exit App</string>
     <string name="action_nfc">Goto NFC Settings</string>
@@ -212,7 +219,7 @@
     <string name="action_data_as_ascii">Data as ASCII</string>
     <string name="action_decode_ac">Decode Access Conditions</string>
     <string name="action_show_value_blocks_as_int">Value Blocks as Int.</string>
-    <string name="action_show_tag_info">Display Tag Info</string>
+    <string name="action_show_tag_info">Display Tag Details</string>
     <string name="action_show_vb_tool">Value Block De-/Encoder</string>
     <string name="action_show_ac_tool">Access Condition De-/Encoder</string>
     <string name="action_show_diff_tool">Diff Tool (Compare Dumps)</string>
@@ -227,8 +234,8 @@
     <string name="action_append">Append</string>
     <string name="action_do_not_show_again">Do not show this message
         again</string>
-    <string name="action_beer_sounds_fine">Beer sounds fine
-        (Donate via Google Play)</string>
+    <string name="action_beer_sounds_fine">Donate via Google Play to original dev</string>
+    <string name="action_beer_sounds_fine2">Donate via PayPal to modder</string>
     <string name="action_chose_dump">Choose a Dump&#8230;</string>
     <string name="action_continue">Continue</string>
     <string name="action_dont_save">Don\'t Save</string>
@@ -237,6 +244,7 @@
 
     <!-- Toast messages -->
     <string name="info_new_tag_found">New tag found</string>
+    <string name="info_new_tag_not_found">Tag not found</string>
     <string name="info_no_external_storage">Error: External storage is not
         readable/writable</string>
     <string name="info_no_tag_found">Error: There is no Mifare Classic tag</string>
@@ -421,7 +429,7 @@
         <a href="https://github.com/ikarus23/MifareClassicTool">MCT
         on github</a><br />
         &#8226; Rate this app:
-        <a href="market://details?id=de.syss.MTCBrute4c">via
+        <a href="market://details?id=de.syss.MifareClassicTool">via
         Google Play</a><br />
         &#8226; Donate:
         <a href="https://sites.google.com/view/nokisdemox">via
@@ -464,17 +472,16 @@
         current year (e.g. 12, meaning 2012).
         \n\nMaybe the tag is not an original Mifare Classic tag.</string>
     <string name="dialog_save_conflict_title">File already exists</string>
-    <string name="dialog_save_conflict_dump">This file already exists.
-        What do you want to do?
-        \n\n<b>Note: Files containing multiple dumps (created by using
-        \"append\") can not be displayed, edited or written by
-        this app.</b></string>
+    <string name="dialog_save_conflict_dump">This file already exists.         What do you want to do?           <b>Note: Files containing multiple dumps (created by using         \"append\") can not be displayed, edited or written by         this app.</b></string>
     <string name="dialog_save_conflict_keyfile">This file already exists.
         What do you want to do?</string>
     <string name="dialog_donate_title">Donate</string>
     <string name="dialog_donate"><b>This is a MCT apk Mod</b>
-        \n\nIf the new features, fixes or the app in general makes you happy,
-        please consider to make the developer happy. Buy him a beer! ;)
+        \n\nThere is a lot of new feautures, that requires your agreement of this terms:
+        -You are completely responsable of your acts
+        -I\'m not responsible of any damage or act you do.
+        -You have to use this app on cards that are completely yours.
+        By continue using this app, it means you accept this terms and conditions.
     </string>
     <string name="dialog_save_before_quitting_title">Unsaved changes</string>
     <string name="dialog_save_before_quitting"><b>There are unsaved changes!</b>
@@ -486,5 +493,212 @@
     <string name="hint_hex_3_byte">HEX, 3 bytes</string>
     <string name="hint_hex_00">00</string>
     <string name="hint_int_423">e.g. 423</string>
+    <string name="nokisdemox_select_key">Please select a keyfile</string>
+    <string name="nokisdemox_web_page">NokisDemox Web Page</string>
+    <string name="nokisdemox_donation">NokisDemox Donation</string>
+    <string name="nokisdemox_yt">NokisDemox Youtube Channel</string>
 
+    <!-- Brute -->
+    <string name="brute_thread1">Single thread</string>
+    <string name="brute_thread2">Double thread</string>
+    <string name="brute_increase_start">Increase start</string>
+    <string name="brute_decrease_start">Decrease start</string>
+    <string name="brute_start">Start Brute-force</string>
+    <string name="brute_stop">Stop Brute-force</string>
+    <string name="brute_save_status">Save current state</string>
+    <string name="dialog_brute_title">Brute Force Mod</string>
+    <string name="dialog_brute_content">This mode allows your android device to bruteforce any
+    nfc tag, but it can take soo long. There are two modes, a single thread that goes from what
+    you want to FFFFFFFFFFFF and the double one that allows you to choose the start value and
+    the last one.</string>
+
+    <!-- EMV CC Checker -->
+    <string name="title_EMV_cc_check">EMV Credit Card Check</string>
+    <string name="activity_pre_into">The app may crash if the tag is not a Credit Card, for more info click in the info button at the top</string>
+    <string name="activity_into">Reader mode active</string>
+    <string name="cc_editor_title">Open a Credit Card saved file</string>
+    <string name="cc_editor_btn">Open this Credit Card file</string>
+    <string name="dialog_emv_context">This activity will allow you to see the information of a
+    NFC credit card and automatically emulate it. Once you have read the credit card, you can
+    save that info and check it out whenever you want in the list menu.Check out modder info in
+    the main menu to see the original project.
+    </string>
+    <string name="emv_not_cc">Card detected but it is not a supported Credit Card</string>
+    <string name="emv_reading_progress">Reading card data … </string>
+    <string name="emv_reading_success">Reading card data … completed</string>
+    <string name="emv_card_detected">Card detected</string>
+    <string name="emv_toast_read">Tag read</string>
+    <string name="emv_save_no_name">Please don\'t leave name empty</string>
+    <string name="emv_saved_as">Saved as </string>
+    <string name="emv_switch_read">Read Mode</string>
+    <string name="emv_switch_demo">Demonstration Mode</string>
+
+    <!-- Emulator -->
+    <string name="title_Emulator">Emulate Tag UID (BETA)</string>
+    <string name="action_Emulator_settings">Emulator Settings</string>
+    <string name="btn_Emulator_settings">Add tag and settings</string>
+    <string name="btn_Emulator_info">Information</string>
+    <string name="btn_Emulator_scan">Scan tag UID</string>
+    <string name="btn_Emulator_settings_add">Add</string>
+    <string name="btn_Emulator_reset">Reset NFC Status</string>
+    <string name="btn_Emulator_advanced_settings">Advanced settings(Coming soon)</string>
+    <string name="action_Emulator_scan">Emulator Scan UID</string>
+    <string name="action_Emulator_root_info">**---You need to be Root User---**</string>
+    <string name="not_emulator_title">UID Emulator</string>
+    <string name="not_emulator_message">This activity will allow you to emulate any NFC UID by
+    typing it or just scanning the tag. Check out modder info in the main menu to see the
+    original project.</string>
+    <string name="emulator_root">Root access is given</string>
+    <string name="emulator_not_root">Can\'t get root access</string>
+    <string name="action_emulator_emulate">Emulate</string>
+    <string name="action_emulator_rename">Rename</string>
+    <string name="action_emulator_delete">Delete</string>
+    <string name="emulator_first_restore">Restore to default first</string>
+    <string name="emulator_card">card:</string>
+    <string name="dialog_emulator_title">Card is being emulated</string>
+    <string name="dialog_emulator_content">Card is </string>
+    <string name="emulator_settings_tag">New Card Here as: "XX, XX, XX, XX" Example: 12, 34, 56, 78</string>
+    <string name="emulator_scanning_text">Put your card behind your phone and I\'ll try to read it.</string>
+    <string name="emulator_already_restore">Already restore to default</string>
+    <string name="emulator_no_restore">No backup file found</string>
+    <string name="emulator_current">Current:</string>
+
+    <!-- Stealth -->
+    <string name="title_stealth">Stealth read tags</string>
+    <string name="check_stealth_adv">Advanced mode (more than 15 times)</string>
+    <string name="action_stealth">Stealth mode (Alpha)</string>
+    <string name="action_stealth_start">Start read</string>
+    <string name="action_stealth_stop">Stop read</string>
+    <string name="dialog_stealth_mode_title">Stealth reader (ALPHA)</string>
+    <string name="dialog_stealth_mode_content">This mode will allow you to read tags while
+    screen is off and also it will repeat the key dictionary the times you want ,until its read something
+    or you press stop stealth mode. (It may have some errors, you can\'t put more than15 times because you may break the app).
+    Now is only available a repetitive mode while the screen is on, the service, that will provide lock screen reading, is under testing and has a lot
+    of issues, thats why is not available yet.(Hopefully a new version of this app will bring the stealth mode as a Beta or even as a release version)</string>
+    <string name="action_stealth_notify_title">Stealth mode is active</string>
+    <string name="action_stealth_notify_body">Click here to stop it</string>
+    <string name="action_stealth_nokey">No key file selected</string>
+    <string name="not_stealth_read_y">Reading: Yes</string>
+    <string name="not_stealth_read_n">Reading: Not yet</string>
+    <string name="not_stealth_content_read_y">Stealth info : READING</string>
+    <string name="txt_stealth_read_n">Stealth info : Not reading</string>
+    <string name="txt_stealth_try_n">Try number: </string>
+    <string name="txt_stealth_of"> of </string>
+    <string name="txt_not_stealth_advanced">Advanced try finished</string>
+    <string name="txt_not_stealth_try">Try finished</string>
+    <string name="stealth_start">Stealth mode activated</string>
+    <string name="stealth_adv_start">Advanced stealth mode activated</string>
+    <string name="stealth_adv_start_error">Error, put less than 15 times or check Advanced mode</string>
+    <string name="stealth_xml_delay">Delay between reads(in seconds)</string>
+    <string name="stealth_xml_repeats">Times to repeat map key</string>
+    <string name="stealth_xml_lasttag">Last Tag info</string>
+
+    <!-- New preferences features -->
+    <string name="action_use_custom_sector_count">Use custom sector count</string>
+    <string name="info_retry_authentication_count_error">Error: Retries must be between
+        1 and 1000</string>
+    <string name="action_use_internal_storage">Save dump and key files
+        to the internal storage</string>
+    <string name="action_auto_copy_uid">Automatically copy new tag UID to clipboard</string>
+    <string name="dialog_custom_sector_count">Force a custom sector count
+        and ignore the sector count detected by Android. This can be useful
+        for tags with 2K memory.</string>
+    <string name="dialog_retry_authentication_title">Retry authentication</string>
+    <string name="action_retry_authentication">Retry the authentication if it fails</string>
+    <string name="dialog_retry_authentication">Retry the authentication (to access a sector/block)
+        X times if it fails.\n\nSome tags need this in order to work well (e.g. some block 0
+        writable tags with 7 bytes UID). Also, might help to get some devices to work more
+        consistent (e.g. the Google Nexus 5X or the Huawei P10).\n\nKeep in mind that this
+        might slow down reading, writing or even key mapping. In most cases you should leave
+        this option disabled.</string>
+    <string name="dialog_use_internal_storage_title">Use Internal Storage</string>
+    <string name="dialog_use_internal_storage">Android commonly has two places to store
+        files: The internal and the external memory.\n\nThe internal memory is only
+        readable by the app and will be deleted once the app gets uninstalled.\n\nThe
+        external storage, in many cases the SD card, is readable by every app with
+        sufficient rights. Data stored on the external memory will survive an
+        uninstall of the app.\n\nBy using this option you can switch between the two
+        storages. Dump and key files will not be copied between them.</string>
+    <string name="hint_custom_retry_authentication_count">Number of retries</string>
+    <string name="hint_custom_sector_count">e.g. 16 for 1K</string>
+    <string name="dialog_custom_sector_count_title">Custom Sector Count</string>
+
+    <string name="info_sector_count_error">Error: Sector count must be between 1 and 40</string>
+    <string name="info_hope_help">I hope this help you</string>
+
+    <!-- Bcc Tool -->
+    <string name="title_activity_bcc_tool">BCC Calculator</string>
+    <string name="text_uid_part">UID (part):</string>
+    <string name="hint_hex_4_byte">HEX, 4 bytes</string>
+    <string name="action_calc_bcc">Calculate BCC</string>
+    <string name="text_bcc">BCC:</string>
+    <string name="info_invalid_uid_length">Error: Invalid UID length</string>
+
+    <!-- Modder info -->
+    <string name="modder_related">Other NFC cool Apps:</string>
+    <string name="modder_official">Official Mifare Classic Tools</string>
+    <string name="modder_apps">My other Apps:</string>
+    <string name="modder_thanks">This New Version is also possible thanks to this projects:</string>
+    <string name="modder_app_emv">EmvEmulator (CCReader)</string>
+    <string name="modder_app_uid_em">NFC UID Emulator</string>
+
+    <!-- Clone UID Tool-->
+    <string name="title_activity_clone_uid">Clone UID to Magic Tag (2nd gen)</string>
+    <string name="text_clone_uid_info">This tool can clone the UID of a tag to a
+        \"magic tag\" (2nd gen, Android compatible, direct write,
+        block 0 writable). Hit the info button to get more information.</string>
+    <string name="text_uid_to_clone">UID to clone</string>
+    <string name="text_clone_uid_manufacturer_block_rest">The rest of block 0</string>
+    <string name="text_rescan_tag_to_check">Rescan clone to validate success</string>
+    <string name="text_checking_clone">Checking clone</string>
+    <string name="text_clone_successfully">Successfully cloned UID</string>
+    <string name="text_uid_match_error">UIDs did not match</string>
+    <string name="text_clone_error">Error: Are you sure you have a magic
+        tag (2nd gen)?</string>
+    <string name="action_show_clone_uid">Clone UID</string>
+    <string name="action_clone_uid">Calculate block 0 and clone UID</string>
+    <string name="action_clone_uid_advanced">Advanced options</string>
+    <string name="dialog_gen2_tags_info_title">Cloning the UID</string>
+    <string name="dialog_gen2_tags_info">The first block of the first sector of an MIFARE
+        Classic tag contains the UID and is read-only i.e. not writable. But there are
+        special MIFARE Classic tags (\"magic tags 2nd gen\", aka. \"block 0 direct write tags\")
+        that support writing to the first block (including the UID) with a simple write command.
+        This App is able to write to such tags and can therefore clone the UID. However, some special
+        tags (\"magic tags 1st gen\") require a special command sequence to put them into the
+        state where writing to the manufacturer block is possible. These tags will not work.
+        \n\nFor now this tool will only work with 4-byte UIDs.</string>
+    <string name="text_status_log">Status Log</string>
+    <string name="text_use_uid_of_scanned_tag">Use UID of scanned tag</string>
+    <string name="info_rest_of_block_0_length">Error: The length of the rest of block 0
+        is incorrect</string>
+    <string name="text_block_0_calculated">Block 0 calculated</string>
+    <string name="text_waiting_for_magic_tag">Waiting for magic tag (2nd gen)</string>
+    <string name="text_writing_block_0">Writing block 0</string>
+    <string name="text_no_errors_on_write">No errors during write process</string>
+    <string name="info_incorrect_key">Error: Key not correct</string>
+    <string name="dialog_rest_of_block_0_title">Rest of Block 0</string>
+    <string name="dialog_rest_of_block_0">MIFARE Classic tags can typically only be
+        written blockwise. The UID is represented by the first bytes of block 0. To
+        change the UID, the full block 0 must be written. The \"rest of block 0\" data are
+        the bytes which will get appended to the UID to represent a full block.</string>
+    <string name="dialog_key_for_block_0_title">Key for Block 0</string>
+    <string name="dialog_key_for_block_0">To write to block 0 (the block with the UID) you
+        need the corresponding key with write privileges. For blank or factory formatted
+        tags this key is key A with a value of \"FFFFFFFFFFFF\".</string>
+    <string name="text_write_key">The key to write block 0</string>
+    <!-- Ultralight tag reader -->
+    <string name="ultralight_name">Ultralight reader (NFCulT)</string>
+    <string name="ultralight_dump_insert_name">Insert dump name..</string>
+    <string name="ultralight_info_title">Ultralight reader (NFCulT)</string>
+    <string name="ultralight_info">This activity will allow you to see the information of a
+    mifare ultralight tag. Once you have read it, you can save that info and check it out
+    whenever you want in the list menu.Check out modder info in the main menu to see the
+    original project.(in a future update emulate ultralight will be added)(.mut files are
+    "mifare ultralight tags", which is just a txt)</string>
+    <string name="ultralight_saved_title">Open an Ultralight saved dump</string>
+    <string name="ultralight_saved_btn">Open this Ultralight dump</string>
+    <string name="ultralight_btn_save">Save Dump</string>
+    <string name="ultralight_btn_write">Write Dump</string>
+    <string name="ultralight_btn_open">Open Dump</string>
+    <string name="ultralight_more_btn_open">Ultralight Reader</string>
 </resources>

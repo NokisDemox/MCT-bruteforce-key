@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".MainMenu1"
+    android:orientation="vertical"
+    android:background="@drawable/nk_logo_little">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingTop="10dp">
+
+                <Button
+                    android:id="@+id/buttonMainTagInfo"
+                    style="?android:attr/buttonStyleSmall"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.5"
+                    android:drawableTop="@drawable/tag_info"
+                    android:onClick="onShowTagInfo_main"
+                    android:text="@string/title_activity_main_tools" />
+
+                <Button
+                    android:id="@+id/buttonMainTools"
+                    style="?android:attr/buttonStyleSmall"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.5"
+                    android:drawableTop="@drawable/tools"
+                    android:onClick="onShowOtherTools_main"
+                    android:text="@string/title_activity_other_tools" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingTop="10dp">
+
+                <Button
+                    android:id="@+id/buttonMainSettings"
+                    style="?android:attr/buttonStyleSmall"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.5"
+                    android:drawableTop="@drawable/preferences"
+                    android:onClick="onShowPreferences_main"
+                    android:text="@string/title_activity_main_settings" />
+
+                <Button
+                    android:id="@+id/buttonMainAbout"
+                    style="?android:attr/buttonStyleSmall"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.5"
+                    android:drawableTop="@drawable/backgroundimage"
+                    android:onClick="onShowAbout_main"
+                    android:text="@string/title_activity_main_about" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingTop="10dp">
+
+                <Button
+                    android:id="@+id/button"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/title_activity_main_modder"
+                    android:drawableTop="@drawable/nokisweb"
+                    android:layout_weight="0.5"
+                    android:onClick="onOpenModder_Info"
+                    style="?android:attr/buttonStyleSmall"/>
+
+                <Button
+                    android:id="@+id/buttonMainHelp"
+                    style="?android:attr/buttonStyleSmall"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.5"
+                    android:drawableTop="@drawable/help_and_info"
+                    android:onClick="onShowHelp"
+                    android:text="@string/action_help" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

@@ -18,13 +18,6 @@
 
 package de.syss.MCTBrute4c.Activities;
 
-import java.io.File;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.OutputStream;
-
-import android.Manifest;
 import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.app.AlertDialog;
@@ -34,7 +27,6 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.SharedPreferences.Editor;
-import android.content.pm.PackageManager;
 import android.content.pm.PackageManager.NameNotFoundException;
 import android.content.res.AssetManager;
 import android.net.Uri;
@@ -43,16 +35,10 @@ import android.os.Build;
 import android.os.Bundle;
 import android.os.Environment;
 import android.provider.Settings;
-import android.support.annotation.NonNull;
-import android.support.v4.app.ActivityCompat;
-import android.support.v4.content.ContextCompat;
 import android.text.Html;
 import android.text.method.LinkMovementMethod;
 import android.util.Log;
-import android.view.ContextMenu;
-import android.view.ContextMenu.ContextMenuInfo;
 import android.view.Menu;
-import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
@@ -60,7 +46,15 @@ import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.OutputStream;
+
 import de.syss.MCTBrute4c.Common;
+import de.syss.MCTBrute4c.Emulator.MainActivity;
 import de.syss.MCTBrute4c.R;
 
 /**
@@ -70,12 +64,10 @@ import de.syss.MCTBrute4c.R;
  * <li>Error/Debug messages (Log.e()/Log.d()) are hard coded</li>
  * <li>This is my first App, so please by decent with me ;)</li>
  * </ul>
- * @author Gerhard Klostermeier
+ *
  */
 
-public class MainMenu extends Activity {
-    private int STORAGE_PERMISSION_CODE = 1;
-
+public class MainMenu extends BasicActivity {
     private static final String LOG_TAG =
             MainMenu.class.getSimpleName();
 
@@ -83,44 +75,12 @@ public class MainMenu extends Activity {
     private final static int FILE_CHOOSER_KEY_FILE = 2;
     private AlertDialog mEnableNfc;
     private Button mReadTag;
+    private Button mUltralight;
+    private Button mEmulateTag;
     private Button mWriteTag;
-    private Button mBrute;
-    private boolean mResume = true;
+        private boolean mResume = true;
     private Intent mOldIntent = null;
-    private void requestStoragePermission() {
-        if (ActivityCompat.shouldShowRequestPermissionRationale(this, Manifest.permission.WRITE_EXTERNAL_STORAGE)) {
-            new AlertDialog.Builder(this)
-                    .setTitle("Permission needed")
-                    .setMessage("This permission is needed for the app to work")
-                    .setPositiveButton("Ok", new DialogInterface.OnClickListener() {
-                        @Override
-                        public void onClick(DialogInterface dialogInterface, int i) {
-                            dialogInterface.dismiss();
-                        }
-                    })
-                    .setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
-                        @Override
-                        public void onClick(DialogInterface dialogInterface, int i) {
-                            dialogInterface.dismiss();
-                        }
-                    })
-                    .create().show();
 
-        } else {
-            ActivityCompat.requestPermissions(this, new String [] {Manifest.permission.WRITE_EXTERNAL_STORAGE}, STORAGE_PERMISSION_CODE);
-        }
-    }
-
-    @Override
-    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
-        if(requestCode == STORAGE_PERMISSION_CODE) {
-            if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
-                Toast.makeText(this, "Permission Granted", Toast.LENGTH_SHORT).show();
-            }else {
-                Toast.makeText(this,"Permission Denied", Toast.LENGTH_SHORT).show();
-            }
-        }
-    }
 
     /**
      * Check for NFC hardware, Mifare Classic support and for external storage.
@@ -131,21 +91,14 @@ public class MainMenu extends Activity {
      */
     @Override
     public void onCreate(Bundle savedInstanceState) {
-        if (ContextCompat.checkSelfPermission(MainMenu.this,
-                Manifest.permission.WRITE_EXTERNAL_STORAGE) == PackageManager.PERMISSION_GRANTED) {
-            Toast.makeText(MainMenu.this, "You Have grant storage permission", Toast.LENGTH_SHORT).show();
-        } else {
-            requestStoragePermission();
-        }
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_menu);
-        // Add the context menu to the tools button.
-        Button tools = (Button) findViewById(R.id.buttonMainTools);
-        registerForContextMenu(tools);
+
         // Find Read/Write buttons and bind them to member vars.
         mReadTag = (Button) findViewById(R.id.buttonMainReadTag);
         mWriteTag = (Button) findViewById(R.id.buttonMainWriteTag);
-        mBrute = (Button) findViewById(R.id.buttonMainBrute);
+        mEmulateTag = (Button) findViewById(R.id.buttonMainEmulator);
+        mUltralight = (Button) findViewById(R.id.buttonMainUltralight);
 
         Common.setUseAsEditorOnly(false);
 
@@ -153,34 +106,35 @@ public class MainMenu extends Activity {
         Common.setNfcAdapter(NfcAdapter.getDefaultAdapter(this));
         if (Common.getNfcAdapter() == null) {
             new AlertDialog.Builder(this)
-                .setTitle(R.string.dialog_no_nfc_title)
-                .setMessage(R.string.dialog_no_nfc)
-                .setIcon(android.R.drawable.ic_dialog_alert)
-                .setPositiveButton(R.string.action_exit_app,
-                        new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialog, int which) {
-                        finish();
-                    }
-                 })
-                 .setNeutralButton(R.string.action_editor_only,
-                        new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialog, int which) {
-                        // Only use Editor.
-                        Common.setUseAsEditorOnly(true);
-                        mReadTag.setEnabled(false);
-                        mWriteTag.setEnabled(false);
-                        mBrute.setEnabled(false);
-                    }
-                 })
-                 .setOnCancelListener(new DialogInterface.OnCancelListener() {
-                    @Override
-                    public void onCancel(DialogInterface dialog) {
-                        finish();
-                    }
-                 })
-                 .show();
+                    .setTitle(R.string.dialog_no_nfc_title)
+                    .setMessage(R.string.dialog_no_nfc)
+                    .setIcon(android.R.drawable.ic_dialog_alert)
+                    .setPositiveButton(R.string.action_exit_app,
+                            new DialogInterface.OnClickListener() {
+                                @Override
+                                public void onClick(DialogInterface dialog, int which) {
+                                    finish();
+                                }
+                            })
+                    .setNeutralButton(R.string.action_editor_only,
+                            new DialogInterface.OnClickListener() {
+                                @Override
+                                public void onClick(DialogInterface dialog, int which) {
+                                    // Only use Editor.
+                                    Common.setUseAsEditorOnly(true);
+                                    mReadTag.setEnabled(false);
+                                    mWriteTag.setEnabled(false);
+                                    mEmulateTag.setEnabled(false);
+                                    mUltralight.setEnabled(false);
+                                }
+                            })
+                    .setOnCancelListener(new DialogInterface.OnCancelListener() {
+                        @Override
+                        public void onCancel(DialogInterface dialog) {
+                            finish();
+                        }
+                    })
+                    .show();
             mResume = false;
         }
 
@@ -213,6 +167,33 @@ public class MainMenu extends Activity {
                 // Could not create directory.
                 Log.e(LOG_TAG, "Error while creating '" + Common.HOME_DIR
                         + Common.TMP_DIR + "' directory.");
+                return;
+            }
+            // Create cc directory.
+            path = new File(Environment.getExternalStoragePublicDirectory(
+                    Common.HOME_DIR) + "/" + Common.CC_DIR);
+            if (!path.exists() && !path.mkdirs()) {
+                // Could not create directory.
+                Log.e(LOG_TAG, "Error while creating '" + Common.HOME_DIR
+                        + Common.CC_DIR + "' directory.");
+                return;
+            }
+            // Create html directory.
+            path = new File(Environment.getExternalStoragePublicDirectory(
+                    Common.HOME_DIR) + "/" + Common.HTML_DIR);
+            if (!path.exists() && !path.mkdirs()) {
+                // Could not create directory.
+                Log.e(LOG_TAG, "Error while creating '" + Common.HOME_DIR
+                        + Common.HTML_DIR + "' directory.");
+                return;
+            }
+            // Create mut directory.
+            path = new File(Environment.getExternalStoragePublicDirectory(
+                    Common.HOME_DIR) + "/" + Common.MUT_DIR);
+            if (!path.exists() && !path.mkdirs()) {
+                // Could not create directory.
+                Log.e(LOG_TAG, "Error while creating '" + Common.HOME_DIR
+                        + Common.MUT_DIR + "' directory.");
                 return;
             }
 
@@ -348,13 +329,14 @@ public class MainMenu extends Activity {
                         checkNfc();
                     }
                 })
-                .setNegativeButton(R.string.action_cancel,
+                .setNegativeButton(R.string.action_beer_sounds_fine2,
                         new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialog, int which) {
-                        dialog.cancel();
-                    }
-                })
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+                                Intent donate_modder=new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.paypal.me/NokisDemoxDonations"));
+                                startActivity(donate_modder);
+                            }
+                        })
                 .setOnCancelListener(new DialogInterface.OnCancelListener() {
                     @Override
                     public void onCancel(DialogInterface dialog) {
@@ -377,7 +359,8 @@ public class MainMenu extends Activity {
             // Disable read/write tag options.
             mReadTag.setEnabled(false);
             mWriteTag.setEnabled(false);
-            mBrute.setEnabled(false);
+            mEmulateTag.setEnabled(false);
+            mUltralight.setEnabled(false);
             CharSequence styledText = Html.fromHtml(
                     getString(R.string.dialog_no_mfc_support_device));
             AlertDialog ad = new AlertDialog.Builder(this)
@@ -412,34 +395,6 @@ public class MainMenu extends Activity {
             mResume = false;
         }
     }
-
-    /**
-     * Add a menu with "preferences", "about", etc. to the Activity.
-     */
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.general_options, menu);
-        return true;
-    }
-
-    /**
-     * Add the menu with the tools.
-     * It will be shown if the user clicks on "Tools".
-     */
-    @Override
-    public void onCreateContextMenu(ContextMenu menu, View v,
-                                    ContextMenuInfo menuInfo) {
-        super.onCreateContextMenu(menu, v, menuInfo);
-        MenuInflater inflater = getMenuInflater();
-        menu.setHeaderTitle(R.string.dialog_tools_menu_title);
-        menu.setHeaderIcon(android.R.drawable.ic_menu_preferences);
-        inflater.inflate(R.menu.tools, menu);
-        // Enable/Disable tag info tool depending on NFC availability.
-        menu.findItem(R.id.menuMainTagInfo).setEnabled(
-                !Common.useAsEditorOnly());
-    }
-
     /**
      * If resuming is allowed because all dependencies from
      * {@link #onCreate(Bundle)} are satisfied, call
@@ -473,7 +428,8 @@ public class MainMenu extends Activity {
                 // Disable read/write tag options.
                 mReadTag.setEnabled(false);
                 mWriteTag.setEnabled(false);
-                mBrute.setEnabled(false);
+                mEmulateTag.setEnabled(false);
+                mUltralight.setEnabled(false);
             }
         } else {
             // NFC is enabled. Hide dialog and enable NFC
@@ -494,7 +450,8 @@ public class MainMenu extends Activity {
             if (Common.hasMifareClassicSupport()) {
                 mReadTag.setEnabled(true);
                 mWriteTag.setEnabled(true);
-                mBrute.setEnabled(true);
+                mEmulateTag.setEnabled(true);
+                mUltralight.setEnabled(true);
             }
         }
     }
@@ -536,9 +493,8 @@ public class MainMenu extends Activity {
         Intent intent = new Intent(this, ReadTag.class);
         startActivity(intent);
     }
-
-    public void onShowBruteTag(View view) {
-        Intent intent = new Intent(MainMenu.this, Brute.class);
+    public void onShowUltralightReader(View view) {
+        Intent intent = new Intent(this, Ultralight_activity.class);
         startActivity(intent);
     }
 
@@ -552,23 +508,9 @@ public class MainMenu extends Activity {
         Intent intent = new Intent(this, WriteTag.class);
         startActivity(intent);
     }
-        /**
-     * Show the {@link HelpAndInfo}.
-     * @param view The View object that triggered the method
-     * (in this case the help/info button).
-     */
-    public void onShowHelp(View view) {
-        Intent intent = new Intent(this, HelpAndInfo.class);
+    public void onShowEmulator(View view) {
+        Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);
-    }
-
-    /**
-     * Show the tools menu (as context menu).
-     * @param view The View object that triggered the method
-     * (in this case the tools button).
-     */
-    public void onShowTools(View view) {
-        openContextMenu(view);
     }
 
     /**
@@ -629,90 +571,6 @@ public class MainMenu extends Activity {
     }
 
     /**
-     * Show the {@link Preferences}.
-     */
-    private void onShowPreferences() {
-        Intent intent = new Intent(this, Preferences.class);
-        startActivity(intent);
-    }
-
-    /**
-     * Show the about dialog.
-     */
-    private void onShowAboutDialog() {
-        CharSequence styledText = Html.fromHtml(
-                getString(R.string.dialog_about_mct,
-                Common.getVersionCode()));
-        AlertDialog ad = new AlertDialog.Builder(this)
-            .setTitle(R.string.dialog_about_mct_title)
-            .setMessage(styledText)
-            .setIcon(R.mipmap.ic_launcher)
-            .setPositiveButton(R.string.action_ok,
-                    new DialogInterface.OnClickListener() {
-                @Override
-                public void onClick(DialogInterface dialog, int which) {
-                    // Do nothing.
-                }
-            }).create();
-         ad.show();
-         // Make links clickable.
-         ((TextView)ad.findViewById(android.R.id.message)).setMovementMethod(
-                 LinkMovementMethod.getInstance());
-    }
-
-    /**
-     * Handle the user input from the general options menu
-     * (e.g. show the about dialog).
-     * @see #onShowAboutDialog()
-     * @see #onShowPreferences()
-     */
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle item selection.
-        switch (item.getItemId()) {
-        case R.id.menuMainPreferences:
-            onShowPreferences();
-            return true;
-        case R.id.menuMainAbout:
-            onShowAboutDialog();
-            return true;
-        default:
-            return super.onOptionsItemSelected(item);
-        }
-    }
-
-    /**
-     * Handle (start) the selected tool from the tools menu.
-     * @see TagInfoTool
-     * @see ValueBlockTool
-     * @see AccessConditionTool
-     */
-    @Override
-    public boolean onContextItemSelected(MenuItem item) {
-        Intent intent;
-        switch (item.getItemId()) {
-        case R.id.menuMainTagInfo:
-            intent = new Intent(this, TagInfoTool.class);
-            startActivity(intent);
-            return true;
-        case R.id.menuMainValueBlockTool:
-            intent = new Intent(this, ValueBlockTool.class);
-            startActivity(intent);
-            return true;
-        case R.id.menuMainAccessConditionTool:
-            intent = new Intent(this, AccessConditionTool.class);
-            startActivity(intent);
-            return true;
-        case R.id.menuMainDiffTool:
-            intent = new Intent(this, DiffTool.class);
-            startActivity(intent);
-            return true;
-        default:
-            return super.onContextItemSelected(item);
-        }
-    }
-
-    /**
      * Run the {@link DumpEditor} or the {@link KeyEditor}
      * if file chooser result is O.K.
      * @see DumpEditor
@@ -763,6 +621,21 @@ public class MainMenu extends Activity {
         File extended = new File(Environment.getExternalStoragePublicDirectory(
                 Common.HOME_DIR) + "/" + Common.KEYS_DIR,
                 Common.STD_KEYS_EXTENDED);
+        File full = new File(Environment.getExternalStoragePublicDirectory(
+                Common.HOME_DIR) + "/" + Common.KEYS_DIR,
+                Common.STD_KEYS_FULL);
+        File cc = new File(Environment.getExternalStoragePublicDirectory(
+                Common.HOME_DIR) + "/" + Common.CC_DIR,
+                Common.STD_CC);
+        File mut = new File(Environment.getExternalStoragePublicDirectory(
+                Common.HOME_DIR) + "/" + Common.MUT_DIR,
+                Common.STD_MUT);
+        File html = new File(Environment.getExternalStoragePublicDirectory(
+                Common.HOME_DIR) + "/" + Common.HTML_DIR,
+                Common.STD_HTML);
+        File logo = new File (Environment.getExternalStoragePublicDirectory(
+                Common.HOME_DIR) + "/" + Common.HTML_DIR,
+                Common.STD_LOGO);
         AssetManager assetManager = getAssets();
 
         if (!std.exists()) {
@@ -795,10 +668,81 @@ public class MainMenu extends Activity {
                           + "from assets to external storage.");
               }
         }
-    }
-    public void browser1 (View view){
-        Intent browserIntent=new Intent(Intent.ACTION_VIEW,Uri.parse("https://goo.gl/KsLjqb"));
-        startActivity(browserIntent);
+        if (!full.exists()) {
+            // Copy full.keys.
+            try {
+                InputStream in = assetManager.open(
+                        Common.KEYS_DIR + "/" + Common.STD_KEYS_FULL);
+                OutputStream out = new FileOutputStream(full);
+                Common.copyFile(in, out);
+                in.close();
+                out.flush();
+                out.close();
+            } catch(IOException e) {
+                Log.e(LOG_TAG, "Error while copying 'full.keys' "
+                        + "from assets to external storage.");
+            }
+        }
+        if (!cc.exists()) {
+            // Copy test.cc
+            try {
+                InputStream in = assetManager.open(
+                        Common.CC_DIR + "/" + Common.STD_CC);
+                OutputStream out = new FileOutputStream(cc);
+                Common.copyFile(in, out);
+                in.close();
+                out.flush();
+                out.close();
+            } catch(IOException e) {
+                Log.e(LOG_TAG, "Error while copying 'ultralight-test.mut' "
+                        + "from assets to external storage.");
+            }
+        }
+        if (!html.exists()) {
+            // Copy help.html
+            try {
+                InputStream in = assetManager.open(
+                        Common.HTML_DIR + "/" + Common.STD_HTML);
+                OutputStream out = new FileOutputStream(html);
+                Common.copyFile(in, out);
+                in.close();
+                out.flush();
+                out.close();
+            } catch(IOException e) {
+                Log.e(LOG_TAG, "Error while copying 'ultralight-test.mut' "
+                        + "from assets to external storage.");
+            }
+        }
+        if (!mut.exists()) {
+            // Copy help.html
+            try {
+                InputStream in = assetManager.open(
+                        Common.MUT_DIR + "/" + Common.STD_MUT);
+                OutputStream out = new FileOutputStream(mut);
+                Common.copyFile(in, out);
+                in.close();
+                out.flush();
+                out.close();
+            } catch(IOException e) {
+                Log.e(LOG_TAG, "Error while copying 'ultralight-test.mut' "
+                        + "from assets to external storage.");
+            }
+        }
+        if (!logo.exists()) {
+            // Copy help.html
+            try {
+                InputStream in = assetManager.open(
+                        Common.HTML_DIR + "/" + Common.STD_LOGO);
+                OutputStream out = new FileOutputStream(logo);
+                Common.copyFile(in, out);
+                in.close();
+                out.flush();
+                out.close();
+            } catch(IOException e) {
+                Log.e(LOG_TAG, "Error while copying 'icon.png' "
+                        + "from assets to external storage.");
+            }
+        }
     }
 }
 
