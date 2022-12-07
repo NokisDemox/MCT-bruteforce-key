@@ -1,4 +1,0 @@
-#Wed May 30 23:49:08 CEST 2018
-base.0=C\:\\Users\\Artero\\Desktop\\proyectos\\mct app mod\\mct brutef\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\1
-path.0=classes.dex
-renamed.0=classes.dex
